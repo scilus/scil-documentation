@@ -1,7 +1,7 @@
 
 .. _common-tools:
 
-SCILPY
+SCILPY / DIPY
 ==============
 
 SCILPY

@@ -28,15 +28,13 @@ in the lab, from using Linux to developing code.
 
 .. toctree::
     :maxdepth: 1
-    :caption: Other common tools
+    :caption: Common tools
 
     tools/scilpy
     tools/mi-brain
-    tools/ants
-    tools/mrtrix
-    tools/fsl
     tools/singularity
     tools/nexflow
+    tools/other_tools
 
 .. toctree::
     :maxdepth: 1
