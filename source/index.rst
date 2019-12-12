@@ -22,7 +22,6 @@ in the lab, from using Linux to developing code.
     :caption: Our tools
 
     tools/scilpy
-    tools/our_pipelines
     tools/machine_learning
 
 
@@ -31,8 +30,7 @@ in the lab, from using Linux to developing code.
     :caption: Common tools
 
     tools/mi-brain
-    tools/singularity
-    tools/nexflow
+    tools/nextflow_singularity
     tools/environments
     tools/other_tools
 
@@ -43,6 +41,8 @@ in the lab, from using Linux to developing code.
     coding/python
     coding/scilpy
     coding/git
+    coding/nextflow_singularity
+
 
 .. toctree::
     :maxdepth: 1

@@ -1,11 +1,8 @@
-Developers
+Environments
 ==============
 
 .. role:: bash(code)
    :language: bash
-
-Using environments
-------------------
 
 *Why?*
 
