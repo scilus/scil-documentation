@@ -21,7 +21,7 @@ in the lab, from using Linux to developing code.
     :maxdepth: 1
     :caption: Our tools
 
-    tools/scilpy
+    tools/scilpy_dipy_tractoflow
     tools/machine_learning
 
 

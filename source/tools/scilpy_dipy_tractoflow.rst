@@ -67,4 +67,4 @@ If you want to run many scripts, on many subjects, one way would be to prepare a
 
 *How to install it*
 
-To Do
+You can check the `installation guide <https://tractoflow-documentation.readthedocs.io/en/latest/installation/before_install.html>`_ on Tractoflow's website.

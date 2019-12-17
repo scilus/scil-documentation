@@ -6,3 +6,4 @@ Other tools
     ants
     mrtrix
     fsl_freesurfer
+    amico
