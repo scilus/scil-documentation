@@ -1,5 +1,5 @@
 MRtrix
-=======
+======
 
 .. role:: bash(code)
    :language: bash

@@ -1,5 +1,5 @@
 FSL / FreeSurfer
-=================
+================
 
 .. role:: bash(code)
    :language: bash
@@ -7,7 +7,7 @@ FSL / FreeSurfer
 FSL and FreeSurfer are two set of tools developped respectively by FMRIB, Oxford, UK and by MGH, Harvard, Boston. The two teams have collaborated to make their tools compatible.
 
 FSL
-----
+---
 
 *What is it?*
 
@@ -24,7 +24,7 @@ FSL
     Then from a terminal: :bash:`python fslinstaller.py`.
 
 FreeSurfer
------------
+----------
 
 *What is it?*
 

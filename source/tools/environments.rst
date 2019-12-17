@@ -1,5 +1,5 @@
 Environments
-==============
+============
 
 .. role:: bash(code)
    :language: bash

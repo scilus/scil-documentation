@@ -1,7 +1,7 @@
 Amico / Commit
-===============
+==============
 
-To Do
+To Do. Can you could help me?
 
 https://github.com/daducci/AMICO
 
