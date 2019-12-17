@@ -1,12 +1,12 @@
 Welcome
-==============
+========
 
 Important rooms and places
-"""""""""""""""""""""""""""
-Chantal, Lynn, and the faculté’s offices are important to know where they are. Ask someone in the lab or Maxime to guide you.
+""""""""""""""""""""""""""
+Chantal, Lynn, and the Faculty’s offices are important and you should know where they are. Ask someone in the lab or Maxime to guide you.
 
 Suscriptions
-"""""""""""""""""""""""""""
+""""""""""""
 
 Don't hesitate to remind Maxime or his research assistants if some of the following steps were not completed.
 
@@ -15,13 +15,12 @@ Keys to the lab
 Google Calendar
     Maxime will add you to the lab calendar. We note our lab meetings, events and other important information and we use it everyday, so you should make a habit of following it! Maxime can also add you to his personal calendar so you can follow his availabilities.  * Tip. It's easier if you have a gmail account.
 Mailing list
-    Maxime will add you.
-.. Mailing list: (scil@listes.usherbrooke.ca)
+    When Maxime wants to send a message to everyone, we either use Slack or our mailing list. Ask Maxime to add you.
 
 Slack
     Create an account on `slack <https://slack.com>`_. We use it to communicate: it's easier to follow discussions there than by long lists of emails. To access our workspace: Ask Maxime.
 Github
-    The code we develop (scilpy) is offered online on `Github <https://github.com/>`_ when it's ready. For more information on scilpy, see the corresponding tab. It is public so you don't need an account to just look at the repository, but you will have to create an account if you will participate to scilpy's development. With an account, you can also "watch" our repo (i.e. receive emails for major changes).
+    The code we develop (:ref:`ref_scilpy_page`) is offered online on `Github <https://github.com/>`_ when it's ready. It is public so you don't need an account to just look at the repository, but you will have to create an account if you will participate to scilpy's development. With an account, you can also "watch" our repo (i.e. receive emails for major changes).
 Bitbucket
     The code (scilpy) is kept on `Bitbucket <https://bitbucket.org/>`_ during its development period. It is private so you need an account to access our repo. Then, email your username to maxime. * Tip, use your @usherbrooke.ca email; you will have an academic account!
 BrainData
