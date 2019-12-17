@@ -71,6 +71,10 @@ Setting up everything the first time
     # Note that here, myBranch2 would be a copy of myBranch1.
     # If instead you want to start from the master, switch to your master branch first.
 
+    # Delete a branch:
+    git branch -d myBranch # For a local branch
+    git push origin --delete myBranch # For a branch on origin
+
 Downloading updates
 ^^^^^^^^^^^^^^^^^^^
 
