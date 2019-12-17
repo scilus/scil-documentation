@@ -1,3 +1,4 @@
+.. _ref_scilpy_page:
 
 .. _common-tools:
 
