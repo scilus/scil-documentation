@@ -8,7 +8,7 @@ Let's say you want to save your work on internet to make sure that everything is
 
 Ex: you're trying to develop a feature on, ex, scilpy, and your collegue is developping another feature on his own computer. 1) You don't want to save it constantly, dropbox-style. You only want to add your code once you're sure it has been correctly tested. 2) If the two of you want to add your features, we need a way to deal with conflicts if you have changed the same files. Git does that. Github and bitbuckets are two websites offering git as service in a user-friendly way.
 
-You can find many good tutorials on internet, such as `this one <https://git-scm.com/doc>`_ on the official website.
+You can find many good tutorials on internet, such as `this one <https://git-scm.com/doc>`_ on the official website. Or check `this very nice introduction <https://docs.google.com/presentation/d/1z0gsgM2Of3TIBSmJUVNPJJR6UkWZEEE_OBVYixOT8iA/edit#slide=id.g6b1c9a75fb_2_789.>`_ by Alex from our lab.
 
 How we use git in the lab
 -------------------------
@@ -142,6 +142,9 @@ Figure: [5]_.
 
     # Technique 2: rebase
     git rebase branch1 branch2
+    # P.S. If you then want to push your branch (git push origin branch2), git won't
+    # recognize your branch's history and won't allow it. Use:
+    git push --force origin branch2
 
 .. [1] Modified from here: https://mamchenkov.net/wordpress/2018/06/06/git-worktree-a-better-way-for-git-stash-abusers/+
 .. [2] Taken here: https://buddy.works/blog/5-types-of-git-workflows
