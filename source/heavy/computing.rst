@@ -11,7 +11,7 @@ Compute Canada
 
 `Compute Canada <https://www.computecanada.ca>`_ is an example of service for clusters. An explained in the Welcoming page, you must ask for access. Here are the links to the `login page <https://ccdb.computecanada.ca>`_ and to the `wiki page <https://docs.computecanada.ca/wiki/Compute_Canada_Documentation>`_.
 
-Our lab has access to CEDAR. Here is how the directories are separated. When you connect (ex, with ssh), you land in a directory called USER (your username), which we can also call your home. Inside, you will find:
+Our lab has access to CEDAR. Here is how the directories are separated. When you connect (ex, with ssh), you start in a directory called USER (your username), which we can also call your home. Inside, you will find:
 
     - projects/def-descotea: a symlink to Maxime's project space. Inside, there is one directory per user in our lab (you only have access to yours). This is where you should keep your data.
     - scratch: a symlink to your scratch space. This is where you should run your sbatch jobs.
@@ -28,14 +28,14 @@ Here is how Compute Canada defines each space:
 
 See below for the command line to connect to cedar. To understand the difference between ssh, sftp, scp, you can check the `following website <https://enterprisedt.com/products/completeftp/doc/guide/html/sftpsettings.html>`_.
 
-Commands on distant HPC computers are ran using sbatch. You can check `tractoflow's website <https://tractoflow-documentation.readthedocs.io/en/latest/pipeline/launch.html#high-performance-computer-hpc>`_ for a sbatch example. The jobs are ran with a delay that depends on your priority as a user. The more you use ComputeCanada, the more your priority decreases. That's why it is important to be careful on the time and resources you use for each job. In your sbatch.sh file, the following options are important and here are how recommandations:
+Commands on distant HPC computers are ran using sbatch. You can check `tractoflow's website <https://tractoflow-documentation.readthedocs.io/en/latest/pipeline/launch.html#high-performance-computer-hpc>`_ for a sbatch example. The jobs are ran with a delay that depends on your priority as a user. The more you use ComputeCanada, the more your priority decreases. That's why it is important to be careful on the time and resources you use for each job. In your sbatch.sh file, the following options are important. If your job crashes, your priority is not impacted. But if it succeeds and you had overestimated the time you had to reserve, it still decreases your priority. If you don't know how long a task should take, you can ask around in the lab or try to guess from information in published papers (ex, in the case of Tractoflow)
 
 .. code-block:: bash
 
-    #SBATCH --nodes=1               # --> We recommand ???
-    #SBATCH --cpus-per-task=32      # --> We recommand ???
-    #SBATCH --mem=0                 # --> We recommand ???
-    #SBATCH --time=48:00:00         # --> We recommand ???
+    #SBATCH --nodes=1
+    #SBATCH --cpus-per-task=32
+    #SBATCH --mem=0
+    #SBATCH --time=48:00:00
 
 Finally the command lines are:
 
