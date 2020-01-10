@@ -50,8 +50,8 @@ in the lab, from using Linux to developing code.
     :maxdepth: 1
     :caption: Dealing with heavy data
 
-    heavy/computing
     heavy/storage
+    heavy/computing
 
 .. toctree::
     :maxdepth: 1
