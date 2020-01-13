@@ -58,3 +58,4 @@ in the lab, from using Linux to developing code.
     :caption: Other
 
     other/conferences
+    other/scholarships
