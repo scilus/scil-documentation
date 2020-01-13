@@ -1,3 +1,4 @@
+.. _ref_scilpy_page:
 
 SCILPY / DIPY
 ==============
@@ -30,8 +31,6 @@ SCILPY
 *How to install it*
 
     Users: you can follow the instructions on the Github page. Clone the repository, install the requirements and install through the setup.py as explained.
-
-    VÉRIFIER QUE MA PR POUR LA DESCRIPTION POUR LES DÉVELOPPERS EST AJOUTÉE DANS SCILPY.
 
 Our nextflows
 ##############

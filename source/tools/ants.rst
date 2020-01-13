@@ -27,15 +27,16 @@ ANTs
         mkdir build
         cd build
         ccmake ../code # Press c twice and then g
-        make -j 8
+        make -j 8      # -j is the number of threads.
+                       # If your computer doesn't allow 8, simply decrease this number.
         cp ../code/Scripts/*.sh bin/
 
     Then add these lines in your .bashrc:
 
-    - From a terminal: :bash:`sudo gedit ~/.bashrc`
+    - From a terminal: :bash:`gedit ~/.bashrc`
     - Copy this in your file:
 
         .. code-block:: bash
 
-            export PATH=~/Code/ANTs/build/bin:${PATH}
-            export ANTSPATH=~/Code/ANTs/build/bin
+            export PATH=~/code/ANTs/build/bin:${PATH}
+            export ANTSPATH=~/code/ANTs/build/bin

@@ -26,6 +26,7 @@ Environments
         # One of:
         mkvirtualenv $NAME
         mkvirtualenv --python=python3.7 $NAME   # To use one precise python version
+                                                # You can also use the complete path to the python installation
         mkvirtualenv $NAME --python=/usr/bin/python3.7  # Equivalent. The python
                                                         # version must be already
                                                         # installed on your computer

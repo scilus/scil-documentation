@@ -13,15 +13,15 @@ FSL
 
     FSL is a set of tools to analyse FMRI, MRI and DTI brain imaging data. Here is the link to their `wiki page <https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/>`_.
 
-    In the lab, we mainly use `Bet <https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/BET>`_ (for skullstripping).
+    In the lab, we mainly use `Bet <https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/BET>`_ (for skullstripping) and `FAST <https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FAST>`_ (to segment a T1 into GM, WM, CSF)
 
-    Previously, we also used some of these tools, but now we prefer FreeSurfer or Ants: `FAST <https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FAST>`_ (to segment a T1 into GM, WM, CSF), `FIRST <https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FIRST>`_ (for subcortical GM segmentation), and `FLIRT <https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FLIRT>`_/`FNIRT <https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FNIRT>`_ (for linear/non-linear registration).
+    Previously, we also used some of these tools, but now we prefer FreeSurfer or Ants: `FIRST <https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FIRST>`_ (for subcortical GM segmentation), and `FLIRT <https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FLIRT>`_/`FNIRT <https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FNIRT>`_ (for linear/non-linear registration).
 
 *How to install it?*
 
     To install, you must download fslinstaller.py at https://fsl.fmrib.ox.ac.uk/fsldownloads_registration. You will have to create an account.
 
-    Then from a terminal: :bash:`python fslinstaller.py`.
+    Then from a terminal: :bash:`python fslinstaller.py`. (Note that this only works on python2.7. See the Environments section for help on how to use a different python version).
 
 FreeSurfer
 ----------

@@ -27,6 +27,7 @@ MRtrix
         git clone https://github.com/MRtrix3/mrtrix3.git
         cd mrtrix3
         ./configure
+        NUMBER_OF_PROCESSORS=8  # If you want to set the number of threads your computer should use.
         ./build
 
     Then you could add these lines in your .bashrc:

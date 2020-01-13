@@ -9,6 +9,6 @@ Mi-Brain
 To install it, scroll down to the Q/R section and follow the instructions.
 
 
-\* Other useful viewers: mrview (see MRtrix), `tracVis <http://trackvis.org/download/>`_.
+\* Other useful viewers: mrview (see MRtrix), `tracvis <http://trackvis.org/download/>`_.
 
 \* Pro tip: viewing your data in more than one viewer may help ensuring your data is correctly saved (good header, good directions, etc.).
