@@ -8,7 +8,7 @@ Summary, coming events and deadlines
 ------------------------------------
 
 .. image:: ../images/calendar-modif.jpg
-   :scale: 30 %
+   :scale: 34 %
    :align: left
 
 2019
@@ -17,7 +17,7 @@ Summary, coming events and deadlines
 
 2020
     - Jan 20: Deadline to submit abstracts to RBIQ.
-    - Jan 23: Paper registration deadline for MIDL
+    - Jan 24: Paper registration deadline for MIDL
     - Jan 30: Paper submission deadline for MIDL
     - Feb 5: Deadline to register to RBIQ.
     - Feb 7: **QBIN** scientific day, Montreal.
