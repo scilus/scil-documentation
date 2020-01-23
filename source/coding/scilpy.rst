@@ -1,5 +1,5 @@
 Scilpy coding standards
-============================
+=======================
 
 Thanks to JC for the coding tricks.
 
