@@ -1,3 +1,6 @@
+.. _ref_environments_page:
+
+
 Environments
 ============
 
@@ -20,6 +23,19 @@ Environments
 
         sudo pip install virtualenvwrapper
         mkdir ~/Envs
+
+    Then you could add these lines in your .bashrc (from a terminal: :bash:`sudo gedit ~/.bashrc`)
+
+    .. code-block:: bash
+
+        export WORKON_HOME=~/Envs/
+        #export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3   # uncomment this line if you have errors when startint your terminal (next step)
+        source /usr/local/bin/virtualenvwrapper.sh
+
+    Finally, you can restart the terminal and create an environment:
+
+    .. code-block:: bash
+
         NAME=somename # Ex: $NOM could be my_env_py3
                       # depending on the use you will give to this environment.
                       # Try to be explicit
@@ -34,19 +50,6 @@ Environments
         # Note. To download a python version to your /usr/bin without installing it:
         # https://www.python.org/downloads/
 
-| J'avais ça dans mes notes. Nécessaire?
-| sudo apt install libblas-dev liblapack-dev gfortran cython python-dev
-| sudo pip install setuptools
-
-     Then you could add these lines in your .bashrc:
-
-    - From a terminal: :bash:`sudo gedit ~/.bashrc`
-    - Copy this in your file:
-
-        .. code-block:: bash
-
-            export WORKON_HOME=~/Envs/
-            source /usr/local/bin/virtualenvwrapper.sh
 
 *How to install it?*
 

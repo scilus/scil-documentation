@@ -1,7 +1,15 @@
 .. _ref_scilpy_page:
 
+
+.. role:: bash(code)
+   :language: bash
+
 SCILPY / DIPY
 ==============
+
+.. warning::
+
+    Before installing anything, please read the :ref:`ref_environments_page` page!
 
 DIPY
 ####
@@ -32,12 +40,14 @@ SCILPY
 
     Users: you can follow the instructions on the Github page. Clone the repository, install the requirements and install through the setup.py as explained.
 
+    Developpers: instead, you should try :bash:`python setup.py develop`
+
 Our nextflows
 ##############
 
 *What is it?*
 
-If you want to run many scripts, on many subjects, one way would be to prepare a bash script (.sh) to run your study. Ex:
+    If you want to run many scripts, on many subjects, one way would be to prepare a bash script (.sh) to run your study. Ex:
 
     .. code-block:: bash
 
@@ -66,4 +76,4 @@ If you want to run many scripts, on many subjects, one way would be to prepare a
 
 *How to install it*
 
-You can check the `installation guide <https://tractoflow-documentation.readthedocs.io/en/latest/installation/before_install.html>`_ on Tractoflow's website.
+    You can check the `installation guide <https://tractoflow-documentation.readthedocs.io/en/latest/installation/before_install.html>`_ on Tractoflow's website.
