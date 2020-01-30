@@ -16,12 +16,12 @@ Summary, coming events and deadlines
     - :strike:`Dec 19: Abstract submission deadline for OHBM`
 
 2020
-    - Jan 20: Deadline to submit abstracts to RBIQ.
-    - Jan 24: Paper registration deadline for MIDL
-    - Jan 30: Paper submission deadline for MIDL
-    - Feb 5: Deadline to register to RBIQ.
+    - :strike:`Jan 20: Deadline to submit abstracts to RBIQ.`
+    - :strike:`Jan 24: Paper registration deadline for MIDL`
+    - :strike:`Jan 30: Paper submission deadline for MIDL`
+    - Feb 5: Deadline to register to QBIN scientific day.
     - Feb 7: **QBIN** scientific day, Montreal.
-    - Feb 18: Intention to sumit deadline for MICCAI
+    - Feb 18: Intention to submit deadline for MICCAI
     - March 3: Paper submission deadline for MICCAI
     - March 10: Registration deadline for DIPY's workshop
     - March 16 - March 20: **DIPY's workshop**
