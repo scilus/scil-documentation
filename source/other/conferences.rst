@@ -19,15 +19,16 @@ Summary, coming events and deadlines
     - :strike:`Jan 20: Deadline to submit abstracts to RBIQ.`
     - :strike:`Jan 24: Paper registration deadline for MIDL`
     - :strike:`Jan 30: Paper submission deadline for MIDL`
-    - Feb 5: Deadline to register to QBIN scientific day.
-    - Feb 7: **QBIN** scientific day, Montreal.
-    - Feb 18: Intention to submit deadline for MICCAI
-    - March 3: Paper submission deadline for MICCAI
-    - March 10: Registration deadline for DIPY's workshop
+    - :strike:`Feb 5: Deadline to register to QBIN scientific day.`
+    - :strike:`Feb 7: **QBIN** scientific day, Montreal.`
+    - :strike:`Feb 18: Intention to submit deadline for MICCAI`
+    - :strike:`March 3: Paper submission deadline for MICCAI`
+    - :strike:`March 10: Registration deadline for DIPY's workshop`
     - March 16 - March 20: **DIPY's workshop**
-    - April 18 - April 23: **ISMRM**, Sydney, Australia
+    - CANCELLED: April 18 - April 23: **ISMRM**, Sydney, Australia
     - June 26 - June 30: **OHBM**, Montreal, Canada
     - July 6 - July 8: **MIDL**, Montreal, Canada
+    - July 8 - July 13: **ISMRM**, Paris, France
     - Oct 4 - Oct 8: **MICCAI**, Lima, Peru
 
 International events
