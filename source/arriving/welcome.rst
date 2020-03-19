@@ -23,6 +23,14 @@ Github
     The code we develop (:ref:`ref_scilpy_page`) is offered online on `Github <https://github.com/>`_ when it's ready. It is public so you don't need an account to just look at the repository, but you will have to create an account if you will participate to scilpy's development. With an account, you can also "watch" our repo (i.e. receive emails for major changes).
 Bitbucket
     The code (scilpy) is kept on `Bitbucket <https://bitbucket.org/>`_ during its development period. It is private so you need an account to access our repo. Then, email your username to maxime. * Tip, use your @usherbrooke.ca email; you will have an academic account!
+Working from home
+    If for some reason you need to work from home but you need your installation at the University, you can use these tricks to help:
+
+    - Follow `these instructions <https://www.usherbrooke.ca/services-informatiques/repertoire/reseaux/rpv/>`_ to connect through **VPN**. It allows to search scientific articles with the same rights as when you are at the university (ex, free access to many articles in Google scholar).
+    - You can use **screen sharing** softwares such as TeamViewer.
+    - You can connect through **ssh** to get your data: ssh CIP@<addresse IP>
+
+
 BrainData
     We deal with very heavy data and you probably don't want to keep it all on your computer. See the Heavy Data Storage tab to learn more about it. You can send an email to casius@usherbrooke.ca with Maxime in cc to have access. Give your CIP and mention that you need access to Dryade. Then, to connect to our server, in a terminal:
 
