@@ -26,7 +26,7 @@ Bitbucket
 Working from home
     If for some reason you need to work from home but you need your installation at the University, you can use these tricks to help:
 
-    - Follow `these instructions <https://www.usherbrooke.ca/services-informatiques/repertoire/reseaux/rpv/>`_ to connect through **VPN**. It allows to search scientific articles with the same rights as when you are at the university (ex, free access to many articles in Google scholar).
+    - Follow `these instructions <https://www.usherbrooke.ca/services-informatiques/repertoire/reseaux/rpv/>`_ to connect through **VPN**. It allows to search scientific articles with the same rights as when you are at the university (ex, free access to many articles in Google scholar). Another solution for articles, though, is to go on the university's `library's website <https://www.usherbrooke.ca/biblio/trouver-des/articles-de-periodiques-revues-et-journaux/>`_ and click on "Outil de découverte" if your are logged in with your CIP (top-right corner, the connexion button).
     - You can use **screen sharing** softwares such as TeamViewer.
     - You can connect through **ssh** to get your data: ssh CIP@<addresse IP>
 
