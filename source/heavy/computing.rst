@@ -15,7 +15,9 @@ Compute Canada
 
 `Compute Canada <https://www.computecanada.ca>`_ is an example of service for clusters. An explained in the :ref:`ref_onboarding` page, you must ask for access. Here are the links to the `login page <https://ccdb.computecanada.ca>`_ and to the `wiki page <https://docs.computecanada.ca/wiki/Compute_Canada_Documentation>`_.
 
-Our lab has access to cedar, graham or beluga. The following text takes cedar as example, but it could be either one. Here is how the directories are separated into "spaces", with Compute Canada's definition of each space:
+Our lab has access to cedar, graham or beluga. The following text takes beluga as example, but it could be either one. However, our lab has more TB and RAM on beluga.
+
+Here is how the directories are separated into "spaces" and Compute Canada's definition of each space:
 
 .. image:: ../images/logo_computeCanada.png
    :scale: 90 %
@@ -34,11 +36,11 @@ Thus, when you connect (ex, with ssh), you start in a directory called USER (you
 Using Compute Canada for the first time
 """""""""""""""""""""""""""""""""""""""
 
-1. Connect to cedar via ssh.
+1. Connect to beluga via ssh.
 
     .. code-block:: bash
 
-        ssh USER@cedar.computecanada.ca
+        ssh USER@beluga.computecanada.ca
 
 2. On your first visit, you will probably want to edit your .bashrc with your preferences.
 
@@ -47,7 +49,7 @@ Using Compute Canada for the first time
         cd # Will return you to your home
         nano .bashrc # Nano is one text editor. You might try others if you prefer.
 
-    Here is a copy of Maxime's version. You may copy and paste this into your .bashrc.
+    Here is an example. You may copy and paste this into your .bashrc.
 
     .. code-block:: bash
 
@@ -63,9 +65,9 @@ Using Compute Canada for the first time
 
         # User specific aliases and functions
 
-        module load java/1.8.0_121 singularity/2.6
+        module load java/1.8.0_192 singularity/3.5
 
-        export PATH=$PATH:/home/USER/scripts
+        #export PATH=$PATH:/home/USER/scripts  # if you have scripts
         export PATH=$PATH:$HOME/nextflow
 
         export SLURM_ACCOUNT=rrg-descotea
@@ -79,17 +81,17 @@ To understand the difference between ssh, sftp, scp, you can check the `followin
 
     .. code-block:: bash
 
-        # To download from cedar:
-        path_cedar=/home/USER/projects/.... # Path to the data on cedar
+        # To download from beluga:
+        path_beluga=/home/USER/projects/.... # Path to the data on beluga
         path_local=./                       # Path where you want to download the data (locally)
-        scp USER@cedar.computecanada.ca:$path_cedar $path_local
+        scp USER@beluga.computecanada.ca:$path_beluga $path_local
 
         # Or to download with deferencing (i.e. copy reference of symlink instead of the symlink itself)
-        rsync -rL USER@cedar.computecanada.ca:$path_cedar $path_local
+        rsync -rL USER@beluga.computecanada.ca:$path_beluga $path_local
 
         # To connect (then type exit to disconnect):
-        ssh USER@cedar.computecanada.ca
-        sftp  USER@cedar.computecanada.ca
+        ssh USER@beluga.computecanada.ca
+        sftp  USER@beluga.computecanada.ca
 
         # Once connected, to run a job:
         sbatch my_sbatch_command_hcp.sh
@@ -115,13 +117,13 @@ Commands on distant HPC computers are ran using sbatch. You can check `tractoflo
                                        # See the comment for the cpus-per-task. One general rule could be
                                        # that if you have more subjects than cores/cpus (ex, if you process 38
                                        # subjects on 32 cpus-per-task), you could ask for one more node.
-        #SBATCH --cpus-per-task=32     # --> You can see here the choices. For cedar, you can choose 24, 32 or 48.
+        #SBATCH --cpus-per-task=32     # --> You can see here the choices. For beluga, you can choose 24, 32 or 48.
                                        # https://docs.computecanada.ca/wiki/Cedar#Node_characteristics
         #SBATCH --mem=0                # --> 0 means you take all the memory of the node. If you think you will need
                                        # all the node, you can keep 0.
         #SBATCH --time=48:00:00
 
-Another technique to avoid loosing priority with crashed jobs is, once connected on cedar, to run the following command:
+Another technique to avoid loosing priority with crashed jobs is, once connected on beluga, to run the following command:
 
     .. code-block:: bash
 

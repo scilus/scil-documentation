@@ -16,12 +16,12 @@ Using Tractoflow on Compute Canada
 
     To use tractoflow on a computing platform, you will find some information on Tractoflow's website, section `How to launch tractoflow <https://tractoflow-documentation.readthedocs.io/en/latest/pipeline/launch.html>`_. Here is additional, more complete instructions:
 
-    #. Bring data to your cluster.
+    #. Bring data to your cluster. Ex, here, on Beluga.
 
         .. code-block:: bash
 
-            scp MY_DATA.zip USER@cedar.computecanada.ca:
-            scp -r MY_DIR USER@cedar.computecanada.ca:  # To send a whole folder, unzipped.
+            scp MY_DATA.zip USER@beluga.computecanada.ca:
+            scp -r MY_DIR USER@beluga.computecanada.ca:  # To send a whole folder, unzipped.
 
     #. Connect to the cluster using ssh. Type ls and make sure that you see
 
@@ -47,7 +47,7 @@ Using Tractoflow on Compute Canada
 
        You should see bval  bvec  dwi.nii.gz  t1.nii.gz, as many times as you have subjects.
 
-    #. Nextflow will need to find your data in the scratch. As explained on Tractoflow's website (section How to launch your data), create a file cedar.conf in your project (ex, using nano), which contains these 2 lines.
+    #. Nextflow will need to find your data in the scratch. As explained on Tractoflow's website (section How to launch your data), create a file beluga.conf in your project (ex, using nano), which contains these 2 lines.
 
         .. code-block:: bash
 
@@ -73,15 +73,15 @@ Using Tractoflow on Compute Canada
 
     #. Now, we are ready to run tractoflow. Most important questions you should ask yourself:
 
-        - What shells (if you have multi-shell data) will I use to compute DTI metrics? *Typically: the b0s and shell ~1000.*
-        - What shells (if you have multi-shell data) will I use to compute fODFs & metrics? *Typically: all your shells?*
+        - What shells (if you have multi-shell data) will I use to compute DTI metrics? *Typically: b < 1200*
+        - What shells (if you have multi-shell data) will I use to compute fODFs & metrics? *Typically: b>700 and the b0.*
         - Do I want to fix the fiber response function (FRF) or compute the mean FRF for my group? *Typically: ?*
         - What seeding strategy do you want for PFT tracking? Interface seeding or WM seeding? *Depends on your project. Ex, for a connectomics study, interface seeding is better.*
         - How many seeds do you want? (or how many streamlines you wish to have in the final tractogram?) *Typically: ~2,000,000 - 3,000,000 streamlines. To calculate the number of seeds per voxel, you can use an approximation. Ex: on a test subject, we found 260k voxels of the wm-gm interface, from which we will seed. 260,000*15 = 3.9M seeds will be launched. Hopefully, this should lead to 2.5M-3.5M streamlines in the final tractogram.*
 
        If any of the above four questions are puzzling or do not make sense, go back to your notes, readings, and courses. You don’t understand what you are about to launch! Or see Max or someone in the SCIL for help and an important discussion.
 
-       For example, we could launch the following command. However, don't run it now, we will actually use a sbatch (see lower).
+       For example, we could launch the following command. However, **don't run it now**, we will actually use a sbatch (see lower).
 
         .. code-block:: bash
 
@@ -90,10 +90,10 @@ Using Tractoflow on Compute Canada
             #   - Fix the FRF to (15,4,4) x 10^-4 mm2/s
             #   - Interface seeding
             #   - nbr_seeds 15.
-            nextflow -c ../cedar.conf run ../tractoflow-2.0.1/main.nf \
-                --root ../input_data_tractoflow --dti_shells "0 1500" --fodf_shells "0 1500" \
-                -with-singularity ../tractoflow_2.0.0_8b39aee_2019-04-26.img -resume -with-report report.html \
-                --step 0.5 --nbr_seeds 15 --wm_seeding false --mean_frf false --set_frf true
+            nextflow -c ../beluga.conf run ../tractoflow-*/main.nf --root ../input_data_tractoflow \
+                -with-singularity ../tractoflow_*.img -resume -with-report report.html \
+                --dti_shells "0 1500" --fodf_shells "0 1500" --step 0.5 --nbr_seeds 15 \
+                --wm_seeding false --mean_frf false --set_frf true
 
     #. Before launching your command for real, let's test it quickly using an interactive node. You ask access to an interactive node doing this:
 
@@ -103,16 +103,35 @@ Using Tractoflow on Compute Canada
             mkdir output_tractoflow
             cd output_tractoflow
 
-            salloc -c 32 --mem 32G --time 00:02:00 -A def-descotea
+            salloc -c 32 --mem 32G --time 00:10:00 -A def-descotea
 
             # Wait for the node to be allocated to you.
-            # Then type the command with --help
+            # If our lab lacks priority and it is too long, you can try with -c 16 --mem 16Gb.
+            # When allocation is granted, you should see:
+            #   salloc: Pending job allocation xxx
+            #   salloc: job xxx queued and waiting for resources
+            #   salloc: job xxx has been allocated resources
+            #   salloc: Granted job allocation xxx
+            #   salloc: Waiting for resource configuration
+            #   salloc: Nodes yyym are ready for job
 
-    Then, you may type the real command (see point 9). Make sure it starts running. Once sure that it found the data, the img, the code, you can kill it by pressing ctrl-c.
+            # Then type the tractoflow command with --help at the end. Tractoflow's help should be printed.
 
-    11. Last decision to take on the cluster: Do you need 1 node or multiple nodes? Beyond 20 subjects or so, we recommend using multiple nodes. See the HPC part of the `launch page <https://tractoflow-documentation.readthedocs.io/en/latest/pipeline/launch.html>`_.
+            # Then, you may type the real command. Make sure it starts running. Once sure that it found the data, the img, the code, you can kill it by pressing ctrl-c.
 
-    12. We have all the ingredients to prepare the final sbatch. Here, we ask for 4 nodes, with 32 threads each and 116Gb of RAM each (see the -with-mpi option). Create a file cmd_my_tractoflow.sh with the following.
+       If it fails:
+
+         - Is the data binding correctly (see point 5)?
+         - If one process fails, you should see a warning such as ``[11/53e26e] NOTE: Process `Bet_Prelim_DWI (101309)` terminated with an error exit status (127) -- Execution is retried (3)``. You can then check in the associated folder's log to see the error. For example:
+
+         .. code-block:: bash
+
+            ls -a work/11/53e26e*/  # Check that files are there
+            cat work/11/53e26e*/.command.log  # Check the error
+
+    #. Last decision to take on the cluster: Do you need 1 node or multiple nodes? Beyond 20 subjects or so, we recommend using multiple nodes. See the HPC part of tractoflow's `launch page <https://tractoflow-documentation.readthedocs.io/en/latest/pipeline/launch.html>`_.
+
+    #. We have all the ingredients to prepare the final sbatch. Here, we ask for 4 nodes, with 32 threads each and 116Gb of RAM each (see the -with-mpi option). Create a file cmd_my_tractoflow.sh with the following.
 
         .. code-block:: bash
 
@@ -131,13 +150,15 @@ Using Tractoflow on Compute Canada
 
             export NXF_CLUSTER_SEED=$(shuf -i 0-16777216 -n 1)
 
-            srun nextflow -c ../cedar.conf run ../tractoflow-2.0.1/main.nf --root ../input_data_tractoflow --dti_shells "0 1500" --fodf_shells "0 1500" -with-singularity ../tractoflow_2.0.0_8b39aee_2019-04-26.img -resume -with-report report.html --step 0.5 --nbr_seeds 15 --wm_seeding false --mean_frf false --set_frf true -with-mpi
+            srun (copy your nextflow command from point 9) -with-mpi
 
     13. Finally launch your sbatch! Yeah!
 
         .. code-block:: bash
 
-            sbatch -A USER cmd_my_tractoflow.sh
+            sbatch -A def-descotea cmd_my_tractoflow.sh
+
+            squeue -u USER  # To check it has been launched
 
     14. We recommend doing something like this to save results, scripts and container
 
@@ -147,7 +168,7 @@ Using Tractoflow on Compute Canada
             mkdir final_results/containers/
             mkdir final_results/scripts
             cp output_tractoflow/cmd_*.sh final_results/scripts/
-            cp output_tractoflow/cedar.conf final_results/scripts/
+            cp output_tractoflow/beluga.conf final_results/scripts/
             cp -rL output_tractoflow/results final_results/tractoflow
             cp -rL qa-nf/results_QA final_results/qa-tractoflow
 
