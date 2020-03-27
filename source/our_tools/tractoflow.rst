@@ -9,9 +9,13 @@ Tractoflow
 Our lab has prepared pipelines as nextflows (see the 'Nexflow' section in 'Other tools'). You can analyse all your diffusion data in only one simple script that will run a pipeline called the `Tractoflow <https://tractoflow-documentation.readthedocs.io/en/latest/pipeline/steps.html>`_, which does all the preprocessing on DWI data and T1 data and performs the wholebrain tracking.
 
 Installing Tractoflow
+*********************
+
     You can check the `installation guide <https://tractoflow-documentation.readthedocs.io/en/latest/installation/before_install.html>`_ on Tractoflow's website (pages before install and install). If you want to install it on Compute Canada, connect first and follow instructions in the High Performance Computer sections.
 
 Using Tractoflow on Compute Canada
+**********************************
+
     To learn about Compute Canada, please see the :ref:`ref_heavy_computing` page.
 
     To use tractoflow on a computing platform, you will find some information on Tractoflow's website, section `How to launch tractoflow <https://tractoflow-documentation.readthedocs.io/en/latest/pipeline/launch.html>`_. Here is additional, more complete instructions:
@@ -177,3 +181,12 @@ Using Tractoflow on Compute Canada
 
             # If you are sure to be done, uncomment following line
             # rm -rf input_* output_*
+
+Using config files
+******************
+
+.. note::
+
+    These instructions are particularly useful if you are trying to preprocess HCP data (Human Connectome Project). The data (as found for instance on BrainData, see :ref:`ref_heavy_storage`), is not totally raw and should not be used directly in tractoflow. We have prepared special parameters for such cases. They are kept in a nextflow.config file.
+
+The tractoflow command can also be ran with most options listed in a config file such as `this one <https://github.com/scilus/tractoflow/blob/master/nextflow.config>`_. You simply have to keep the nextflow.config file in the directory from where you run your command.
