@@ -1,3 +1,5 @@
+.. _ref_ants:
+
 ANTs
 ====
 
@@ -17,19 +19,22 @@ ANTs
 
 *How to install it?*
 
-    In a terminal, from the directory where you want to install it:
+    These instructions are base on `ANTs instructions here <https://github.com/ANTsX/ANTs/wiki/Compiling-ANTs-on-Linux-and-Mac-OS>`_. Alternatively, you can try 'apt-get install ants':
 
     .. code-block:: bash
 
+        cd my_favorite_dir
         mkdir ANTs
         cd ANTs
-        git clone https://github.com/stnava/ANTs.git code
-        mkdir build
+        git clone https://github.com/ANTsX/ANTs.git code
+        workingDir=${PWD}
+        mkdir build install
         cd build
-        ccmake ../code # Press c twice and then g
-        make -j 8      # -j is the number of threads.
-                       # If your computer doesn't allow 8, simply decrease this number.
-        cp ../code/Scripts/*.sh bin/
+        cmake -DCMAKE_INSTALL_PREFIX=${workingDir}/install \
+            ${workingDir}/code 2>&1 | tee cmake.log
+        make -j 4 2>&1 | tee build.log
+        cd ANTS-build
+        make install 2>&1 | tee install.log
 
     Then add these lines in your .bashrc:
 
@@ -38,5 +43,5 @@ ANTs
 
         .. code-block:: bash
 
-            export PATH=~/code/ANTs/build/bin:${PATH}
-            export ANTSPATH=~/code/ANTs/build/bin
+            export ANTSPATH=/opt/ANTs/bin/
+            export PATH=${ANTSPATH}:$PATH

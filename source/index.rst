@@ -22,6 +22,7 @@ in the lab, from using Linux to developing code.
     :caption: Our tools
 
     tools/scilpy_dipy_tractoflow
+    our_tools/recobundles
     tools/machine_learning
 
 
