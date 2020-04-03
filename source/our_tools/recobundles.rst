@@ -18,11 +18,11 @@ You will need :ref:`ref_ants`
     maxL=200
 
     # Recobundles options. Change as needed.
-    nb_total_tests=9    # Nb bundles * nb_per_bundle (see json) = max total tests
+    nb_total_executions=9    # Nb bundles * nb_per_bundle (see json) = max total executions
     thresh_dist_qb_myStreamlines="10 12"
-    processes=6         # Number of thread used for computation
-    seed=0              # Random generator.
-    minimal_vote=0.5    # Saving streamlines if recognized often enough
+    processes=6              # Number of thread used for computation
+    seed=0                   # Random generator.
+    minimal_vote=0.5         # Saving streamlines if recognized often enough
 
 
     while IFS= read -r subj; do
@@ -30,11 +30,11 @@ You will need :ref:`ref_ants`
 
         # Defining subj folders
         subj_folder=$tractoflow_folder/$subj
-        rbx_folder=$subj_folder/Recobundles
+        rbx_folder=$subj_folder/RecobundlesX
         if [ ! -d "$rbx_folder" ]; then
           mkdir "$rbx_folder"
         else
-          echo "The Recobundles folder already exists!!! Please delete it first."
+          echo "The RecobundlesX folder already exists!!! Please delete it first."
           echo "($rbx_folder)"
           exit 1
         fi
@@ -73,7 +73,7 @@ You will need :ref:`ref_ants`
         #   inverse is to use the inverse affine
         ###
         scil_recognize_multi_bundles.py $subj_filtered_trk $model_config $model_streamlines_files $affine \
-            --output_dir $output_dir/multi  --multi_parameters $nb_total_tests \
+            --output_dir $output_dir/multi  --multi_parameters $nb_total_executions \
             --tractogram_clustering $thresh_dist_qb_myStreamlines \
             --processes $processes --seeds $seed --inverse -f --log_level DEBUG --minimal_vote $minimal_vote
 
