@@ -156,15 +156,21 @@ Using Tractoflow on Compute Canada
 
             srun (copy your nextflow command from point 9) -with-mpi
 
-    13. Finally launch your sbatch! Yeah!
+    #. Finally launch your sbatch! Yeah!
 
         .. code-block:: bash
 
             sbatch -A def-descotea cmd_my_tractoflow.sh
 
-            squeue -u USER  # To check it has been launched
+            squeue -u USER  # To check if it has been launched
 
-    14. We recommend doing something like this to save results, scripts and container
+            exit # To quit beluga
+
+        You will receive an email when your command is launched (if you provided it in step 11). If you want to supervise the results while it runs, you should find a file such as slurm-6635828.out. It is the equivalent of what would be printed in your terminal if you ran it directly. You can download it with scp or simply look at it using 'cat slurm-6635828.out'.
+
+        .. note:: It is normal to see some failed tasks. The way it works, many jobs are started at the same time, and it may cause some scheduling errors. As long as some jobs succeed, you can let it run.
+
+    #. We recommend doing something like this to save results, scripts and container
 
         .. code-block:: bash
 
