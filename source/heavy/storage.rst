@@ -1,8 +1,10 @@
+.. _ref_heavy_storage:
+
 Dealing with heavy data storage
 ===============================
 
 BrainData
----------------
+---------
 
 Brain imaging data can be very heavy! It is very probable that you won't be able to keep all your data on your computer. The SCIL offers you access to a very big network of storage space. You can mount BrainData in the directory you wish.
 
@@ -18,6 +20,11 @@ The main directories inside BrainData are:
       | We could eventually add processed data too if your preprocessing is absolutely finished and clean and if you have a singularity to allow people to reproduce your results.
     - processedData: **This is where you could store the processed data for your project**. We don't force BIDS format here but please keep your directory names meaningful and clean your files as often as possible.
     - references: Miscellaneous resources you could find useful, such as atlases, books, previous conferences' posters, the list of publications by members of the SCIL, the list of previous student's thesis and so on.
+
+Globus
+------
+
+ToDo
 
 BIDS
 ----
