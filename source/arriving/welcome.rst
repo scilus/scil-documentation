@@ -20,7 +20,7 @@ Mailing list
 Slack
     Create an account on `slack <https://slack.com>`_. We use it to communicate: it's easier to follow discussions there than by long lists of emails. To access our workspace: Ask Maxime.
 Github
-    The code we develop (:ref:`ref_scilpy_page`) is offered online on `Github <https://github.com/>`_ when it's ready. It is public so you don't need an account to just look at the repository, but you will have to create an account if you will participate to scilpy's development. With an account, you can also "watch" our repo (i.e. receive emails for major changes).
+    The code we develop (:ref:`ref_scilpy`) is offered online on `Github <https://github.com/>`_ when it's ready. It is public so you don't need an account to just look at the repository, but you will have to create an account if you will participate to scilpy's development. With an account, you can also "watch" our repo (i.e. receive emails for major changes).
 Bitbucket
     The code (scilpy) is kept on `Bitbucket <https://bitbucket.org/>`_ during its development period. It is private so you need an account to access our repo. Then, email your username to maxime. * Tip, use your @usherbrooke.ca email; you will have an academic account!
 BrainData

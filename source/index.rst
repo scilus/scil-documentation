@@ -21,17 +21,20 @@ in the lab, from using Linux to developing code.
     :maxdepth: 1
     :caption: Our tools
 
-    tools/scilpy_dipy_tractoflow
-    tools/machine_learning
+    our_tools/scilpy
+    our_tools/tractoflow
+    our_tools/other_pipelines
+    our_tools/machine_learning
 
 
 .. toctree::
     :maxdepth: 1
     :caption: Common tools
 
+    tools/dipy
     tools/mi-brain
-    tools/nextflow_singularity
     tools/environments
+    tools/nextflow_singularity
     tools/other_tools
 
 .. toctree::
