@@ -28,7 +28,7 @@ Github
     The code we develop (:ref:`ref_scilpy`) is offered online on `Github <https://github.com/>`_ when it's ready. It is public so you don't need an account to just look at the repository, but you will have to create an account if you will participate to scilpy's development. With an account, you can also "watch" our repo (i.e. receive emails for major changes).
 
 Bitbucket
-    `Bitbucket <https://bitbucket.org/>`_ is an alternative to Github if you want to keep your code private, you might want to use it eventually. \*Tip, use your @usherbrooke.ca email; you will have an academic account!
+    `Bitbucket <https://bitbucket.org/>`_ is an alternative to Github if you want to keep your code private, you might want to use it eventually. \*Tip, use your @usherbrooke.ca email; you will have an academic account!gi
 
 BrainData
     We deal with very heavy data and you probably don't want to keep it all on your computer. See the Heavy Data Storage tab to learn more about it. You can send an email to casius@usherbrooke.ca with Maxime in cc to have access. Give your CIP and mention that you need access to Dryade. Then, to connect to our server, in a terminal:
@@ -58,3 +58,7 @@ We recommand using linux, but Mac can be an option. With windows, your life will
 
 4. You may want to install other tools that are often useful for people in our lab (see the pages for MI-brain, ants, mrtrix, fsl and freesurfer, etc.
 
+Getting set on super computers
+""""""""""""""""""""""""""""""
+
+The first use of a computing platform can be tricky but you'll get used to it. Please see the (:ref:`ref_heavy_computing`) tab for more information and for our first-use tutorial. If your goal is to use the computing platform to run Tractoflow, you will find instructions on the :ref:`ref_tractoflow` page. Else see the :ref:`ref_other_pipelines` page.
