@@ -133,7 +133,7 @@ Using Tractoflow on Compute Canada
             ls -a work/11/53e26e*/  # Check that files are there
             cat work/11/53e26e*/.command.log  # Check the error
 
-    #. Last decision to take on the cluster: Do you need 1 node or multiple nodes? Beyond 20 subjects or so, we recommend using multiple nodes. See the HPC part of tractoflow's `launch page <https://tractoflow-documentation.readthedocs.io/en/latest/pipeline/launch.html>`_.
+    #. Last decision to take on the cluster: Do you need 1 node or multiple nodes? Beyond 20 subjects or so, we recommend using multiple nodes. See the HPC part of tractoflow's `launch page <https://tractoflow-documentation.readthedocs.io/en/latest/pipeline/launch.html>`_. Depending on the cluster you are using (beluga, cedar, etc.), you have access to different types of nodes. Keeping the option "mem=0" in your sbatch (see next step) means you accept any node. If your data is very heavy (ex, HCP data), you might need to restric to the nodes with more RAM. See the `memory section here <https://docs.computecanada.ca/wiki/Running_jobs#Memory>`_ for more information.
 
     #. We have all the ingredients to prepare the final sbatch. Here, we ask for 4 nodes, with 32 threads each and 116Gb of RAM each (see the -with-mpi option). Create a file cmd_my_tractoflow.sh with the following.
 
