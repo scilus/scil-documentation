@@ -19,29 +19,6 @@ ANTs
 
 *How to install it?*
 
-    These instructions are base on `ANTs instructions here <https://github.com/ANTsX/ANTs/wiki/Compiling-ANTs-on-Linux-and-Mac-OS>`_. Alternatively, you can try 'apt-get install ants':
+    You can find instructions on `ANTs github page <https://github.com/ANTsX/ANTs/wiki/Compiling-ANTs-on-Linux-and-Mac-OS>`_, but from our tests it seems easier to use `Neurodebian's page <http://neuro.debian.net/pkgs/ants.html>`_ (click on "Install this package", select your system, choose any download server and follow instructions*). To check your installation, start typing 'ant' in your terminal and hit tab twice. You should see a list of ants options such as 'antsRegistrationSyNQuick.sh'.
 
-    .. code-block:: bash
-
-        cd my_favorite_dir
-        mkdir ANTs
-        cd ANTs
-        git clone https://github.com/ANTsX/ANTs.git code
-        workingDir=${PWD}
-        mkdir build install
-        cd build
-        cmake -DCMAKE_INSTALL_PREFIX=${workingDir}/install \
-            ${workingDir}/code 2>&1 | tee cmake.log
-        make -j 4 2>&1 | tee build.log
-        cd ANTS-build
-        make install 2>&1 | tee install.log
-
-    Then add these lines in your .bashrc:
-
-    - From a terminal: :bash:`gedit ~/.bashrc`
-    - Copy this in your file:
-
-        .. code-block:: bash
-
-            export ANTSPATH=/opt/ANTs/bin/
-            export PATH=${ANTSPATH}:$PATH
+    \* Be careful though as these instructions can create errors in your sources.list. If you see warnings when running apt-get update, you probably now have twice the same key. Use your favorite editor to delete the doublons.
