@@ -21,4 +21,6 @@ ANTs
 
     You can find instructions on `ANTs github page <https://github.com/ANTsX/ANTs/wiki/Compiling-ANTs-on-Linux-and-Mac-OS>`_, but from our tests it seems easier to use `Neurodebian's page <http://neuro.debian.net/pkgs/ants.html>`_ (click on "Install this package", select your system, choose any download server and follow instructions*). To check your installation, start typing 'ant' in your terminal and hit tab twice. You should see a list of ants options such as 'antsRegistrationSyNQuick.sh'.
 
+    Then add this line to your bashrc:  `export ANTSPATH=/usr/lib/ants/`
+
     \* Be careful though as these instructions can create errors in your sources.list. If you see warnings when running apt-get update, you probably now have twice the same key. Use your favorite editor to delete the doublons.

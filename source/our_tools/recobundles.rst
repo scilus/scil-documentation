@@ -11,15 +11,18 @@ You will need :ref:`ref_ants`
 
     tractoflow_folder=my_dir
     subject_list=my_subject_list.txt
-    model_T1=my_model.nii.gz  # Ex: hcp_models/mni_masked.nii.gz
+    models_path=YOUR_PATH         # Ex: hcp_models/
+    model_T1=THE_T1               # Ex: $models_path/mni_masked.nii.gz
+    model_config=JSON_FILE        # Ex: $models_path/config_python.json
+    model_streamlines_files=FILES # Ex: $models_path/*/. Files like AF_L.trk, AF_R.trk, etc.
 
     # Filtering options. Change as needed.
     minL=20
     maxL=200
 
-    # Recobundles options. Change as needed.
+    # RecobundlesX options. Change as needed.
     nb_total_executions=9    # Nb bundles * nb_per_bundle (see json) = max total executions
-    thresh_dist_qb_myStreamlines="10 12"
+    thresh_dist="10 12"
     processes=6              # Number of thread used for computation
     seed=0                   # Random generator.
     minimal_vote=0.5         # Saving streamlines if recognized often enough
@@ -49,12 +52,14 @@ You will need :ref:`ref_ants`
         #   f=fixed image, m=moving image
         #   -t: transformation a = rigid+affine
         #   n = nb of threads
+        # This should create 3 files : model_to_subj_anat0GenericAffine.mat,
+        # model_to_subj_anatInverseWarped.nii.gz and  model_to_subj_anatWarped.nii.gz
         ###
         model_on_subj=$rbx_folder/model_to_subj_anat
         antsRegistrationSyNQuick.sh -d 3 -f $subj_T1 -m $model_T1 -t a -n 4 -o $model_on_subj
 
         ###
-        # Generating affine
+        # Generating affine txt file (using ANTS)
         ###
         affine=${model_on_subj}0GenericAffine.txt
         ConvertTransformFile 3 ${model_on_subj}0GenericAffine.mat $affine --hm --ras
@@ -72,9 +77,11 @@ You will need :ref:`ref_ants`
         #   Seed = rnd generator seed.
         #   inverse is to use the inverse affine
         ###
-        scil_recognize_multi_bundles.py $subj_filtered_trk $model_config $model_streamlines_files $affine \
-            --output_dir $output_dir/multi  --multi_parameters $nb_total_executions \
-            --tractogram_clustering $thresh_dist_qb_myStreamlines \
-            --processes $processes --seeds $seed --inverse -f --log_level DEBUG --minimal_vote $minimal_vote
+        mkdir $rbx_folder/multi_bundles
+        scil_recognize_multi_bundles.py --output $rbx_folder/multi_bundles \
+            --multi_parameters $nb_total_executions --tractogram_clustering_thr $thresh_dist  \
+            --processes $processes --seeds $seed --inverse -f --log_level DEBUG \
+            --minimal_vote_ratio $minimal_vote \
+            $subj_filtered_trk $model_config $model_streamlines_files $affine
 
     done < $subject_list
