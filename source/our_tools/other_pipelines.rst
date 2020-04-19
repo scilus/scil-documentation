@@ -29,6 +29,8 @@ We have a QC pipeline which creates a summary of the quality of your data.
         path_QC_nextflow=WHERE_YOU_CLONED_dmriqc-flow
         singularity_img=WHERE_YOU_DOWNLOADED/singularity_dmriqc_*.img
 
+        nextflow run $path_QC_nextflow/main.nf --root $tractoflow_results -with-singularity $singularity_img -resume
+
 RecobundlesX
 ------------
 
