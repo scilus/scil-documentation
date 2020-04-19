@@ -85,3 +85,11 @@ You will need :ref:`ref_ants`
             $subj_filtered_trk $model_config $model_streamlines_files $affine
 
     done < $subject_list
+
+To visualize your results for one subject, here is a nice tool:
+
+    .. code-block:: bash
+
+        # Run from inside your RecobundlesX folder
+        anat=YOUR_ANAT
+        scil_visualize_bundles_mosaic.py $anat *.trk mosaic.png
