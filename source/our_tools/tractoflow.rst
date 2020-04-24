@@ -188,6 +188,30 @@ Using Tractoflow on Compute Canada
             # If you are sure to be done, uncomment following line
             # rm -rf input_* output_*
 
+Checking the results
+********************
+
+When the job is finished, you can check the slurm output, as in step 12. The last part should look like:
+
+    .. code-block:: bash
+
+        Pipeline completed at: Thu Apr 09 20:45:08 EDT 2020
+        Execution status: OK
+        Execution duration: 5h 32m 57s
+        Completed at: 09-Apr-2020 20:45:09
+        Duration    : 5h 32m 59s
+        CPU hours   : 129.2 (2% cached, 0% failed)
+        Succeeded   : 286
+        Cached      : 98
+        Ignored     : 1
+        Failed      : 3
+
+In this example, you see 3 fails and 1 ignored. When tractoflow fails to preprocess a subject, it tries again up to 4 times, at after the last time, the subject is ignored and tractoflow continues with the rest of the pipeline. So here, the 3 fails and 1 ignore are for the same subject.
+
+To discover which subject caused a problem, you may check the report.html. Scrolldown to the task table, and look for subjects with 'failed' status (you can you the search bar).
+
+To discover the reason for fails, there is no easy answer. You might have to check each file individually, see if some files are corrupted or how their brain looks like.
+
 Using config files
 ******************
 
