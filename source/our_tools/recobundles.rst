@@ -93,3 +93,14 @@ To visualize your results for one subject, here is a nice tool:
         # Run from inside your RecobundlesX folder
         anat=YOUR_ANAT
         scil_visualize_bundles_mosaic.py $anat *.trk mosaic.png
+
+Here is a nice example to help your compare your results. This was created from a HCP subject.
+
+
+.. image:: ../images/mosaic_part1.png
+    :scale: 50 %
+    :align: center
+
+.. image:: ../images/mosaic_part2.png
+    :scale: 50 %
+    :align: center
