@@ -5,7 +5,7 @@ Onboarding new students
 
 Important rooms and places
 """"""""""""""""""""""""""
-Chantal, Lynn, and the Faculty’s offices are important and you should know where they are. Ask someone in the lab or Maxime to guide you.
+Chantal Proulx, Lynn Lebrun, Karine Bolduc and generally the Faculty’s offices are important and you should know where they are. Ask someone in the lab or Maxime to guide you.
 
 Subscriptions
 """""""""""""
@@ -56,7 +56,7 @@ We recommend using linux, but Mac can be an option. With windows, your life will
 
 3. You may want to install Tractoflow (see :ref:`ref_tractoflow`) or our other tools (see :ref:`ref_other_pipelines`).
 
-4. You may want to install other tools that are often useful for people in our lab (see the pages for MI-brain, ants, mrtrix, fsl and freesurfer, etc.
+4. You may want to install other tools that are often useful for people in our lab (see the pages for MI-brain, Ants, MRtrix, FSL and Freesurfer, etc.)
 
 Getting set on super computers
 """"""""""""""""""""""""""""""
