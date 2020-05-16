@@ -48,7 +48,7 @@ Compute Canada
 Preparing your computer
 """""""""""""""""""""""
 
-We recommend using linux, but Mac can be an option. With windows, your life will definitely be more complicated.
+We recommend using linux, but Mac can be an option. With Windows, your life will definitely be more complicated.
 
 1. First, you should work in a virtual environment to avoid breaking your python installation. See the :ref:`ref_environments_page`.
 
@@ -58,15 +58,15 @@ We recommend using linux, but Mac can be an option. With windows, your life will
 
 4. You may want to install other tools that are often useful for people in our lab (see the pages for MI-brain, Ants, MRtrix, FSL and Freesurfer, etc.)
 
-Getting set on super computers
-""""""""""""""""""""""""""""""
+Getting set up on super computers
+"""""""""""""""""""""""""""""""""
 
 The first use of a computing platform can be tricky but you'll get used to it. Please see the (:ref:`ref_heavy_computing`) tab for more information and for our first-use tutorial. If your goal is to use the computing platform to run Tractoflow, you will find instructions on the :ref:`ref_tractoflow` page. Else see the :ref:`ref_other_pipelines` page.
 
 Working from home
 """""""""""""""""
 
-    If for some reason you need to work, you might need to connect to the University network...
+    If you work from home, you might need to connect to the UdeS network. Do the following:
 
     1) To have access to scientific papers (ex, free access to many articles in Google scholar): See the VPN information below or go on the University's `library's website <https://www.usherbrooke.ca/biblio/trouver-des/articles-de-periodiques-revues-et-journaux/>`_ and click on "Outil de découverte" if your are logged in with your CIP (top-right corner, the connexion button).
 
@@ -78,7 +78,7 @@ VPN
 SSH
     1. Connect to the University's VPN.
 
-    2. You must know your lab computer's IP address or its University code (ex: DINF-0000-00a).
+    2. You must know your lab computer's IP address or its University code (ex: DINF-0000-00a). (email casius@usherbrooke.ca to ask your IP address if you don't know)
 
     3. | Connect with ssh. On Linux or Mac, ssh can be simply used via the terminal. The option -X is to make sure the applications you use appear at home.
        | `ssh -x your_cip@your_computer_IPaddress`, or
