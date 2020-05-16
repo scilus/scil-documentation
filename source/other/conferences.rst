@@ -12,6 +12,7 @@ Summary, coming events and deadlines
    :align: right
 
 2019
+    - :strike:`(Nov 6: Abstract submission deadline for ISMRM)`
     - :strike:`(Dec 19: Abstract submission deadline for OHBM)`
 
 2020
@@ -21,11 +22,13 @@ Summary, coming events and deadlines
     - :strike:`(Feb 18: Intention to submit deadline for MICCAI)`
     - :strike:`(March 3: Paper submission deadline for MICCAI)`
     - :strike:`CANCELLED: March 16 - March 20: DIPY's workshop`
-    - RESCHEDULED: April 18 - April 23: **ISMRM**, Sydney, Australia. Now in August.
+    - May 16: UNIQUE Student symposium. Link `here <https://sites.google.com/view/unique-neuro-ai/activities>`_.
     - RESCHEDULED: May 21 - May 22: **Symposium Imagining Imaging**, Sherbrooke. Date to be announced.
     - NOW ONLINE ONLY: June 26 - June 30: **OHBM**, Montreal, Canada
-    - NOW ONLINE ONLY: July 6 - July 8: **MIDL**, Montreal, Canada
-    - August 8 - August 13: (rescheduled) **ISMRM**, Paris, France
+    - July 2: Early registration deadline for ISMRM.
+    - NOW ONLINE ONLY: July 6 - July 8: **MIDL**, Montreal, Canada.
+    - August 8 - August 13: (rescheduled) **ISMRM**, Paris, France (was initially April 18 - April 23 in Australia).
+    - August 17: Registration deadline for MICCAI
     - Oct 4 - Oct 8: **MICCAI**, Lima, Peru
 
 2021
@@ -33,6 +36,9 @@ Summary, coming events and deadlines
     - June 27 - July 1: **OHBM**, Seoul, Korea
     - July 7 - July 9: **MIDL**, Lübeck, Germany
     - Sept 27 - Oct 1: **MICCAI**, Strasbourg, France
+
+Dates to be announced:
+    - Dipy's workshop 2021
 
 International events
 --------------------
