@@ -43,27 +43,21 @@ Using Tractoflow on Compute Canada
             unzip MY_DATA.zip
             rm -rf MY_DATA.zip
 
-    #. You now have all your input data ready to go for tractoflow. If you want to double-check that all the necessary files are there. Run
-
-        .. code-block:: bash
-
-            for a in input_data_tractoflow/*; do ls $a; done
-
-       You should see bval  bvec  dwi.nii.gz  t1.nii.gz, as many times as you have subjects.
-
-    #. Nextflow will need to find your data in the scratch. As explained on Tractoflow's website (section How to launch your data), create a file beluga.conf in your project (ex, using nano), which contains these 2 lines.
+    #. Nextflow will need to find your data. With the newest version, it should be done automatically and you can skip to next step. If you are using an older version, as explained on Tractoflow's website (section How to launch your data), create a file beluga.conf in your project (ex, using nano), which contains these 2 lines.
 
         .. code-block:: bash
 
             singularity.runOptions="--bind /lustre04/scratch/USER/"
-            process.executor='ignite'
-
 
     #. If you want to have an idea of the b-values in your protocol because you are not sure (this is useful to know to set the dti_shells and fodf_shells in your future tractoflow command):
 
         .. code-block:: bash
 
             for a in input_data_tractoflow/*; do cat $a/bval; done
+
+            # OR:
+            # (If you have a lot of subjects, it might be easier for you to simply check one subject)
+            cat input_data_tractoflow/SUBJ_X/bval
 
     #. Tractoflow is 100% reproducible if you re-use in the future the SAME code and SAME container image (singularity). Hence, copy them locally in your project to SAVE them in the future.
 
@@ -99,7 +93,7 @@ Using Tractoflow on Compute Canada
                 --dti_shells "0 1500" --fodf_shells "0 1500" --step 0.5 --nbr_seeds 15 \
                 --wm_seeding false --mean_frf false --set_frf true
 
-    #. Before launching your command for real, let's test it quickly using an interactive node. You ask access to an interactive node doing this:
+    #. Before launching your command for real, if you would like to test it quickly, you can  use an interactive node :
 
         .. code-block:: bash
 
