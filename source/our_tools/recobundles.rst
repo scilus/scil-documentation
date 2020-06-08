@@ -1,9 +1,11 @@
 RecobundlesX
 ============
 
-Here is a typical example of a script to run our scilpy's version of Recobundles on a batch of subjects. Dipy also has its version, and you can find the explanation `here <https://dipy.org/documentation/0.16.0./examples_built/bundle_extraction/>`_.
+Recobundles is a tool to separate your wholebrain tracking result into different bundles divided into separate files. Dipy has a published version, called Recobundles. It is single atlas and single parameter while our version (which we call RecobundlesX) is multi-atlas and multi-parameter, and shown to be more robust in Rheault 2020 (PhD thesis).
 
-In the following script, we take the example of data that has been preprocessed using :ref:`ref_tractoflow`. tractoflow_folder is your root, which should contain tractoflow's results for each subject. This script will create a Recobundles folder inside each subject's directory.
+You can find the description of Dipy single atlas / single parameter `here <https://dipy.org/documentation/0.16.0./examples_built/bundle_extraction/>`_.  We also provide a convenient wrapper for that version in scil_recognize_single_bundle.py which is simpler to use and does not use as much RAM and disk space. For multiple bundles however, we highly recommend scil_recognize_multi_bundle.py (i.e. RecobundlesX).
+
+Here is an example of how to run RecobundlesX. In the following script, we take the example of data that has been preprocessed using :ref:`ref_tractoflow`. tractoflow_folder is your root, which should contain tractoflow's results for each subject. This script will create a Recobundles folder inside each subject's directory.
 
 You will need :ref:`ref_ants`
 
