@@ -20,6 +20,8 @@ If you don't know the name of a script, you may look for all scripts matching so
 
         scil_find_script.py keyword
 
+Finally, for a html version of the help, you will find the description of all scripts and modules, as well as some tutorials, on `scilpy's official documentation <https://scilpy.readthedocs.io/>`_.
+
 
 Installing scilpy
     - Users: you can follow the instructions on the Github page. Clone the repository, install the requirements and install through the setup.py as explained.
