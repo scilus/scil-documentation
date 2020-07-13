@@ -59,16 +59,6 @@ Using Tractoflow on Compute Canada
             # (If you have a lot of subjects, it might be easier for you to simply check one subject)
             cat input_data_tractoflow/SUBJ_X/bval
 
-    #. Tractoflow is 100% reproducible if you re-use in the future the SAME code and SAME container image (singularity). Hence, copy them locally in your project to SAVE them in the future.
-
-        .. code-block:: bash
-
-            cd ~/projects/def-descotea/USER
-            mkdir Project_X
-            cd Project_X
-            cp ~/tractoflow_*.img .
-            cp -r ~/tractoflow-* .
-
     #. Now, we are ready to run tractoflow. Most important questions you should ask yourself:
 
         - What shells (if you have multi-shell data) will I use to compute DTI metrics? *Typically: b < 1200*
@@ -164,20 +154,22 @@ Using Tractoflow on Compute Canada
 
         .. note:: It is normal to see some failed tasks. The way it works, many jobs are started at the same time, and it may cause some scheduling errors. As long as some jobs succeed, you can let it run.
 
-    #. We recommend doing something like this to save results, scripts and container
+    #. Tractoflow is 100% reproducible if you re-use in the future the SAME code and SAME container image (singularity). We recommend doing something like this to save results, scripts and container. Make sure you don't keep that folder in the Scratch, where it will be deleted after some time. You can either download it or keep it in Projects.
 
         .. code-block:: bash
 
-            mkdir final_results
-            mkdir final_results/containers/
-            mkdir final_results/scripts
-            cp output_tractoflow/cmd_*.sh final_results/scripts/
-            cp output_tractoflow/beluga.conf final_results/scripts/
-            cp -rL output_tractoflow/results final_results/tractoflow
-            cp -rL qa-nf/results_QA final_results/qa-tractoflow
+            mkdir my_project_tractoflow
 
-            mv *img final_results/containers/
-            cp *.txt final_results/scripts/
+            mkdir my_project_tractoflow/containers/
+            mv *img my_project_tractoflow/containers/
+
+            mkdir my_project_tractoflow/scripts
+            cp output_tractoflow/cmd_*.sh my_project_tractoflow/scripts/
+            cp output_tractoflow/beluga.conf my_project_tractoflow/scripts/
+            cp *.txt my_project_tractoflow/scripts/
+
+            mkdir my_project_tractoflow/results
+            cp -rL output_tractoflow/results my_project_tractoflow/results
 
             # If you are sure to be done, uncomment following line
             # rm -rf input_* output_*
@@ -213,4 +205,4 @@ Using config files
 
     These instructions are particularly useful if you are trying to preprocess HCP data (Human Connectome Project). The data (as found for instance on BrainData, see :ref:`ref_heavy_storage`), is not totally raw and should not be used directly in tractoflow. We have prepared special parameters for such cases. They are kept in a nextflow.config file.
 
-The tractoflow command can also be ran with most options listed in a config file such as `this one <https://github.com/scilus/tractoflow/blob/master/nextflow.config>`_. You simply have to keep the nextflow.config file in the directory from where you run your command.
+The tractoflow command can also be ran with most options listed in a config file such as `this one <https://github.com/scilus/tractoflow/blob/master/nextflow.config>`_. You simply have to keep the nextflow.config file in the directory from where you run your command. However, a better use of the config files would be to use them for consultation only and to give all the parameters explicitly, manually, when launching tractoflow. This may avoid confusion on the default parameters. Be careful, thus, not to keep the config file in your directory if you are not sure how to use them!
