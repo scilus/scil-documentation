@@ -144,7 +144,8 @@ Using Tractoflow on Compute Canada
 
         .. code-block:: bash
 
-            sbatch -A def-descotea cmd_my_tractoflow.sh
+            sbatch -A rrg-descotea cmd_my_tractoflow.sh # On beluga
+            sbatch -A def-descotea cmd_my_tractoflow.sh # Elsewhere
 
             squeue -u USER  # To check if it has been launched
 
