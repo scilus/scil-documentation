@@ -1,6 +1,7 @@
+.. _ref_nextflow:
 
-Singularity / Nexflow
-=====================
+Singularity / Nextflow
+======================
 
 Singularity / docker
 ####################
@@ -12,4 +13,6 @@ Singularity / docker
 Nextflow
 ########
 
-    Also, most of our tools are offered as a « Nexflow ». That means that we have already created pipelines (a list of the numerous steps to process your data, for example) that will run easily on your computer in a computationally efficient, robust and reproducible way. The goal is that two users, running the same job on two different computers at two different moments, should obtain the same results!
+    Also, most of our tools are offered as a « Nextflow ». That means that we have already created pipelines (a list of the numerous steps to process your data, for example) that will run easily on your computer in a computationally efficient, robust and reproducible way. The goal is that two users, running the same job on two different computers at two different moments, should obtain the same results!
+
+    To install nextflow, you can check here: https://tractoflow-documentation.readthedocs.io/en/latest/installation/before_install.html
