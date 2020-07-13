@@ -23,9 +23,9 @@ in the lab, from using Linux to developing code.
 
     our_tools/scilpy
     our_tools/tractoflow
+    our_tools/recobundles
     our_tools/other_pipelines
     our_tools/machine_learning
-
 
 .. toctree::
     :maxdepth: 1

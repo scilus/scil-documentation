@@ -1,3 +1,5 @@
+.. _ref_heavy_computing:
+
 Dealing with heavy computing
 ============================
 
