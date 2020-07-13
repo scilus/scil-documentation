@@ -39,13 +39,12 @@ in the lab, from using Linux to developing code.
 
 .. toctree::
     :maxdepth: 1
-    :caption: Coding standards in the lab
+    :caption: Standards in the lab
 
-    coding/python
-    coding/scilpy
-    coding/git
-    coding/nextflow_singularity
-
+    standards/in_our_lab
+    standards/python
+    standards/git
+    standards/nextflow_singularity
 
 .. toctree::
     :maxdepth: 1

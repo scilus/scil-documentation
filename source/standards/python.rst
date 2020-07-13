@@ -1,3 +1,5 @@
+.. _ref_python_coding:
+
 General python coding tricks
 ============================
 
