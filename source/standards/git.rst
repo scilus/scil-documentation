@@ -21,7 +21,7 @@ How we use git in the lab
        :scale: 25 %
        :align: right
 
-*If you plan on developping code, here is how we suggest you do:*
+*If you plan on developping code:*
 
     Our standards are based on recommandations you can find anywhere on the web. Let's say you want to develop scilpy. Instead of cloning scilpy directly on your computer, you should **fork** it, i.e. copy it as one of your own repository in your own account. On Github, you can find the button "fork" on the top right of scilpy's repository page. You can clone this repository on your computer (see last paragraph). This leaves you with three connected repositories (see Fig [1]_).
 

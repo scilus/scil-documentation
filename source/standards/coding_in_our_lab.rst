@@ -1,15 +1,7 @@
-.. _ref_lab_standards:
+.. _ref_coding_standards:
 
-Our lab's standards
-===================
-
-General good habits
-*******************
-
-Here are some rules to follow in our lab.
-
-- Please keep all folders names in lowercase (this is true when coding, but also generally everywhere, like in BrainData for instance).
-
+Our lab's coding standards
+==========================
 
 Python standards in our lab / in scilpy
 ***************************************

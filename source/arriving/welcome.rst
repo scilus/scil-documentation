@@ -3,6 +3,17 @@
 Onboarding new students
 =======================
 
+Where to start?
+""""""""""""""""
+
+1. When you first arrive in the lab, take the time to set everything well on your computer. See below for a list of useful accounts you should create and software/tools you should install.
+
+2. You can check each of our tools pages for a description and for some tutorials (Tractoflow, Recobundles, etc.).
+
+3. Before starting a project that includes programing, please read carefully the :ref:`ref_coding_standards` page to understand how we usually code in our lab.
+
+4. Before starting a project that includes data, please read carefully the :ref:`ref_organization_standards` page to understand where to get your data or where to save your data.
+
 Important rooms and places
 """"""""""""""""""""""""""
 Chantal Proulx, Lynn Lebrun, Karine Bolduc and generally the Faculty’s offices are important and you should know where they are. Ask someone in the lab or Maxime to guide you.
@@ -54,19 +65,19 @@ We recommend using linux, but Mac can be an option. With Windows, your life will
 
 2. Install scilpy (see the :ref:`ref_scilpy` page). This will install Dipy too.
 
-3. You may want to install Tractoflow (see :ref:`ref_tractoflow`) or our other tools (see :ref:`ref_other_pipelines`).
+3. You may want to install Tractoflow (see :ref:`ref_tractoflow`) or our other tools. Check each tool's page for a description of the installation steps.
 
 4. You may want to install other tools that are often useful for people in our lab (see the pages for MI-brain, Ants, MRtrix, FSL and Freesurfer, etc.)
 
 Getting set up on super computers
 """""""""""""""""""""""""""""""""
 
-The first use of a computing platform can be tricky but you'll get used to it. Please see the (:ref:`ref_heavy_computing`) tab for more information and for some explanation. If your goal is to use the computing platform to run Tractoflow, you will find instructions on the :ref:`ref_tractoflow` page. A more complete "first-use" tutorial will be added soon.
+The first use of a computing platform can be tricky but you'll get used to it. Please see the (:ref:`ref_heavy_computing`) tab for more information on computing platforms in general. If your goal is to use the computing platform to run Tractoflow, you will find instructions on the :ref:`ref_tractoflow` page, including a complete "first-use" tutorial.
 
 Working from home
 """""""""""""""""
 
-    If you work from home, you might need to connect to the UdeS network. Do the following:
+If you work from home, you might need to connect to the UdeS network. Do the following:
 
     1) To have access to scientific papers (ex, free access to many articles in Google scholar): See the VPN information below or go on the University's `library's website <https://www.usherbrooke.ca/biblio/trouver-des/articles-de-periodiques-revues-et-journaux/>`_ and click on "Outil de découverte" if your are logged in with your CIP (top-right corner, the connexion button).
 
@@ -88,25 +99,3 @@ SSH
 
 TeamViewer
     You can use **screen sharing** software such as TeamViewer. You must first install TeamViewer while you are at the University and note the ID and password. Then you can install TeamViewer at home.
-
-Where to start?
-""""""""""""""""
-
-You can check the :ref:`ref_lab_standards` page to get acquainted with our lab's habits.
-
-You can check the :ref:`ref_scilpy` page for an introduction to our lab's official github repository, scilpy.
-
-You can check each of our other tools pages for a description and for some tutorials (tractoflow, recobundles, etc.)
-
-Start a project:
-- existing data: BrainData, processed data: créer un fichier avec un nom explicite.
-- si tu acquiert des nouvelles data raw, parler avec Arnaud,
-
-- Si vous cherchez des données: voir le channel #whereismyData: poser la question. On est en remanagement de nos trucs, bientôt ça sera plus clean, mais d'ici là, demander aux gens.
-
-- underscores. Pas mots collés.
-
-
-ajouter apre`s tractoflow: QC puis channel #QCmyData. un autre check puis parler à arnaud, on va le mettre dans braindata/beluga/...
-
-+ dire au monde de pas hésiter à faire des issues

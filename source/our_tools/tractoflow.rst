@@ -207,3 +207,8 @@ Using config files
     These instructions are particularly useful if you are trying to preprocess HCP data (Human Connectome Project). The data (as found for instance on BrainData, see :ref:`ref_heavy_storage`), is not totally raw and should not be used directly in tractoflow. We have prepared special parameters for such cases. They are kept in a nextflow.config file.
 
 The tractoflow command can also be ran with most options listed in a config file such as `this one <https://github.com/scilus/tractoflow/blob/master/nextflow.config>`_. You simply have to keep the nextflow.config file in the directory from where you run your command. However, a better use of the config files would be to use them for consultation only and to give all the parameters explicitly, manually, when launching tractoflow. This may avoid confusion on the default parameters. Be careful, thus, not to keep the config file in your directory if you are not sure how to use them!
+
+After tractoflow
+*****************
+
+Once the preprocessing and the tracking are done, scilpy also contains scripts to separate your data into known bundles (Recobundles), vizualize your results (ex, scil_visualize_bundles_mosaic.py), compute statistics on your bundles and so on. One particularly important tool is the **Quality Check**. You should strongly consider verifying the quality of your tractoflow process with our QC tool (:ref:`ref_QC`). Once this step is done, talk with Arnaud to find the best way to save your data and share it with the lab.
