@@ -61,7 +61,7 @@ We recommend using linux, but Mac can be an option. With Windows, your life will
 Getting set up on super computers
 """""""""""""""""""""""""""""""""
 
-The first use of a computing platform can be tricky but you'll get used to it. Please see the (:ref:`ref_heavy_computing`) tab for more information and for our first-use tutorial. If your goal is to use the computing platform to run Tractoflow, you will find instructions on the :ref:`ref_tractoflow` page. Else see the :ref:`ref_other_pipelines` page.
+The first use of a computing platform can be tricky but you'll get used to it. Please see the (:ref:`ref_heavy_computing`) tab for more information and for some explanation. If your goal is to use the computing platform to run Tractoflow, you will find instructions on the :ref:`ref_tractoflow` page. A more complete "first-use" tutorial will be added soon.
 
 Working from home
 """""""""""""""""
@@ -88,3 +88,25 @@ SSH
 
 TeamViewer
     You can use **screen sharing** software such as TeamViewer. You must first install TeamViewer while you are at the University and note the ID and password. Then you can install TeamViewer at home.
+
+Where to start?
+""""""""""""""""
+
+You can check the :ref:`ref_lab_standards` page to get acquainted with our lab's habits.
+
+You can check the :ref:`ref_scilpy` page for an introduction to our lab's official github repository, scilpy.
+
+You can check each of our other tools pages for a description and for some tutorials (tractoflow, recobundles, etc.)
+
+Start a project:
+- existing data: BrainData, processed data: créer un fichier avec un nom explicite.
+- si tu acquiert des nouvelles data raw, parler avec Arnaud,
+
+- Si vous cherchez des données: voir le channel #whereismyData: poser la question. On est en remanagement de nos trucs, bientôt ça sera plus clean, mais d'ici là, demander aux gens.
+
+- underscores. Pas mots collés.
+
+
+ajouter apre`s tractoflow: QC puis channel #QCmyData. un autre check puis parler à arnaud, on va le mettre dans braindata/beluga/...
+
++ dire au monde de pas hésiter à faire des issues

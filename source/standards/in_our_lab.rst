@@ -1,9 +1,20 @@
-Scilpy coding standards
-=======================
+.. _ref_lab_standards:
 
-Thanks to JC for the coding tricks.
+Our lab's standards
+===================
 
-Here are the scilpy standards in python. See the General python coding tricks page for more tricks on how we use python. For C++, use the following link: https://github.com/scilus/fibernavigator/wiki/Coding-standard. Note that some scripts are coded in cython (.pyx) but if you're using it, you're probably already an experienced user of scilpy so we won't describe cython here.
+General good habits
+*******************
+
+Here are some rules to follow in our lab.
+
+- Please keep all folders names in lowercase (this is true when coding, but also generally everywhere, like in BrainData for instance).
+
+
+Python standards in our lab / in scilpy
+***************************************
+
+Here are the scilpy standards in python. See the :ref:`ref_python_coding` page for more tricks on how to use python.
 
 **Main scilpy library**
 
@@ -84,3 +95,11 @@ We aim to provide scripts that are relatively clear and easy to use for non tech
 **Printing and logging**
 
     - Instead of using naked prints in the scripts, use Python’s logging facilities. Helps when running lots of scripts, to direct outputs to various logging mechanisms.
+
+
+C++ or cython standards in our lab / in scilpy
+**********************************************
+
+For C++, use the following link: https://github.com/scilus/fibernavigator/wiki/Coding-standard.
+
+Note that some scripts are coded in cython (.pyx) but if you're using it, you're probably already an experienced user of scilpy, so we won't describe cython here.
