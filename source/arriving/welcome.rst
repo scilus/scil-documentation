@@ -8,7 +8,7 @@ Where to start?
 
 1. When you first arrive in the lab, take the time to set everything well on your computer. See below for a list of useful accounts you should create and software/tools you should install.
 
-2. You can check each of our tools pages for a description and for some tutorials (Tractoflow, Recobundles, etc.).
+2. You can check each tool's page for a description and for some tutorials (Tractoflow, Recobundles, etc.).
 
 3. Before starting a project that includes programing, please read carefully the :ref:`ref_coding_standards` page to understand how we usually code in our lab.
 
