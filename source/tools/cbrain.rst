@@ -5,7 +5,7 @@ CBRAIN
    :language: bash
 
 
-CBRAIN is a collaborative, web-enabled grid platform built to facilitate research on large, distributed datasets by managing user access, transfer, caching and provenence for distributed data, as well as mediating interactions with high-performance computing centres (HPCs).
+CBRAIN is a collaborative, web-enabled grid platform built to facilitate research on large, distributed datasets by managing user access, transfer, caching and provenance for distributed data, as well as mediating interactions with high-performance computing centres (HPCs).
 
 You can ask for an account by following this link https://portal.cbrain.mcgill.ca/
 
