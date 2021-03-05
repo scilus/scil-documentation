@@ -1,3 +1,5 @@
+.. _ref_cbrain:
+
 CBRAIN
 ======
 
@@ -9,6 +11,6 @@ CBRAIN is a collaborative, web-enabled grid platform built to facilitate researc
 
 You can ask for an account by following this link https://portal.cbrain.mcgill.ca/
 
-Here is the documentation: https://github.com/aces/cbrain/wiki
+Here is the documentation: https://github.com/aces/cbrain/wiki. Also check our videos tab in the Teams' General channel for an introduction to CBRAIN.
 
 Once you've got an account please send a message on the Teams channel `ComputeCanada` to be added to the SCIL group and get access to the data provider on beluga.

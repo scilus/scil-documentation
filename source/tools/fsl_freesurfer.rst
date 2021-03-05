@@ -34,3 +34,5 @@ FreeSurfer
 
     If you plan to run freesurfer, note that we have a singularity and nextflow pipeline to run recon-all from Freesurfer 6. Moreover, if you plan to run freesurfer for multiple subjects, ask people in the lab how to do this on CBRAIN. It is the most efficient way to do so.
 
+    Else, you can run some commands (e.g. recon-all) through cbrain, see the :ref:`ref_cbrain` tab for more information.
+
