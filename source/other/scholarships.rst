@@ -11,7 +11,7 @@ Scholarship awards
   | `FRQNT login page <https://frqnet.frq.gouv.qc.ca/researchPortal/faces/jsp/login/login.xhtml?lang=FR&site=null>`_.
 
 - | CRSNG/NSERC:
-  | `Description page PhD (ES-D) <http://www.frqnt.gouv.qc.ca/bourses-et-subventions/consulter-les-programmes-remplir-une-demande/bourse/bourses-de-2supesup-et-3supesup-cycles-w8dqldzo1561492002107>`_. It also automatically suscribes you to the `BESC-D <https://www.nserc-crsng.gc.ca/Students-Etudiants/PG-CS/CGSD-BESCD_fra.asp>`_ scholarship, which is better. Finally, the `BESC-Vanier <https://vanier.gc.ca/fr/home-accueil.html>`_ is the best of all 3 scholarships and application must be filled in separately.
+  | `Description page PhD (ES-D) <http://www.frqnt.gouv.qc.ca/bourses-et-subventions/consulter-les-programmes-remplir-une-demande/bourse/bourses-de-2supesup-et-3supesup-cycles-w8dqldzo1561492002107>`_. It also automatically subscribes you to the `BESC-D <https://www.nserc-crsng.gc.ca/Students-Etudiants/PG-CS/CGSD-BESCD_fra.asp>`_ scholarship, which is better. Finally, the `BESC-Vanier <https://vanier.gc.ca/fr/home-accueil.html>`_ is the best of all 3 scholarships and application must be filled in separately.
   | `Decription page master (BESC-M) <https://www.nserc-crsng.gc.ca/Students-Etudiants/PG-CS/CGSM-BESCM_fra.asp>`_.
   | `Login page NSERC <https://ebiz.nserc.ca/nserc_web/nserc_login_f.htm>`_.
 

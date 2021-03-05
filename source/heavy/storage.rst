@@ -10,14 +10,13 @@ Brain imaging data can be very heavy! It is very probable that you won't be able
 
 .. code-block:: bash
 
-    path_local=my_favorite_location/BrainData #You can name it as you wish
+    path_local=/braindata #You can name it as you wish, but please place it directly after the root (/)
     mkdir $path_local
     sshfs USER@braindata.scil.usherbrooke.ca:/braindata $path_local
 
 The main directories inside BrainData are:
 
-    - | databases: Raw folders (anat/dwi) for various databases, in nifti format. Currently, this directory can only be modified by some authorized users such as Arnaud, who makes sure everything stays clean and in BIDS format (see next section). You can ask him if you think another database should be added.
-      | We could eventually add processed data too if your preprocessing is absolutely finished and clean and if you have a singularity to allow people to reproduce your results.
+    - | databases: Raw folders (anat/dwi) for various databases, in nifti format. Currently, this directory can only be modified by some authorized users such as Arnaud, who makes sure everything stays clean and in BIDS format (see next section). You can ask him if you think another database should be added. We could eventually add processed data too if your preprocessing is absolutely finished and clean and if you have a singularity to allow people to reproduce your results.
     - processedData: **This is where you could store the processed data for your project**. We don't force BIDS format here but please keep your directory names meaningful and clean your files as often as possible.
     - references: Miscellaneous resources you could find useful, such as atlases, books, previous conferences' posters, the list of publications by members of the SCIL, the list of previous student's thesis and so on.
 
