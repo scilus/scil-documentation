@@ -24,7 +24,7 @@ Finally, for a html version of the help, you will find the description of all sc
 
 
 Installing scilpy
-    - Users: you can follow the instructions on the Github page. Clone the repository, install the requirements and install through the setup.py as explained.
+    - Users: you can follow the instructions on the Github page or follow these instructions :
 
     .. code-block:: bash
 
