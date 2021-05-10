@@ -22,7 +22,7 @@ Mailing list
     When Maxime wants to send a message to everyone, we either use Slack or our mailing list. Ask Maxime to add you.
 
 Teams
-    We use Microsoft Teams as means of communication. You can use you CIP and university's password to connect. You can ask Maxime to add you to the SCIL's "team". Then, you can explore the various conversations, called "channels". When lab meetings are online, you can join them via the "General" channel. Also, we encourage you to explore the videos in the video tab from the General channel. You can find there the recording of previous lab meetings, videos of Max's dMRI class and more.
+    We use Microsoft Teams as means of communication. You can use your CIP and university's password to connect. You can ask Maxime to add you to the SCIL's "team". Then, you can explore the various conversations, called "channels". When lab meetings are online, you can join them via the "General" channel. Also, we encourage you to explore the videos in the video tab from the General channel. You can find there the recording of previous lab meetings, videos of Max's dMRI class and more.
 
 Github
     The code we develop (:ref:`ref_scilpy`) is offered online on `Github <https://github.com/>`_ when it's ready. It is public so you don't need an account to just look at the repository, but you will have to create an account if you will participate to scilpy's development. With an account, you can also "watch" our repo (i.e. receive emails for major changes).
