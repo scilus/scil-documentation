@@ -31,7 +31,7 @@ Bitbucket
     `Bitbucket <https://bitbucket.org/>`_ is an alternative to Github if you want to keep your code private, you might want to use it eventually. \*Tip, use your @usherbrooke.ca email; you will have an academic account!
 
 BrainData
-    We deal with very heavy data and you probably don't want to keep it all on your computer. See the Heavy Data Storage tab to learn more about it. You can send an email to casius@usherbrooke.ca with Maxime in cc to have access. Give your CIP and mention that you need access to Dryade. Then, to connect to our server, in a terminal:
+    We deal with very heavy data and you probably don't want to keep it all on your computer. See the Heavy Data Storage tab to learn more about it. You can go to https://casius.usherbrooke.ca/sp to communicate with Casius to have access. Give your CIP, mention Maxime Descoteaux and mention that you need access to Dryade. Then, to connect to our server, in a terminal:
 
     .. code-block:: sh
 
@@ -78,7 +78,7 @@ VPN
 SSH
     1. Connect to the University's VPN.
 
-    2. You must know your lab computer's IP address or its University code (ex: DINF-0000-00a). (email casius@usherbrooke.ca to ask your IP address if you don't know)
+    2. You must know your lab computer's IP address or its University code (ex: DINF-0000-00a). (Ask casius at https://casius.usherbrooke.ca/sp if you don't know).
 
     3. | Connect with ssh. On Linux or Mac, ssh can be simply used via the terminal. The option -X is to make sure the applications you use appear at home.
        | `ssh -x your_cip@your_computer_IPaddress`, or
