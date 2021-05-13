@@ -44,7 +44,7 @@ To assess the quality of your bundles, the best way is to check the data visuall
 Tractometry
 -----------
 
-If you have a ground truth, you can compute statistics for each bundle using the tractometer. You can find the definition of each metric (ex., VB, IB, VC, IC, OL, OR) on the `tractometer website <http://tractometer.org/ismrm_2015_challenge/evaluation>`_.
+If you have a ground truth, you can compute statistics for each bundle using the metrics that were introduced in the tractometer. You can find the definition of each metric (ex., VB, IB, VC, IC, OL, OR) on the `tractometer website <http://tractometer.org/ismrm_2015_challenge/evaluation>`_. To compute them, you can use scilpy's script `scil_evaluate_bundles_pairwise_agreement_measures.py`.
 
 
 Sharing your work
