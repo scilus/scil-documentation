@@ -16,17 +16,30 @@ We have a QC pipeline which creates a summary of the quality of your data.
 
 *How to install it?*
 
-    The easiest is to use it as a nextflow with singularity (see :ref:`ref_nextflow` for more information.) First download the singularity image (.img) here: https://github.com/GuillaumeTh/dmriqcpy/releases. Then, download the nextflow:
+    Your can clone and install the dmriqcpy repository:
 
     .. code-block:: bash
 
-        git clone https://github.com/GuillaumeTh/dmriqc-flow.git
+        git clone https://github.com/scilus/dmriqcpy.git
+        cd dmriqcpy
+        pip install -e .
+
+    If you want to use it as a nextflow (see :ref:`ref_nextflow` for more information.), you can use the singularities available with the releases on `Github <https://github.com/scilus/dmriqcpy/releases>`_ (click on "Assets" under the chosen release). To download the nextflow:
+
+    .. code-block:: bash
+
+        git clone https://github.com/scilus/dmriqc_flow.git
 
 *How to run it?*
 
+    Here is an example of how to run the nexflow version. If you need to use it on a cluster (ex, Beluga), you can check our :ref:`ref_tractoflow` tutorial.
+
     .. code-block:: bash
 
-        nextflow run PATH_TO_DMRIQC_FLOW/main.nf --root TRACTOFLOW_RESULTS -with-singularity PATH_TO_THE_DMRIQC_SINGULARITY -resume
+        # -profile: one of input_qc, tractoflow_qc_light or tractoflow_qc_all.
+        nextflow run PATH_TO_DMRIQC_FLOW/main.nf --input TRACTOFLOW_RESULTS -resume \
+            -profile tractoflow_qc_all
+
 
 *How to use it?*
 
