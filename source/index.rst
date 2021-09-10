@@ -35,7 +35,12 @@ in the lab, from using Linux to developing code.
     tools/mi-brain
     tools/environments
     tools/nextflow_singularity
-    tools/other_tools
+    tools/ants
+    tools/cbrain
+    tools/fsl_freesurfer
+    tools/civet
+    tools/mrtrix
+    tools/amico
 
 .. toctree::
     :maxdepth: 1
