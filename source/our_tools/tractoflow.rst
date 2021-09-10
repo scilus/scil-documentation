@@ -11,7 +11,7 @@ Our lab has prepared pipelines as nextflows (see the 'Nexflow' section in 'Other
 Installing Tractoflow
 *********************
 
-    You can check the `installation guide <https://tractoflow-documentation.readthedocs.io/en/latest/installation/before_install.html>`_ on Tractoflow's website (pages before install and install). If you want to install it on Compute Canada, connect first and follow instructions in the High Performance Computer sections.
+    You can check the `installation guide <https://tractoflow-documentation.readthedocs.io/en/latest/installation/install.html>`_ on Tractoflow's website (pages before install and install). If you want to install it on Compute Canada, connect first and follow instructions in the High Performance Computer sections.
 
 Using Tractoflow on Compute Canada
 **********************************
@@ -30,7 +30,7 @@ Using Tractoflow on Compute Canada
     #. Connect to the cluster using ssh. Type ls and make sure that you see
 
         | tractoflow-x.x.x/
-        | tractoflow_x.x.x_version_20xx-xx-xx.img
+        | tractoflow_x.x.x_version_20xx-xx-xx.img OR .sif (sif = singularity image file)
         | MY_DATA.zip
 
     #. Bring your data to your scratch directory.
@@ -78,8 +78,9 @@ Using Tractoflow on Compute Canada
             #   - Fix the FRF to (15,4,4) x 10^-4 mm2/s
             #   - Interface seeding
             #   - nbr_seeds 15.
+            my_singularity_img='../tractoflow_*.img' # or .sif
             nextflow -c ../beluga.conf run ../tractoflow-*/main.nf --root ../input_data_tractoflow \
-                -with-singularity ../tractoflow_*.img -resume -with-report report.html \
+                -with-singularity $my_singularity_img -resume -with-report report.html \
                 --dti_shells "0 1500" --fodf_shells "0 1500" --step 0.5 --nbr_seeds 15 \
                 --wm_seeding false --mean_frf false --set_frf true
 
@@ -105,7 +106,7 @@ Using Tractoflow on Compute Canada
 
             # Then type the tractoflow command with --help at the end. Tractoflow's help should be printed.
 
-            # Then, you may type the real command. Make sure it starts running. Once sure that it found the data, the img, the code, you can kill it by pressing ctrl-c.
+            # Then, you may type the real command. Make sure it starts running. Once sure that it found the data, the img/sif, the code, you can kill it by pressing ctrl-c.
 
        If it fails:
 
@@ -162,7 +163,7 @@ Using Tractoflow on Compute Canada
             mkdir my_project_tractoflow
 
             mkdir my_project_tractoflow/containers/
-            mv *img my_project_tractoflow/containers/
+            mv *img my_project_tractoflow/containers/ #or *sif
 
             mkdir my_project_tractoflow/scripts
             cp output_tractoflow/cmd_*.sh my_project_tractoflow/scripts/
