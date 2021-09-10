@@ -10,7 +10,7 @@ Brain imaging data can be very heavy! It is very probable that you won't be able
 
 .. code-block:: bash
 
-    path_local=/braindata #You can name it as you wish, but please place it directly after the root (/)
+    path_local=braindata  # Make a directory somewhere.
     mkdir $path_local
     sshfs USER@braindata.scil.usherbrooke.ca:/braindata $path_local
 

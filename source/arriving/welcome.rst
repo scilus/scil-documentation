@@ -35,12 +35,12 @@ BrainData
 
     .. code-block:: sh
 
-        #Make a directory somewhere. Ex, braindata in your home
+        # Make a directory somewhere. Ex, braindata in your home
         cd ~
         mkdir braindata
 
         # Then connect using your username (should be your CIP)
-        sshfs USER@braindata.scil.usherbrooke.ca/braindata braindata
+        sshfs USER@braindata.scil.usherbrooke.ca:/braindata braindata
 
 Compute Canada
     This is the computing platform we use (see the Dealing with Heavy Computing tab). Create an account here: `login <https://ccdb.computecanada.ca/security/login>`_. When creating your account, you will need Maxime’s info (sponsor ID). You can ask him.
