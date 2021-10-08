@@ -112,7 +112,8 @@ Using sbatch
 Commands on distant HPC computers are ran using sbatch. You can check `tractoflow's website <https://tractoflow-documentation.readthedocs.io/en/latest/pipeline/launch.html#high-performance-computer-hpc>`_ for a sbatch example. The jobs are ran with a delay that depends on your priority as a user. The more you use ComputeCanada, the more your priority decreases. That's why it is important to be careful on the time and resources you use for each job. In your sbatch.sh file, the following options are important. If you cancel your job, your priority is not impacted. But if it succeeds or and you had overestimated the time you had to reserve, or if it crashes, it still decreases your priority. If you don't know how long a task should take, you can ask around in the lab or try to guess from information in published papers (ex, in the case of Tractoflow).
 
     .. code-block:: bash
-
+    
+        #!/bin/sh 
         #SBATCH --nodes=1              # --> Generally depends on your nb of subjects.
                                        # See the comment for the cpus-per-task. One general rule could be
                                        # that if you have more subjects than cores/cpus (ex, if you process 38
@@ -123,10 +124,21 @@ Commands on distant HPC computers are ran using sbatch. You can check `tractoflo
                                        # all the node, you can keep 0.
         #SBATCH --time=48:00:00
 
+Other possible options are
+
+    .. code-block:: bash
+    
+        #SBATCH --mail-user=YOUR_EMAIL
+        #SBATCH --mail-type=BEGIN
+        #SBATCH --mail-type=END
+        #SBATCH --mail-type=FAIL
+        #SBATCH --mail-type=REQUEUE
+        #SBATCH --mail-type=ALL
+
 Another technique to avoid loosing priority with crashed jobs is, once connected on beluga, to run the following command:
 
     .. code-block:: bash
 
-        salloc --cpus-per-task 8 --mem 16G --time 00:10:00
+        salloc --cpus-per-task 8 --mem 16G --time 00:10:00 -A rrg-descotea
 
 This gives you access to a node. You can then try to run your command (without sbatch) to test if it works or crashes.
