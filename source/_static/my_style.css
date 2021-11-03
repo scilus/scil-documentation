@@ -1,10 +1,5 @@
-/*
-"fix screen width.
-*/
-.wy-nav-content {
-    max-width: 100%;
-}
+@import url("theme.css");
 
-.strike {
-  text-decoration: line-through;
+.wy-nav-content {
+    max-width: 80%;
 }
