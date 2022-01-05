@@ -4,7 +4,7 @@
 Mi-Brain
 ========
 
-`Mi-Brain <https://www.imeka.ca/fr/mi-brain/>`_ is a GUI viewer developped by IMEKA (a Sherbrooke compagny for diffusion analysis co-founded by Maxime Descoteaux and Pierre-Marc Jodoin.
+`Mi-Brain <https://www.imeka.ca/fr/mi-brain/>`_ is a GUI viewer developped by IMEKA (a Sherbrooke company for diffusion analysis co-founded by Maxime Descoteaux and Pierre-Marc Jodoin.
 
 To install it, scroll down to the Q/R section and follow the instructions.
 
