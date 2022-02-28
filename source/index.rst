@@ -34,6 +34,7 @@ in the lab, from using Linux to developing code.
     tools/dipy
     tools/mi-brain
     tools/environments
+    tools/python
     tools/nextflow_singularity
     tools/ants
     tools/cbrain
