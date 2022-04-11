@@ -4,6 +4,8 @@ Interesting conferences
 .. role:: strike
     :class: strike
 
+(Last update: 2022-04-11)
+
 Summary, coming events and deadlines
 ------------------------------------
 
@@ -11,17 +13,15 @@ Summary, coming events and deadlines
    :scale: 34 %
    :align: right
 
-2021
-
-    - **Dec 1-2: Neuromatch conference**, virtual
-
-        - Oct 25: Submission deadline
-
 2022
 
     - **May 7-12: ISMRM**, London, England: https://www.ismrm.org/22m/
 
         - Nov 10: Abstract submission deadline
+
+    - **June 2nd**, Sherbrooke: RBIQ / QBIN day: https://rbiq-qbin.qc.ca/fr/2022/03/04/qbin-scientific-day-2022-save-the-date/
+
+        - April 29: Submission deadline.
 
     - **June 19-23: OHBM**, Glasglow, Scotland: https://www.humanbrainmapping.org/i4a/pages/index.cfm?pageid=4114
 
@@ -33,15 +33,17 @@ Summary, coming events and deadlines
         - Dec 17: Paper submission deadline
         - April 22: Short paper submission deadline
 
-    - **Sept 18-22: MICCAI**, Singapore
+    - **Sept 18-22: MICCAI**, Singapore: https://conferences.miccai.org/2022/en/
 
-        - Dates to be announced
+        - Feb 15: Intention to submit.
+        - March 1: Paper submission deadline
+        - Registration deadline not announced.
 
 Dates to be announced:
 
-    - Dipy's workshop 2022
-    - QBIN's annual scientific day 2022
+    - Dipy workshop 2023
     - MAIN event 2022.
+    - Next Neuromatch conference.
 
 International events
 --------------------
@@ -67,7 +69,7 @@ MIDL
     - **Annual** international conference since 2018. Last conferences: Netherlands, England. MIDL 2020 and 2021 were virtual due to COVID-19.
 
 Dipy workshop
-    - DIPY offers an **annual** workshop which is a good way to get acquainted with DIPY. It is held in Indiana (Indiana University is DIPY's main sponsor) around March. Dipy 2020 was cancelled due to COVID-19. Link here: `2021's workshop <https://dipy.org/workshops/dipy-workshop-2021>`_.
+    - DIPY offers an **annual** workshop which is a good way to get acquainted with DIPY. It is held in Indiana (Indiana University is DIPY's main sponsor) around March. Link here: `2022's workshop <https://dipy.org/workshops/dipy-workshop-2022>`_.
 
 Local events
 ------------
@@ -82,7 +84,7 @@ UNIQUE
 
 MAIN
     - Unique helps organizing the **annual** MAIN event (Montreal Artificial Intelligence and Neuroscience) with UdeM since 2017.
-    - Last event's website is `2020's, here <https://www.main2020.org/>`_.
+    - Last event's website is `2021's, here <https://www.main2021.org/>`_.
 
 Symposium Imagining Imaging
     - Was first held in 2014 for the opening of our new Imaging Center at the CHUS and will now again be held this year. Keynote speakers from all around the world.
@@ -94,4 +96,4 @@ Online events
 
 Neuromatch
     - Computational neuroscience. Per their description, "the scope includes machine learning work that has an explicit biological link".
-    - A new **annual** conference, completely online (with the option of hybrid mode, meeting locally with other participants). Link: `Neuromatch website <https://neuromatch.io/>`_.
+    - A new conference, more than once a year, completely online (with the option of hybrid mode, meeting locally with other participants). Link: `Neuromatch website <https://neuromatch.io/>`_.

@@ -16,15 +16,16 @@ Scholarship awards
   | `Login page NSERC <https://ebiz.nserc.ca/nserc_web/nserc_login_f.htm>`_.
 
 - | Borealis:
-  | A `fellowship <https://www.borealisai.com/en/careers/fellowships/>`_ for students in Canada studying machine learning.
+  | A `fellowship <https://www.borealisai.com/en/about/fellowships/>`_ for students in Canada studying machine learning.
 
 - | UNIQUE:
-  | Many choices. See their `resources page <https://sites.google.com/view/unique-neuro-ai/resources>`_.
+  | Many choices. See their `funding page <https://sites.google.com/view/unique-neuro-ai/funding>`_.
 
-- See also the `CONP <https://conp.ca/scholar-program-2020/>`_.
+- See also the Canadian Open Neuroscience Platform `(CONP) <https://conp.ca/scholar-program-2020/>`_.
 
 
 Travelling awards
 *****************
 
+- See the UNIQUE funding page mentionned above.
 - The RBIQ offers travelling awards. See `their competitions page <https://www.rbiq-qbin.qc.ca/Competitions>`_.
