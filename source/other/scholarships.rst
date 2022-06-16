@@ -33,8 +33,8 @@ Travelling awards
 - See the UNIQUE funding page mentionned above.
 - The RBIQ offers travelling awards. See `their competitions page <https://www.rbiq-qbin.qc.ca/Competitions>`_.   
 
-Smaller awards
-**************
+Paper awards
+************
 
 - Releve Etoile Award from the FRQ: $1000 for best recently published paper by a trainee (need to be first or co-first author). Usually 2 deadlines per year (September 1st and March 1st). See `their page <https://frq.gouv.qc.ca/en/program/releve-etoile-louis-berlinguet-2022-2023-2/>`_.    
 - Brain Star Award: $1500 for best recently published scientific paper by a trainee (1 deadline per year, usually January). See `their page <https://can-acn.org/brain-star-awards/#Eligibility/>`_.    
