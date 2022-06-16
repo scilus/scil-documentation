@@ -91,7 +91,6 @@ To visualize your results for one subject, here is a nice tool:
 
     .. code-block:: bash
 
-        # Run from inside your RecobundlesX folder
         anat=YOUR_ANAT
         rbx_folder=YOUR_RBX_FOLDER
         scil_visualize_bundles_mosaic.py ${anat} ${rbx_folder}/*.trk mosaic.png
