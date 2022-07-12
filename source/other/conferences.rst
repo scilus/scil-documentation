@@ -4,34 +4,13 @@ Interesting conferences
 .. role:: strike
     :class: strike
 
-(Last update: 2022-04-11)
+(Last update: 2022-07-12)
 
 Summary, coming events and deadlines
 ------------------------------------
 
-.. image:: ../images/calendar-modif.jpg
-   :scale: 34 %
-   :align: right
 
 2022
-
-    - **May 7-12: ISMRM**, London, England: https://www.ismrm.org/22m/
-
-        - Nov 10: Abstract submission deadline
-
-    - **June 2nd**, Sherbrooke: RBIQ / QBIN day: https://rbiq-qbin.qc.ca/fr/2022/03/04/qbin-scientific-day-2022-save-the-date/
-
-        - April 29: Submission deadline.
-
-    - **June 19-23: OHBM**, Glasglow, Scotland: https://www.humanbrainmapping.org/i4a/pages/index.cfm?pageid=4114
-
-        - Dec 17: Abstract submission deadline
-
-    - **July 6-8: MIDL**, Zürich, Switzerland: https://2022.midl.io/
-
-        - Dec 10: Paper registration deadline
-        - Dec 17: Paper submission deadline
-        - April 22: Short paper submission deadline
 
     - **Sept 18-22: MICCAI**, Singapore: https://conferences.miccai.org/2022/en/
 
@@ -39,11 +18,31 @@ Summary, coming events and deadlines
         - March 1: Paper submission deadline
         - Registration deadline not announced.
 
+    - **Oct 10-14, Diffusion Workshop, ISMRM**, Amsterdam, Netherlands, https://www.ismrm.org/workshops/2022/Diffusion/
+
+        - Aug 12: Abstract submission deadline.
+
+2023
+
+    - **June 03-08: ISMRM**, Toronto, CA: https://www.ismrm.org/23m/
+
+        - Nov 09, 2022: Abstract submission deadline
+
+    - **June 16-20: OHBM**, Montreal, CA: https://www.humanbrainmapping.org/i4a/pages/index.cfm?pageid=3298
+
+        - Dates not announced
+
+    - **Oct 8-12: MICCAI**, Vancouver, CA.
+
+        - Dates not announced
+
 Dates to be announced:
 
     - Dipy workshop 2023
-    - MAIN event 2022.
-    - Next Neuromatch conference.
+    - UNIQUE: MAIN event 2022/2023 + Student symposium 2023
+    - Neuromatch conference 2022/2023.
+    - QBIN scientific day (Journée scientifique du RBIQ) 2023
+    - MIDL 2023, Nashville: Website here https://2023.midl.io/
 
 International events
 --------------------
