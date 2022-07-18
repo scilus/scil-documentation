@@ -1,3 +1,8 @@
+
+.. image:: /images/logo_scil_blanc.pdf
+   :scale: 20 %
+   :align: right
+
 Welcome to the SCIL lab documentation!
 =============================================
 
@@ -16,6 +21,7 @@ in the lab, from using Linux to developing code.
     :caption: Arriving in the lab
 
     arriving/welcome
+    arriving/useful_links
 
 .. toctree::
     :maxdepth: 1

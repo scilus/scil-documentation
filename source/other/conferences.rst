@@ -12,10 +12,11 @@ Summary, coming events and deadlines
 
 2022
 
-    - **Sept 18-22: MICCAI**, Singapore: https://conferences.miccai.org/2022/en/
+    - **Sept 18-22: MICCAI**, Singapore: https://conferences.miccai.org/2022/en/. CDMRI workshop: http://cmic.cs.ucl.ac.uk/cdmri22/.
 
         - Feb 15: Intention to submit.
         - March 1: Paper submission deadline
+        - July 2: Paper submission deadline for the CDMRI workshop.
         - Registration deadline not announced.
 
     - **Oct 10-14, Diffusion Workshop, ISMRM**, Amsterdam, Netherlands, https://www.ismrm.org/workshops/2022/Diffusion/
