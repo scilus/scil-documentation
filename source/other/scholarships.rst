@@ -7,7 +7,7 @@ Scholarship awards
 ******************
 
 - | FRQNT:
-  | `Description page (master/PhD) <http://www.frqnt.gouv.qc.ca/bourses-et-subventions/consulter-les-programmes-remplir-une-demande/bourse/bourses-de-2supesup-et-3supesup-cycles-w8dqldzo1561492002107>`_.
+  | `Scholarships page <https://frq.gouv.qc.ca/trouver-un-financement/>`_. You will find the `master <https://frq.gouv.qc.ca/programme/bourses-de-formation-a-la-maitrise-frqnt/>`_, `PhD <https://frq.gouv.qc.ca/programme/bourses-de-formation-au-doctorat-frq/>`_ and `post-doc <https://frq.gouv.qc.ca/programme/bourse-de-formation-postdoctorale/>`_ pages, and more.
   | `FRQNT login page <https://frqnet.frq.gouv.qc.ca/researchPortal/faces/jsp/login/login.xhtml?lang=FR&site=null>`_.
 
 - | CRSNG/NSERC:
@@ -22,9 +22,9 @@ Scholarship awards
   | Many choices. See their `funding page <https://sites.google.com/view/unique-neuro-ai/funding>`_.
   
 - | QBIN (Quebec Bio-Imaging Network):  
-  | Support scholarships for Msc ($5k), PhD ($7k), and Postdocs ($7k). These scholarships cannot be held concurrently with a scholarship from a granting agency (e.g., FRQNT, NSERC). Students and their supervisor need to be members of QBIN. These scholarships are intended for applicants who have been enrolled in a MSc or PhD research program for one year or less. `Find information <https://www.rbiq-qbin.qc.ca/Competitions>`_.
+  | Support scholarships for Msc ($5k), PhD ($7k), and Postdocs ($7k). These scholarships cannot be held concurrently with a scholarship from a granting agency (e.g., FRQNT, NSERC). Students and their supervisor need to be members of QBIN. These scholarships are intended for applicants who have been enrolled in a MSc or PhD research program for one year or less. `Find information <https://rbiq-qbin.qc.ca/research/>`_. See also their conference allowance.
 
-- See also the Canadian Open Neuroscience Platform `(CONP) <https://conp.ca/scholar-program-2020/>`_.
+- See also the Canadian Open Neuroscience Platform `(CONP) <https://conp.ca/awards/>`_.
 
 
 Travelling awards
