@@ -1,5 +1,5 @@
 
-.. image:: /images/logo_scil_blanc.pdf
+.. image:: /images/logo_scil_blanc.png
    :scale: 20 %
    :align: right
 
@@ -22,6 +22,12 @@ in the lab, from using Linux to developing code.
 
     arriving/welcome
     arriving/useful_links
+
+.. toctree::
+    :maxdepth: 1
+    :caption: Intro to Linux
+
+    intro_to/explore_os
 
 .. toctree::
     :maxdepth: 1
