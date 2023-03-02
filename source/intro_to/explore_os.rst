@@ -55,7 +55,7 @@ Synaptic is a graphical package management tool for Debian systems. It is design
 
     Synaptic is installed by default on Ubuntu (any Debian OS) and will help you look for packages to install or repair mistakes you made.
 
-This can install both libraries required for other software as well as the software itself, it is common to try to launch a new tool and be unable to install or use it until you try something like what is described in Section **Installing Stuff** (below). Synaptic is only the Graphical User Interface (GUI) for package management, but everything your do in Synaptic can be done in the Terminal.
+This can install both libraries required for other software as well as the software itself, it is common to try to launch a new tool and be unable to install or use it until you try something like what is described in Section **Installing Stuff** (below). Synaptic is only the Graphical User Interface (GUI) for package management, but everything you do in Synaptic can be done in the Terminal.
 
 Software Center
 -----------------------
@@ -65,7 +65,7 @@ Syanptic is more powerful and was designed as a package manager. Software Center
     :scale: 40 %
     :align: center
 
-    The software Center allows you to install much useful software often less related to coding and programming.
+    The Software Center allows you to install much useful software often less related to coding and programming.
 
 
 The Terminal
@@ -103,7 +103,7 @@ The advantage of the Terminal is that operations can be automated.
 
 Editing Text
 -----------------------
-The easiest way to edit text is often using the native *Text Editor* in Ubuntu, but you can install software like gEdit, Atom or Sublime for more advance text editing. When dealing with code or processing everything is in text (C++ or Python or Bash), it all depends on the extension. Raw text in a *FILE.py* is in python and raw text in a *FILE.cpp* is C++, while *FILE.sh* is for Bash. Microsoft Word *FILE.docx*) documents can be edited using LibreOffice (LibreOffice use *FILE.odt* by default, not *FILE.docx*), but these are not suitable for coding.
+The easiest way to edit text is often using the native *Text Editor* in Ubuntu, but you can install software like gEdit, Atom or Sublime for more advance text editing. When dealing with code or processing everything is in text (C++ or Python or Bash), it all depends on the extension. Raw text in a *FILE.py* is in Python and raw text in a *FILE.cpp* is C++, while *FILE.sh* is for Bash. Microsoft Word *FILE.docx*) documents can be edited using LibreOffice (LibreOffice use *FILE.odt* by default, not *FILE.docx*), but these are not suitable for coding.
 
 So keep in mind that to edit code you need very simple software like Sublime or Atom. When not writing code, but just simple text you can use the *FILE.txt* extension, or for more advanced formatting you can try Markdown (*FILE.md*). 
 
@@ -113,7 +113,7 @@ If you want to edit your text file directly in the terminal, as a starting point
     :scale: 65 %
     :align: center
 
-    Nano is very useful to edit text file in the terminal and basic operation like replace or copy-pasting lines.
+    Nano is very useful to edit text file in the terminal and basic operation like replacing or copy-pasting lines.
 
 
 **Ressources:**
@@ -123,7 +123,7 @@ If you want to edit your text file directly in the terminal, as a starting point
 
 Installing Stuff
 -----------------------
-Installing packages in Linux with :bash:`apt install` is an easy and straightforward process. apt install is a command-line utility that is used to install, remove, and manage packages on Linux systems. It is the most commonly used package manager on Debian and Ubuntu systems.
+Installing packages in Linux with :bash:`apt install` is an easy and straightforward process. :bash:`apt install` is a command-line utility that is used to install, remove, and manage packages on Linux systems. It is the most commonly used package manager on Debian and Ubuntu systems.
 
 To install a package with apt install, open up a terminal window and type in the command:
 :bash:`sudo apt install <package-name>`
