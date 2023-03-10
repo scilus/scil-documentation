@@ -142,38 +142,141 @@ Bash Language
 """""""""""""""""""""""
 Bash Scripting
 -----------------------
-TODO
+Bash scripting is a powerful tool for users of the Linux operating system. It allows users to automate tasks, create powerful and efficient programs and scripts, and generally make life easier. Bash scripting is based on the syntax of the Bourne Shell, a shell used on the UNIX operating system in the late 1970s.
 
-Advanced Commands
+The usefulness of bash scripting lies in its ability to automate repetitive tasks and create powerful programs and scripts that can be used to perform many different tasks. For instance, it can be used to create scripts that can be used to automate backups, create directories, or even perform complex calculations.
+
+To start using bash scripting, you will need to have access to a Linux system with the bash shell installed, such as Ubuntu or Debian. Once you have access to the shell, you can start writing and running your scripts.
+
+When you are learning bash scripting, there are a few key functions that you should be familiar with. These include, looping (for and while), conditionals (if, elif, else), and variables.
+
+Once you have mastered the basics of bash scripting, you can start exploring more advanced topics, such as regular expressions, arrays, and string manipulation. Learning these topics will help make your scripts more powerful and efficient.
+
+Basic Operation
 -----------------------
-TODO
+First it is crucial to look at the ressources Navigating Files section to learn about basic command (such as echo, cd, or ls)
+
+.. code-block:: bash
+
+    # Variable Declaration
+    # Syntax: VARIABLE_NAME=VALUE 
+    NUMBER=10
+
+.. code-block:: bash
+
+    # For Loop
+    # Syntax: for VARIABLE_NAME in [LIST]; do [COMMANDS]; done 
+    for NUM in 1 2 3 4 5; do 
+      echo "Number $NUM"
+    done
+
+.. code-block:: bash
+
+    # While Loop
+    # Syntax: while [CONDITION]; do [COMMANDS]; done
+    while [ $NUMBER -gt 0 ]; do 
+      echo "Number is $NUMBER"
+      NUMBER=$[$NUMBER-1]
+    done
+
+.. code-block:: bash
+
+    # If/Else
+    # Syntax: if [CONDITION]; then [COMMANDS]; else [COMMANDS]; fi
+    if [ $NUMBER -gt 5 ]; then
+      echo "$NUMBER is greater than 5"
+    else 
+      echo "$NUMBER is less than 5"
+    fi
+
+
+Basename:
+:bash:`basename /usr/local/bin/python`
+Output: python
+
+Dirname:
+:bash:`dirname /usr/local/bin/python`
+Output: /usr/local/bin
 
 Regular Expressions
 -----------------------
-TODO
+Regular expressions are a powerful tool used in Bash to match text strings. A regular expression, or regex, is a sequence of characters that define a search pattern used to match strings of text.
 
-ComputeCanada
-"""""""""""""""""""""""
-ComputeCanada is a national research computing platform that provides Canadian researchers with access to powerful computing resources, storage and expertise in order to enable leading-edge research in all disciplines. It provides researchers with access to high-performance computing, cloud computing, artificial intelligence, big data and visualization resources. ComputeCanada also provides researchers with access to specialized expertise, training, support and consulting services. ComputeCanada enables researchers to accelerate their research and develop new technologies, helping to make Canada a leader in data-driven research.
+For example, the regex `[0-9]` will match any single digit number.
 
-You can transfer files over to ComputeCanada `[link] <https://docs.alliancecan.ca/wiki/Transferring_data>`_ and install what you need for processing. The development environment of ComputeCanada allows you to load entire modules/libraries/software easily.
+Using a for loop and an if/else statement, we can use regular expressions to search for specific patterns in a string. For example, let's say we want to find all of the words in a sentence that start with the letter 'a'. We could use the following for loop:
 
 .. code-block:: bash
 
-   module load singularity/3.8
-   module load nextflow/20.10.0
-   module load java/11.0.2
+    for word in $(echo "This is an amazing test sentence"); do
+        if [[ $word =~ ^a[a-z]* ]]; then
+            echo "$word"
+        fi
+    done
 
-\textbf{SLURM} (Simple Linux Utility for Resource Management) is a powerful and flexible open source workload manager and job scheduler designed specifically for supercomputers and Linux clusters. It is used to manage and allocate resources for large-scale high-performance computing jobs. SLURM allows for efficient and easy resource allocation for jobs, such as allocating nodes, CPUs, memory, and time, as well as monitoring job progress. SLURM is used by many large computing centers, including the US Department of Energy’s Oak Ridge Leadership Computing Facility.
 
-SLURM is useful on supercomputers because it allows for efficient scheduling of resources. With SLURM, resource allocation decisions can be made quickly, ensuring that resources are always available to the jobs that need them. For example, a researcher could submit a job to a supercomputer with SLURM and the system would automatically allocate the necessary resources (e.g., nodes, CPUs, memory, and time) in order to complete the job. Additionally, SLURM can be used to monitor job progress, allowing users to keep track of their jobs’ progress and adjust resource allocation accordingly.
+This loop will iterate through each word in the sentence and check if it matches the regex `^a[a-z]*`. If it does, it will print that word out. In this case, it will print 'a' and 'test'.
 
-It is recommended to use allocated resources, you can do this by adding this to your :bash:`~/.bashrc`.
+The most common use of regular expressions in our context is for files management. For example imagine you have a list of folder using IDs: sub-1010/, sub-1011/, sub-1012/, sub-2000/, sub-2001/, sub-2002/, sub-3010/. By using the regular expressions:
+    - :bash:`ls sub-*` (get all folders)
+    - :bash:`ls sub-10*` (get all 3 folder starting with sub-10)
+    - :bash:`ls sub-*1` (get the 2 folders ending with the number 1)
+    - :bash:`ls sub-??1?` (get the 2 folders that has 1 as the third number)
+    - :bash:`ls sub[1,3]?1` (get the folders that start with either 1 or 3, but finish with 1)
+
+This can be used with for loops to navigate and apply command to different directories or files.
+
+Advanced Commands
+-----------------------
+Here is a few tasks with example commands:
+.. code-block:: bash
+
+    # Iterate over all unique filenames in the directory (similar to a set)
+    for i in $(ls */*.trk | xargs -n 1 basename | sort | uniq);
+        do echo $i
+    done
 
 .. code-block:: bash
 
-   export SLURM_ACCOUNT=rrg-descotea
-   export SBATCH_ACCOUNT=$SLURM_ACCOUNT
-   export SALLOC_ACCOUNT=$SLURM_ACCOUNT
+    # Find and replace all spaces in filenames of the current directory
+    find *.* -type f  | grep " " | while read FILE; do mv "$FILE" ${FILE// /_}; done
 
-You can launch processing using the interactive mode, (*renting* a node for a little while: `[link] <https://docs.alliancecan.ca/wiki/Running_jobs#Interactive_jobs>`_. The alternative is to dispatch tasks and let the system optimize launch: `[link] <https://docs.alliancecan.ca/wiki/Running_jobs#Use_sbatch_to_submit_jobs>`_
+.. code-block:: bash
+    # Find all files in the directory clusters that are above 10 kilobytes
+    for i in $(find clusters/ -type f -size +10k); do echo $i; done
+
+These are examples of what can be done in bash in short one-line, but to get there you need to read a lot of tutorials and practices. Also everytime you do something that works, save it and keep it safe.
+
+1. Using awk to print the first three characters of a string:
+    :bash:`echo "stringexample" | awk '{print substr($0,0,3)}'`
+This command will print the first three characters of the string "stringexample".
+
+
+2. Using a for loop to rename multiple files:
+    :bash:`for file in *.txt; do mv ${file} ${file/.txt/.docx}; done`
+This command will loop through all files in the current directory with a .txt extension and rename them with a .docx extension.
+
+
+3. Using sed to remove all blank lines from a file:
+    :bash:`sed '/^$/d' file.txt`
+This command will remove all blank lines from the file "file.txt".
+
+
+4. Using the command find and sed to find and replace a string: 
+    :bash:`find /path/to/file -type f -exec sed -i 's/original_string/replacement_string/g' {} \;`
+This command will find all files in the directory specified by /path/to/file and replace any instances of the string "original_string" with "replacement_string".
+
+
+5. Using a for loop and the command find to delete all files with a given extension:
+    :bash:`for file in $(find . -name "*.ext"); do rm $file; done`
+This command will loop through all files in the current directory with the extension ".ext" and delete them.
+
+
+6. Using a for loop and sed to insert text into multiple files:
+    :bash:`for file in *.txt; do sed -i '1i\text_to_insert' $file; done`
+This command will loop through all files in the current directory with a .txt extension and insert the text "text_to_insert" at the beginning of each file.
+
+
+7. Using sed and a regular expression to remove lines containing a specific pattern from a file:
+    :bash:`sed -i '/patternToRemove/d' file.txt`
+This command will remove all lines from the file "file.txt" that contain the pattern "patternToRemove".
