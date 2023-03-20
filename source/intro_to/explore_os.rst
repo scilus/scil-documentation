@@ -43,7 +43,7 @@ Ubuntu is not much different than Windows or MacOS. You can right-click to creat
     If you intend to code, you should make sure to have access to the keyboard layout you want.
 
 
-In order to learn about these functionalities, we recommend going through a tutorial `here <https://www.tutorialspoint.com/ubuntu/index.htm>`_. You can also look up YouTube tutorials to introduce features you want to know better, but be sure to check your Ubuntu version before (search for 'system info' in the applications)
+In order to learn about these functionalities, we recommend going through a tutorial `here <https://www.tutorialspoint.com/ubuntu/index.htm>`__. You can also look up YouTube tutorials to introduce features you want to know better, but be sure to check your Ubuntu version before (search for 'system info' in the applications)
 
 Package Manager
 -----------------------
@@ -95,11 +95,11 @@ The advantage of the Terminal is that operations can be automated.
    - For example, if you wanted to copy a file called “example.txt” to the “Documents” directory, located in your home directory, you would type the following command into the shell: :bash:`cp example.txt ~/Documents/`
 
 **Ressources:**
-    - Bash cheat sheet \#1 `[link] <https://www.educative.io/blog/bash-shell-command-cheat-sheet>`_
-    - Bash cheat sheet \#2 `[link] <https://devhints.io/bash>`_
-    - Bash cheat sheet \#3 `[link] <https://www.linuxtrainingacademy.com/linux-commands-cheat-sheet/>`_
-    - Advanced concepts in Bash `[link] <https://www.pcwdld.com/bash-cheat-sheet>`_
-    - Help with the :bash:`~/.bashrc` file `[link] <https://www.marquette.edu/high-performance-computing/bashrc.php>`_
+    - Bash cheat sheet \#1 `[link] <https://www.educative.io/blog/bash-shell-command-cheat-sheet>`__
+    - Bash cheat sheet \#2 `[link] <https://devhints.io/bash>`__
+    - Bash cheat sheet \#3 `[link] <https://www.linuxtrainingacademy.com/linux-commands-cheat-sheet/>`__
+    - Advanced concepts in Bash `[link] <https://www.pcwdld.com/bash-cheat-sheet>`__
+    - Help with the :bash:`~/.bashrc` file `[link] <https://www.marquette.edu/high-performance-computing/bashrc.php>`__
 
 Editing Text
 -----------------------
@@ -117,9 +117,9 @@ If you want to edit your text file directly in the terminal, as a starting point
 
 
 **Ressources:**
-    - Nano guide for novices `[link] <https://itsfoss.com/nano-editor-guide/>`_
-    - Introduction to Markdown `[link] <https://www.markdownguide.org/getting-started/>`_
-    - Test your Markdown online `[link] <https://stackedit.io/>`_
+    - Nano guide for novices `[link] <https://itsfoss.com/nano-editor-guide/>`__
+    - Introduction to Markdown `[link] <https://www.markdownguide.org/getting-started/>`__
+    - Test your Markdown online `[link] <https://stackedit.io/>`__
 
 Installing Stuff
 -----------------------
@@ -209,9 +209,9 @@ Using a for loop and an if/else statement, we can use regular expressions to sea
 .. code-block:: bash
 
     for word in $(echo "This is an amazing test sentence"); do
-        if [[ $word =~ ^a[a-z]* ]]; then
-            echo "$word"
-        fi
+      if [[ $word =~ ^a[a-z]* ]]; then
+        echo "$word"
+      fi
     done
 
 
@@ -232,16 +232,15 @@ Here is a few tasks with example commands:
 .. code-block:: bash
 
     # Iterate over all unique filenames in the directory (similar to a set)
-    for i in $(ls */*.trk | xargs -n 1 basename | sort | uniq);
-        do echo $i
-    done
+    for i in $(ls */*.trk | xargs -n 1 basename | sort | uniq); do echo $i; done
 
 .. code-block:: bash
 
     # Find and replace all spaces in filenames of the current directory
-    find *.* -type f  | grep " " | while read FILE; do mv "$FILE" ${FILE// /_}; done
+    find *.* -type f  | grep " " | while read FILE; do mv "${FILE}" ${FILE// /_}; done
 
 .. code-block:: bash
+
     # Find all files in the directory clusters that are above 10 kilobytes
     for i in $(find clusters/ -type f -size +10k); do echo $i; done
 
@@ -249,34 +248,34 @@ These are examples of what can be done in bash in short one-line, but to get the
 
 1. Using awk to print the first three characters of a string:
     :bash:`echo "stringexample" | awk '{print substr($0,0,3)}'`
-This command will print the first three characters of the string "stringexample".
+    This command will print the first three characters of the string "stringexample".
 
 
 2. Using a for loop to rename multiple files:
     :bash:`for file in *.txt; do mv ${file} ${file/.txt/.docx}; done`
-This command will loop through all files in the current directory with a .txt extension and rename them with a .docx extension.
+    This command will loop through all files in the current directory with a .txt extension and rename them with a .docx extension.
 
 
 3. Using sed to remove all blank lines from a file:
     :bash:`sed '/^$/d' file.txt`
-This command will remove all blank lines from the file "file.txt".
+    This command will remove all blank lines from the file "file.txt".
 
 
 4. Using the command find and sed to find and replace a string: 
-    :bash:`find /path/to/file -type f -exec sed -i 's/original_string/replacement_string/g' {} \;`
-This command will find all files in the directory specified by /path/to/file and replace any instances of the string "original_string" with "replacement_string".
+    :bash:`find /path/to/file -type f -exec sed -i 's/original_string/replace_string/g' {} \;`
+    This command will find all files in the directory specified by /path/to/file and replace any instances of the string "original_string" with "replacement_string".
 
 
 5. Using a for loop and the command find to delete all files with a given extension:
-    :bash:`for file in $(find . -name "*.ext"); do rm $file; done`
-This command will loop through all files in the current directory with the extension ".ext" and delete them.
+    :bash:`for file in $(find . -name "*.ext"); do rm ${file}; done`
+    This command will loop through all files in the current directory with the extension ".ext" and delete them.
 
 
 6. Using a for loop and sed to insert text into multiple files:
-    :bash:`for file in *.txt; do sed -i '1i\text_to_insert' $file; done`
-This command will loop through all files in the current directory with a .txt extension and insert the text "text_to_insert" at the beginning of each file.
+    :bash:`for file in *.txt; do sed -i '1i\text_to_insert' ${file}; done`
+    This command will loop through all files in the current directory with a .txt extension and insert the text "text_to_insert" at the beginning of each file.
 
 
 7. Using sed and a regular expression to remove lines containing a specific pattern from a file:
     :bash:`sed -i '/patternToRemove/d' file.txt`
-This command will remove all lines from the file "file.txt" that contain the pattern "patternToRemove".
+    This command will remove all lines from the file "file.txt" that contain the pattern "patternToRemove".

@@ -5,7 +5,7 @@ Useful links
 Logos
 -----
 
-White SCIL Logo (PDF link): :download:`pdf </images/logo_scil_blanc.pdf>`
+White SCIL Logo (PDF link): :download:`pdf </images/logo_scil_blanc.png>`
 
 
 Black SCIL Logo:
