@@ -5,7 +5,7 @@ Onboarding new students
 
 Important rooms and places
 """"""""""""""""""""""""""
-Chantal Proulx, Lynn Lebrun, Karine Bolduc and generally the Faculty’s offices are important and you should know where they are. Ask someone in the lab or Maxime to guide you.
+Chantal Proulx, Lynn Lebrun, Marie-Pier Côté and generally the Faculty’s offices are important and you should know where they are. Ask someone in the lab or Maxime to guide you.
 
 Subscriptions
 """""""""""""

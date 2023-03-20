@@ -4,46 +4,46 @@ Interesting conferences
 .. role:: strike
     :class: strike
 
-(Last update: 2022-04-11)
+(Last update: 2023-01-18)
 
 Summary, coming events and deadlines
 ------------------------------------
 
-.. image:: ../images/calendar-modif.jpg
-   :scale: 34 %
-   :align: right
+2023
 
-2022
+    - **Feb 09-10: HIBALL**, Montreal: https://events.hifis.net/event/640/
 
-    - **May 7-12: ISMRM**, London, England: https://www.ismrm.org/22m/
+        - Jan 27: Registration deadline.
 
-        - Nov 10: Abstract submission deadline
+    - **April 17-19: I AM**, London, UK: https://www.iambrain.org/
 
-    - **June 2nd**, Sherbrooke: RBIQ / QBIN day: https://rbiq-qbin.qc.ca/fr/2022/03/04/qbin-scientific-day-2022-save-the-date/
+        - March 15: Abstract submission deadline
 
-        - April 29: Submission deadline.
+    - **June 03-08: ISMRM**, Toronto, CA: https://www.ismrm.org/23m/
 
-    - **June 19-23: OHBM**, Glasglow, Scotland: https://www.humanbrainmapping.org/i4a/pages/index.cfm?pageid=4114
+        - Nov 09 (2022): Abstract submission deadline
 
-        - Dec 17: Abstract submission deadline
+    - **July 10-12: MIDL**, Nashville: https://2023.midl.io/
 
-    - **July 6-8: MIDL**, Zürich, Switzerland: https://2022.midl.io/
+        - January 15: Paper submission deadline.
+        - April 7: Short papers submission deadline.
 
-        - Dec 10: Paper registration deadline
-        - Dec 17: Paper submission deadline
-        - April 22: Short paper submission deadline
+    - **July 22-26: OHBM**, Montreal, CA: https://www.humanbrainmapping.org/i4a/pages/index.cfm?pageid=4114
 
-    - **Sept 18-22: MICCAI**, Singapore: https://conferences.miccai.org/2022/en/
+        - January 13: Content submission deadline.
 
-        - Feb 15: Intention to submit.
-        - March 1: Paper submission deadline
-        - Registration deadline not announced.
+    - **Oct 8-12: MICCAI**, Vancouver, CA. https://conferences.miccai.org/2023/en/
+
+        - Feb 23: Intention to submit
+        - March 09: Paper submission deadline
 
 Dates to be announced:
 
     - Dipy workshop 2023
-    - MAIN event 2022.
-    - Next Neuromatch conference.
+    - UNIQUE: MAIN event 2023 + Student symposium 2023
+    - Neuromatch conference 2023.
+    - QBIN scientific day (Journée scientifique du RBIQ) 2023
+
 
 International events
 --------------------
@@ -60,8 +60,15 @@ MICCAI
 
 ISMRM
     - The International Society for Magnetic Resonance in Medicine `(ISMRM) <https://www.ismrm.org>`_
-    - This conference only presents the **MRI modalities** and, like MICCAI, focuses a lot on the methods even if it is a half-method, half-application conference.
-    - **Annual** international conference since 1994. Last conferences: Canada, France, Hawai'i, Singapore. ISMRM 2020 and 2021 were virtual due to COVID-19.
+
+    Main Conference
+
+        - This conference only presents the **MRI modalities** and, like MICCAI, focuses a lot on the methods even if it is a half-method, half-application conference.
+        - **Annual** international conference since 1994. Last conferences: Canada, France, Hawai'i, Singapore. ISMRM 2020 and 2021 were virtual due to COVID-19.
+
+    Diffusion study group Workshop:
+
+        - A conference organized from time to time. Last one was in Amsterdam in 2022. In was the first occurance in many years. https://www.ismrm.org/workshops/2022/Diffusion/
 
 MIDL
     - Medical Imaging with Deep Learning (`MIDL <https://www.midl.io>`_)
@@ -71,6 +78,9 @@ MIDL
 Dipy workshop
     - DIPY offers an **annual** workshop which is a good way to get acquainted with DIPY. It is held in Indiana (Indiana University is DIPY's main sponsor) around March. Link here: `2022's workshop <https://dipy.org/workshops/dipy-workshop-2022>`_.
 
+I AM BRAIN
+    - New association. Their first event will be in April 2023.
+
 Local events
 ------------
 
@@ -79,16 +89,19 @@ RBIQ-QBIN
     - **Annual** scientific day in Montreal. Link here: `scientific day <https://www.rbiq-qbin.qc.ca/Journ%C3%A9e_scientifique_annuelle>`_.
 
 UNIQUE
-    - The Unifying Neuroscience and Artificial Intelligence - Québec (`UNIQUE <https://sites.google.com/view/unique-neuro-ai/>`_). 2019 : scientific day in October. 2020: student symposium in May.
+    - The Unifying Neuroscience and Artificial Intelligence - Québec (`UNIQUE <https://sites.google.com/view/unique-neuro-ai/>`_). They sometime offer scientific days or student symposiums. Ex: https://unique-students.github.io/2022/schedule.
     - See all activities `here <https://sites.google.com/view/unique-neuro-ai/activities>`_.
 
 MAIN
     - Unique helps organizing the **annual** MAIN event (Montreal Artificial Intelligence and Neuroscience) with UdeM since 2017.
-    - Last event's website is `2021's, here <https://www.main2021.org/>`_.
+    - Last event's website is `2022's, here <https://www.main2022.org/>`_.
 
 Symposium Imagining Imaging
     - Was first held in 2014 for the opening of our new Imaging Center at the CHUS and will now again be held this year. Keynote speakers from all around the world.
     - Link for `2020's edition <https://www.fourwav.es/view/2000/info/>`_.
+
+HIBALL Winter School:
+    - Tutorials convering different aspects of working with the BigBrain. https://events.hifis.net/event/640/
 
 
 Online events
