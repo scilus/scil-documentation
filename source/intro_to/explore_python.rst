@@ -133,9 +133,6 @@ Try it out:
 Virtual environment (used like that) create a folder with dependencies in the current directory, delete it to avoid confusion:
 :bash:`rm -rf envname/`
 
-
-
-
 Virtual Environment
 """""""""""""""""""""""
 Python Virtual Environment (also known as venv) is an essential tool for research in any field. It is a special type of environment that allows you to create, manage, and work with different versions of Python and its associated packages and libraries. It provides a safe and isolated environment for research and development, allowing the user to install and test Python packages without affecting the system’s global environment. Additionally, it enables users to install different versions of the same package, which is especially important for research projects that require specific versions of software. It also helps to keep track of the required dependencies for each project, without having to worry about conflicts or version incompatibilities. Finally, it helps to keep the research environment clean and organized, making it easier to replicate the same results.
