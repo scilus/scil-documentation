@@ -13,12 +13,12 @@ Python is a powerful programming language used for many different purposes. It w
 
 This introduction is from Pr. Francois Rheault's class `[link] <https://github.com/minilabus/intro_to_python>`__. It contains an overview of basic concepts in Python, a few good practices (and anti-pattern) and an intro to numpy (notebook 1-2-3), an intro to image processing (4-5-6), an few examples of medical image processing (a-b-c-d-e), an simplistic script (print_fibonacci.py, using sys.argv), an advanced script (remove_background.py, using argparser) and an example of class/object (class_and_objects.py).
 
-This repository uses Jupyter-Notebook, and a few libraries (scipy, numpy, imageio, matplotlib, etc.). So it is a good test to check if your setup is complete (Git is installed, Python is working, virtual environment are setup, libraries are installed, etc.)
+This repository uses Jupyter-Notebook, and a few libraries (scipy, numpy, imageio, matplotlib, etc.). So it is a good test to check if your setup is complete (Git is installed, Python is working, virtual environments are setup, libraries are installed, etc.)
 
 
 Interactive Mode
 -----------------------
-Interactive mode: In interactive mode, the user interacts with the Python interpreter directly, typing in code and seeing the results immediately. This method is useful for quick testing or exploring new concepts, as it allows for rapid prototyping and experimentation. However, it can be challenging to keep track of previous code and results, and it is not ideal for larger projects or for writing reusable code.
+In interactive mode, the user interacts with the Python interpreter directly, typing in code and seeing the results immediately. This method is useful for quick testing or exploring new concepts, as it allows for rapid prototyping and experimentation. However, it can be challenging to keep track of previous code and results, and it is not ideal for larger projects or for writing reusable code.
 
 Interactive mode is a great way to quickly execute small snippets of code and test out ideas. 
 
@@ -29,7 +29,7 @@ To launch interactive mode, simply type :bash:`python` or :bash:`ipython` (if is
     :scale: 50 %
     :align: center
 
-    A python shell let you do everything you want in Python. Using variables, functions, if/else, for loops. The problem is that you are typing it from scratch every time it starts. Great to use a quick calculator or a sanity check on basic data type or import.
+A python shell let you do everything you want in Python. Using variables, functions, if/else, for loops. The problem is that you are typing it from scratch every time it starts. Great to use a quick calculator or a sanity check on basic data type or import.
 
 **Ressources:**
     - Step-by-Step Python tutorial `[link] <https://www.w3schools.com/python/python_intro.asp>`__
@@ -39,7 +39,7 @@ To launch interactive mode, simply type :bash:`python` or :bash:`ipython` (if is
 
 Jupyter Notebooks
 -----------------------
-Jupyter Notebook: Jupyter Notebook is a web-based interactive computing environment that allows users to create and share documents containing live code, equations, visualizations, and narrative text. Jupyter Notebook is a popular choice for data analysis and scientific computing because it allows for the creation of reproducible research documents that combine code, results, and explanations. Additionally, it provides an interactive interface for coding and visualization, making it a useful tool for exploring and presenting data.
+Jupyter Notebook is a web-based interactive computing environment that allows users to create and share documents containing live code, equations, visualizations, and narrative text. Jupyter Notebook is a popular choice for data analysis and scientific computing because it allows for the creation of reproducible research documents that combine code, results, and explanations. Additionally, it provides an interactive interface for coding and visualization, making it a useful tool for exploring and presenting data.
 
 However, it is poorly adapted for processing, large analysis projects or collaborative work.
 
@@ -104,7 +104,7 @@ Install Python (Real)
 -----------------------
 If you are going to install scilpy (or any other library for your research project) you should control more finely what you install.
 
-First we will instruct *apt* where to find Python distribution: :bash:`sudo add-apt-repository ppa:deadsnakes/ppa`
+First, we will instruct *apt* where to find Python distribution: :bash:`sudo add-apt-repository ppa:deadsnakes/ppa`
 
 Then, we update the package list: :bash:`sudo apt update`
 
@@ -141,7 +141,7 @@ There is many ways to handle virtual environments, but here are the two most com
 
 VirtualEnvs
 -----------------------
-Virtualenv is a built-in module in Python that allows you to create isolated environments for Python projects. It is a lightweight and easy-to-use tool for managing dependencies and project configurations. It is also compatible with most Python versions and can be used with any Python package manager. However, virtualenv requires some command-line knowledge to use, and it does not include any pre-installed packages or tools.
+:bash:`virtualenv` is a built-in module in Python that allows you to create isolated environments for Python projects. It is a lightweight and easy-to-use tool for managing dependencies and project configurations. It is also compatible with most Python versions and can be used with any Python package manager. However, virtualenv requires some command-line knowledge to use, and it does not include any pre-installed packages or tools.
 
 **Ressources:**
     - Quick tutorial on virtualenv `[link] <https://pythonbasics.org/virtualenv/>`__
