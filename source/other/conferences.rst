@@ -4,20 +4,24 @@ Interesting conferences
 .. role:: strike
     :class: strike
 
-(Last update: 2023-01-18)
 
 Summary, coming events and deadlines
 ------------------------------------
 
+(Last update: 2023-03-29)
+
 2023
 
-    - **Feb 09-10: HIBALL**, Montreal: https://events.hifis.net/event/640/
+    - **April 17-19: I AM**, London, UK + Online: https://www.iambrain.org/
 
-        - Jan 27: Registration deadline.
+        - March 17: Abstract submission deadline
 
-    - **April 17-19: I AM**, London, UK: https://www.iambrain.org/
+    - **April 24 - 28, Dipy Workshop**, Los Angeles
 
-        - March 15: Abstract submission deadline
+    - **May 25, QBIN / RBIQ Scientific day**, Quebec https://rbiq-qbin.qc.ca/fr/2023/03/27/qbin-scientific-day-2023-save-the-date/
+
+        - April 27: Abstract submission deadline.
+        - May 19: Registration deadline.
 
     - **June 03-08: ISMRM**, Toronto, CA: https://www.ismrm.org/23m/
 
@@ -26,23 +30,25 @@ Summary, coming events and deadlines
     - **July 10-12: MIDL**, Nashville: https://2023.midl.io/
 
         - January 15: Paper submission deadline.
+        - April 6: Last day for early price registration.
         - April 7: Short papers submission deadline.
 
-    - **July 22-26: OHBM**, Montreal, CA: https://www.humanbrainmapping.org/i4a/pages/index.cfm?pageid=4114
+    - **July 22-26: OHBM**, Montreal, CA: https://event.fourwaves.com/ohbm2023/
 
         - January 13: Content submission deadline.
 
-    - **Oct 8-12: MICCAI**, Vancouver, CA. https://conferences.miccai.org/2023/en/
+    - | **Oct 8-12: MICCAI**, Vancouver, CA. https://conferences.miccai.org/2023/en/
+      | ( + CDMRI Workshop; online : http://cmic.cs.ucl.ac.uk/cdmri/ )
 
         - Feb 23: Intention to submit
         - March 09: Paper submission deadline
+        - June: Page for registration will open.
 
 Dates to be announced:
 
-    - Dipy workshop 2023
-    - UNIQUE: MAIN event 2023 + Student symposium 2023
+    - UNIQUE: MAIN event 2023 + Student symposium 2023 (hybrid) https://unique-students.github.io/2023/uss
     - Neuromatch conference 2023.
-    - QBIN scientific day (Journée scientifique du RBIQ) 2023
+    - 2024 HIBALL winter school.
 
 
 International events
@@ -102,7 +108,6 @@ Symposium Imagining Imaging
 
 HIBALL Winter School:
     - Tutorials convering different aspects of working with the BigBrain. https://events.hifis.net/event/640/
-
 
 Online events
 -------------
