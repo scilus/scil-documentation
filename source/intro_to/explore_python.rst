@@ -11,7 +11,7 @@ Python Language
 """""""""""""""""""""""
 Python is a powerful programming language used for many different purposes. It was created in the late 1980s and has grown in popularity due to its easy-to-use syntax, wide range of applications and range of libraries. Python is particularly useful for research in general due to its ability to quickly and easily process large datasets, its support for visualization and its ability to easily integrate with other languages. Python's object-oriented structure makes it easy to use for complex and interactive data analysis, while its flexibility allows researchers to quickly develop and adapt new tools. Additionally, the availability of numerous open source libraries and frameworks makes it easy to access and use in research projects. Python is also popular for its simple syntax and the many libraries and frameworks available, making it an ideal choice for research.
 
-This introduction is from Pr. Francois Rheault's class `[link] <https://github.com/minilabus/intro_to_python>`__. It contains an overview of basic concepts in Python, a few good practices (and anti-pattern) and an intro to numpy (notebook 1-2-3), an intro to image processing (4-5-6), an few examples of medical image processing (a-b-c-d-e), an simplistic script (print_fibonacci.py, using sys.argv), an advanced script (remove_background.py, using argparser) and an example of class/object (class_and_objects.py).
+This introduction is from Pr. Francois Rheault's class `[link] <https://github.com/minilabus/intro_to_python>`__. It contains an overview of basic concepts in Python, a few good practices (and anti-pattern) and an intro to numpy (notebook 1-2-3), an intro to image processing (4-5-6), a few examples of medical image processing (a-b-c-d-e), a simplistic script (print_fibonacci.py, using sys.argv), an advanced script (remove_background.py, using argparser) and an example of class/object (class_and_objects.py).
 
 This repository uses Jupyter-Notebook, and a few libraries (scipy, numpy, imageio, matplotlib, etc.). So it is a good test to check if your setup is complete (Git is installed, Python is working, virtual environments are setup, libraries are installed, etc.)
 
@@ -57,15 +57,17 @@ To launch a Jupyter Notebook, simply type :bash:`jupyter-notebook` (if installed
 
 Integrated Development Environment (IDE)
 ----------------------------------------------
-An IDE is a software application that provides comprehensive facilities for software development, including code editing, debugging, and testing. IDEs are designed to help developers write and maintain code efficiently, with features such as syntax highlighting, auto-completion, and code refactoring. IDEs are well suited for larger projects, as they offer features such as version control, project management, and team collaboration. However, they can be more complex to set up and use than other methods, and may require more resources to run effectively.
+An IDE is an application made for software development, including code editing, debugging, and testing. Known IDEs are VSCode, Pycharm, and some are more simple like Atom. IDEs are designed to help developers write and maintain code efficiently, with features such as syntax highlighting, auto-completion, and code refactoring. IDEs are well suited for larger projects, as they offer features such as version control, project management, and team collaboration. However, they can be more complex to set up and use than other methods, and may require more resources to run effectively.
 
 Scripts can also be written in a simple text editor, but no matter how they were written they can be executed in the command line. To launch a Python script, simply type :bash:`python script_name.py` in your terminal/command line. This will execute the script and display the results in the terminal/command line.
+
+IDEs sometimes come with their own virtual environments, terminal and file explorer to facilitate interactions with your code. Make sure you understand which version of Python you are running and which terminal, where are installed your libraries, and how your code run inside vs outside of the IDE.
 
 .. figure:: /images/intro_to_python_library.png
     :scale: 40 %
     :align: center
 
-    When working with scripts and libraries, you should use a proper IDE (VSCode, Pycharm, or at least Atom) as well as code versioning (Git). Each IDE is slightly different and you should follow online tutorial on the one you want to pick.
+    When working with scripts and libraries, you should use a proper IDE as well as code versioning (Git). Each IDE is slightly different and you should follow online tutorial on the one you want to pick.
 
 **Ressources:**
     - Intro to IDE and how to pick them `[link] <https://realpython.com/python-ides-code-editors-guide/>`__
@@ -76,7 +78,7 @@ Scripts can also be written in a simple text editor, but no matter how they were
 
 Understanding Errors
 -----------------------
-Understanding *traceback* in Python is crucial for effective debugging of code. When an error occurs, Python generates a *traceback*, which is a detailed report of the sequence of function calls that led up to the error. By analyzing the *traceback*, you can identify the specific line of code that caused the error and the functions that were called leading up to it. This information can help you quickly locate and fix errors in your code. Additionally, the error message that accompanies the *traceback* provides valuable information about the type of error that occurred, which can guide you in selecting the appropriate debugging strategy. Overall, mastering *traceback* analysis and error message interpretation are essential skills for any Python programmer.
+Understanding a *traceback* in Python is crucial for effective debugging of code. When an error occurs, Python generates a *traceback*, which is a detailed report of the sequence of function calls that led up to the error. By analyzing the *traceback*, you can identify the specific line of code that caused the error and the functions that were called leading up to it. This information can help you quickly locate and fix errors in your code. Additionally, the error message that accompanies the *traceback* provides valuable information about the type of error that occurred, which can guide you in selecting the appropriate debugging strategy. Overall, mastering *traceback* analysis and error message interpretation are essential skills for any Python programmer.
 
 
 **Ressources:**
@@ -100,38 +102,9 @@ Verify that Python has been installed correctly by running the following command
 This should display the version number of Python that was installed.
 That's it! You have successfully installed Python on your Ubuntu system.
 
-Install Python (Real)
------------------------
-If you are going to install scilpy (or any other library for your research project) you should control more finely what you install.
+**Sadly**, a decent setup is a lot more complex than this. To have a more complete tutorial on installing Python with Virtual Environment: [TODO]
 
-First, we will instruct *apt* where to find Python distribution: :bash:`sudo add-apt-repository ppa:deadsnakes/ppa`
-
-Then, we update the package list: :bash:`sudo apt update`
-
-Here, we will install Python3.10 and all its related component: :bash:`sudo apt-get install python3.10 python3.10-dev python3.10-venv python3.10-minimal python3.10-tk`
-
-In the last command you could change *3.10* by any other existing version of Python, in fact you can install them all and switch between them using a virtual environment (see below).
-
-The next step is to setup a first virtual environment (more details below):
-
-.. code-block:: bash
-
-    virtualenv -p python3.10 envname
-    source envname/bin/activate
-    pip install numpy
-    python
-
-
-Try it out:
-
-.. code-block:: python
-
-    import numpy as np
-    array = np.zeros((10, 10))
-    exit()
-
-Virtual environment (used like that) create a folder with dependencies in the current directory, delete it to avoid confusion:
-:bash:`rm -rf envname/`
+(*It should have been already installed anyway*)
 
 Virtual Environment
 """""""""""""""""""""""
