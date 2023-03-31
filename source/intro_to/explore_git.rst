@@ -144,7 +144,7 @@ Each update is called a **commit**. This is shown in the second figure [2]_.
 
     # From the workspace to your local repo:
     git status # To see which files have been modified without telling git
-    git add myFile  # To add or update a file in git's memory.
+    git add my_file  # To add or update a file in git's memory.
     git add -u      # To add all files that have been modified, but that git already knew
     git status      # If you check again, everything in green will be recorded with the next command:
     git commit -m "Message to explain the work I have been doing in this update"
