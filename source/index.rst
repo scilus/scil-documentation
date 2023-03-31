@@ -29,6 +29,7 @@ in the lab, from using Linux to developing code.
 
     intro_to/explore_os
     intro_to/explore_python
+    intro_to/explore_git
 
 .. toctree::
     :maxdepth: 1
