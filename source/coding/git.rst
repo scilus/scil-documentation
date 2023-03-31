@@ -60,3 +60,5 @@ A few things to considering when reviewing someone else code:
 
 .. [1] Modified from: https://mamchenkov.net/wordpress/2018/06/06/git-worktree-a-better-way-for-git-stash-abusers/
 .. [2] Taken from: https://buddy.works/blog/5-types-of-git-workflows
+
+PS: This section applies to Scilpy (in Python), but also to any repositories for Flows and Docker/Singularity, but also this ReadTheDocs. We use Git for a lot more than the Python libraries.
