@@ -1,36 +1,62 @@
 Git
 ===
 
-How we use git in the lab
--------------------------
+.. role:: bash(code)
+   :language: bash
 
-*If you are only a user and your don't plan on developping the code:*
+If you do not know what is Git, you should visit the page (CROSSREF when done) to learn about the basic concepts and commands of Git. This page is specifically to learn how we use Git in the lab, what we expect and how you can contribute.
 
-    You can download a repository; we say to **clone** a repository. Downloading vs cloning: when you download, it takes the code as it is then, wraps it in a zip file and downloads it all. But then, you have nothing telling you where you downloaded it from and you can't update the code. Cloning keeps the link with git and allows you to update. Simply go in a terminal in the directory where you want to install some repository and enter: git clone https://my_repo.git. You can find the address by clicking on Github's green button "clone repository".
+For users
+---------
 
-    .. image:: /images/git1_modifiedEm.png
-       :scale: 25 %
-       :align: right
+*If you are only a user and you don't plan on developing the code:*
 
-*If you plan on developping code, here is how we suggest you do:*
+You can download a repository; we say to **clone** a repository. Downloading vs cloning: when you download, it takes the code as it is then, wraps it in a zip file and downloads it all. But then, you have nothing telling you where you downloaded it from and you can't update the code. Cloning keeps the link with git and allows you to update. You will need to open a terminal and use the :bash:`git clone` command. You can find the address by clicking on Github's green button *clone repository*.
 
-    Our standards are based on recommandations you can find anywhere on the web. Let's say you want to develop scilpy. Instead of cloning scilpy directly on your computer, you should **fork** it, i.e. copy it as one of your own repository in your own account. On Github, you can find the button "fork" on the top right of scilpy's repository page. You can clone this repository on your computer (see last paragraph). This leaves you with three connected repositories (see Fig [1]_).
+Once cloned we recommend either using a tag (a release) with the :bash:`git checkout` to ensure a stable version of the code. We expect users to remember which repository the cloned, to put the code in a appropriate folder on their computer (and know where it is), approximately when they cloned it and to remember that Scilpy constantly evolve.
 
-    * **upstream**; the first official repository. On internet.
-    * **origin**: your forked repository from which you cloned. On internet.
-    * **local**: files for which git is aware. On your computer.
-    * **workspace**: files that you have created or modified on your computer without telling git.
+If there is a bug when using the code, make sure to read the documentation, ask developers for help and if it is a real problem, raise an issue on Github.
 
-    The goal will be to work on your computer and save your changes to your fork (origin) (don't forget to save regularly!), and, only when everything is clean and tested, add your work to the upstream through an official pull request that will be thoroughly reviewed by other members of the lab.
+For developers
+---------------
 
-    .. image:: /images/git3.png
-       :scale: 45 %
-       :align: left
+.. image:: /images/git_in_the_lab_remotes.png
+   :scale: 25 %
+   :align: right
 
-    Before giving code examples, there is one last aspect to introduce: **branches**. Each of the upstream, origin and local can be separated into branches, that act as versions of your code, as on the figure [2]_. The main version is always called the **master**. On Github, you can see the code for different branches by clicking on the branch button. On your computer, you can only see one branch at the time. To switch to another branch, everything must be saved on the current branch to avoid loosing work. Usually, the branches on your local repo and in your fork (origin) have the same name to avoid confusion.
+Our standards are based on recommendations you can find anywhere on the web. Let's say you want to develop Scilpy. Instead of cloning Scilpy directly on your computer, you should **fork** it, i.e. copy it as one of your own repositories in your own account. On Github, you can find the button *fork* on the top right of Scilpy's repository page. Then, you can clone this copy of the repository (link to your account) on your computer.
 
-    Generally, you should keep your master equal to the upstream's master. You should develop each feature in a separated branch. When you are ready to send your code to the upstream (pull request), it is usually not a good practice to send the work from your master branch, it should come from a branch with this purpose.
+The goal will be to work on your computer and save your changes to your fork (origin) (don't forget to save regularly!). We recommend immediately setting up a remote named *upstream* to help link your fork to the original repository: :bash:`git remote add upstream git@github.com:scilus/scilpy.git` [1]_.
 
+By default all repositories have a main version of the code (a branch called *master* or *main*). When you are exploring new pieces of code, fixing bugs or tinkering in general you should always create a branch first (with a meaningful name) :bash:`git checkout -b my_branch`.
 
-.. [1] Modified from here: https://mamchenkov.net/wordpress/2018/06/06/git-worktree-a-better-way-for-git-stash-abusers/+
-.. [2] Taken here: https://buddy.works/blog/5-types-of-git-workflows
+If your modifications are useful, and you want to keep it safe, you should commit and push them. If your modifications could be useful to everyone and you want to share it with the rest of the world [2]_, you should consider doing a *pull request*. Only when everything is clean and tested, in the Github web interface, you can start an official pull request that will be reviewed by other members of the lab.
+
+.. image:: /images/git_in_the_lab_features.png
+    :scale: 50 %
+    :align: left
+
+Generally, you should keep your master equal to the upstream's master. You should develop each feature in a separated branch. When you are ready to send your code to the upstream (pull request), it is usually not a good practice to send the work from your master branch, it should come from a branch with this purpose.
+
+Every time you create a branch, be sure you checkout (your fork) master (:bash:`git checkout master`), then update your master with what is new *upstream* (:bash:`git pull upstream master`), finally create your branch (:bash:`git checkout -b my_branch`. This way, you will always start developing with fresh code that is up to date, this avoid conflicts and working on an already solved issue, for example.
+
+For reviewers
+-------------
+
+Every once in a while you are expected to review the code of someone else. For a one time review you can use: :bash:`git fetch upstream pull/${PR_NUMBER}/head:${DESIRED_BRANCH_NAME}` to get the code. However, if you review a lot we recommend adding the author of the pull request (PR) as a remote, fetch the branch and checkout the code (to do every time the code change in the pull request if multiple reviews are needed).
+
+A few things to considering when reviewing someone else code:
+    - The tests are expected to work, at the bottom of the PR (see Figure below)
+    - Read the documentation (argparser, docstring, comments), it should be clear for non-experts
+    - All changes should be needed for the bug fix or features, no modification outside of the scope of the PR
+    - Fix conflicts if there is any, merge/rebase with master
+    - Test it yourself to make sure you understand the change and that it works as expected
+    - Be critical of the code speed, robustness, readability, etc.
+    - If the PR is out of your expertise, make sure to tag someone that can help with the review
+
+.. figure:: /images/git_in_the_lab_tests.png
+    :scale: 60 %
+    :align: left
+
+.. [1] Modified from: https://mamchenkov.net/wordpress/2018/06/06/git-worktree-a-better-way-for-git-stash-abusers/
+.. [2] Taken from: https://buddy.works/blog/5-types-of-git-workflows
