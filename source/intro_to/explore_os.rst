@@ -215,7 +215,7 @@ Using a for loop and an if/else statement, we can use regular expressions to sea
     done
 
 
-This loop will iterate through each word in the sentence and check if it matches the regex `^a[a-z]*`. If it does, it will print that word out. In this case, it will print 'a' and 'test'.
+This loop will iterate through each word in the sentence and check if it matches the regex `^a[a-z]*`. If it does, it will print that word out. In this case, it will print 'an' and 'amazing'.
 
 The most common use of regular expressions in our context is for files management. For example imagine you have a list of folder using IDs: sub-1010/, sub-1011/, sub-1012/, sub-2000/, sub-2001/, sub-2002/, sub-3010/. By using the regular expressions:
     - :bash:`ls sub-*` (get all folders)
