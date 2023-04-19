@@ -5,7 +5,7 @@ Intro to Git
    :language: bash
 
 What is Git/Github?
-------------------------------
+-------------------
 Let's say you want to save your work on internet to make sure that everything is safe if your computer breaks. Let's also say you want to share your work with other people. One answer that often comes to mind is to use Dropbox. That's good, but in the special case where your work is code (in any programming language), it is not the best solution.
 
 For example, you're trying to develop a feature on Scilpy and your collegue is developping another feature on his own computer. 1) You don't want to save it constantly, dropbox-style. You only want to add your code once you're sure it has been correctly tested. 2) If the two of you want to add your features, we need a way to deal with conflicts if you have changed the same files. Git does that. Github, GitLab and Bitbucket are websites offering git as service in a user-friendly way.

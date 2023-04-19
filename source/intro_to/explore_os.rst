@@ -5,11 +5,13 @@ Intro to Linux
    :language: bash
 
 Exploring the OS
-"""""""""""""""""""""""
+""""""""""""""""
+
 Linux is a free and open-source operating system that is available in many different flavors or distributions. Unlike Windows or MacOS, Linux is not controlled or owned by a single company and is instead developed by a global team of volunteers. It is best known for its stability, reliability, and flexibility, and is used in many industries, including web hosting, supercomputing, and embedded systems. It is also well-suited for users who want to customize their system to their specific needs. Linux is also known for its great security features and its ability to run a variety of software, from web browsers to games. With Linux, you can create your own custom computer experience, from the desktop environment to the look and feel of the system itself.
 
 Naviguation
------------------------
+-----------
+
 .. figure:: /images/intro_to_linux_boot.png
     :scale: 25 %
     :align: center
@@ -46,7 +48,8 @@ Ubuntu is not much different than Windows or MacOS. You can right-click to creat
 In order to learn about these functionalities, we recommend going through a tutorial `here <https://www.tutorialspoint.com/ubuntu/index.htm>`__. You can also look up YouTube tutorials to introduce features you want to know better, but be sure to check your Ubuntu version before (search for 'system info' in the applications)
 
 Package Manager
------------------------
+---------------
+
 Synaptic is a graphical package management tool for Debian systems. It is designed to allow users to easily install, upgrade, and remove software packages on their systems. It also provides a graphical user interface for viewing the contents of installed packages and managing the packages on the system. Synaptic is useful for users who want to install new software and keep their systems up to date. It is also useful for managing packages that have been installed from sources outside of the official Debian repositories, such as third-party repositories or manual downloads. It is easy to use and provides users with an intuitive and straightforward way to find, install, and manage software packages on their systems.
 
 .. figure:: /images/intro_to_linux_synaptic.png
@@ -58,7 +61,8 @@ Synaptic is a graphical package management tool for Debian systems. It is design
 This can install both libraries required for other software as well as the software itself, it is common to try to launch a new tool and be unable to install or use it until you try something like what is described in Section **Installing Stuff** (below). Synaptic is only the Graphical User Interface (GUI) for package management, but everything you do in Synaptic can be done in the Terminal.
 
 Software Center
------------------------
+---------------
+
 Syanptic is more powerful and was designed as a package manager. Software Center was designed as an "app-store" like program. The software center can install only one thing at a time and is a lot easier to navigate and you can read reviews and ratings.
 
 .. figure:: /images/intro_to_linux_ubuntu_software_center.png
@@ -69,13 +73,15 @@ Syanptic is more powerful and was designed as a package manager. Software Center
 
 
 The Terminal
-"""""""""""""""""""""""
+""""""""""""
+
 The bash terminal, also known as the command line, is a powerful tool for interacting with your Linux system. It allows you to quickly execute commands, manage files and folders, and automate tasks. Bash is especially useful for system administration, scripting, and programming. 
 
 Unlike a graphical user interface (GUI), which uses graphical elements like windows, icons, and menus, the command line requires you to type in commands to execute them. This might sound intimidating at first, but the command line can be much faster and more powerful than a GUI. Plus, with a little practice, you can become an expert in no time!
 
 Navigating Files
------------------------
+----------------
+
 Using the Terminal you can do anything that the GUI File Explorer can, and even more. 
 The advantage of the Terminal is that operations can be automated.
 
@@ -102,7 +108,8 @@ The advantage of the Terminal is that operations can be automated.
     - Help with the :bash:`~/.bashrc` file `[link] <https://www.marquette.edu/high-performance-computing/bashrc.php>`__
 
 Editing Text
------------------------
+------------
+
 The easiest way to edit text is often using the native *Text Editor* in Ubuntu, but you can install software like gEdit, Atom or Sublime for more advance text editing. When dealing with code or processing everything is in text (C++ or Python or Bash), it all depends on the extension. Raw text in a *FILE.py* is in Python and raw text in a *FILE.cpp* is C++, while *FILE.sh* is for Bash. Microsoft Word *FILE.docx*) documents can be edited using LibreOffice (LibreOffice use *FILE.odt* by default, not *FILE.docx*), but these are not suitable for coding.
 
 So keep in mind that to edit code you need very simple software like Sublime or Atom. When not writing code, but just simple text you can use the *FILE.txt* extension, or for more advanced formatting you can try Markdown (*FILE.md*). 
@@ -122,7 +129,8 @@ If you want to edit your text file directly in the terminal, as a starting point
     - Test your Markdown online `[link] <https://stackedit.io/>`__
 
 Installing Stuff
------------------------
+----------------
+
 Installing packages in Linux with :bash:`apt install` is an easy and straightforward process. :bash:`apt install` is a command-line utility that is used to install, remove, and manage packages on Linux systems. It is the most commonly used package manager on Debian and Ubuntu systems.
 
 To install a package with apt install, open up a terminal window and type in the command:
@@ -139,10 +147,12 @@ Finally, you can search for packages available for installation. To do this, use
 :bash:`sudo apt search <package-name>`
 
 Bash Language
-"""""""""""""""""""""""
-Bash Scripting
------------------------
+"""""""""""""
+
 Bash scripting is a powerful tool for users of the Linux operating system. It allows users to automate tasks, create powerful and efficient programs and scripts, and generally make life easier. Bash scripting is based on the syntax of the Bourne Shell, a shell used on the UNIX operating system in the late 1970s.
+
+Bash Scripting
+--------------
 
 The usefulness of bash scripting lies in its ability to automate repetitive tasks and create powerful programs and scripts that can be used to perform many different tasks. For instance, it can be used to create scripts that can be used to automate backups, create directories, or even perform complex calculations.
 
@@ -153,7 +163,8 @@ When you are learning bash scripting, there are a few key functions that you sho
 Once you have mastered the basics of bash scripting, you can start exploring more advanced topics, such as regular expressions, arrays, and string manipulation. Learning these topics will help make your scripts more powerful and efficient.
 
 Basic Operation
------------------------
+---------------
+
 First it is crucial to look at the ressources Navigating Files section to learn about basic command (such as echo, cd, or ls)
 
 .. code-block:: bash
@@ -199,7 +210,8 @@ Dirname:
 Output: /usr/local/bin
 
 Regular Expressions
------------------------
+-------------------
+
 Regular expressions are a powerful tool used in Bash to match text strings. A regular expression, or regex, is a sequence of characters that define a search pattern used to match strings of text.
 
 For example, the regex `[0-9]` will match any single digit number.
@@ -227,7 +239,8 @@ The most common use of regular expressions in our context is for files managemen
 This can be used with for loops to navigate and apply command to different directories or files.
 
 Advanced Commands
------------------------
+-----------------
+
 Here is a few tasks with example commands:
 .. code-block:: bash
 
