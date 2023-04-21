@@ -51,6 +51,8 @@ Since they contain the Operating System (OS), all dependencies, libraries and so
 Installations
 ^^^^^^^^^^^^^
 
+*Do not try to install on MacOS*
+
 The documentation to install Singularity is easy enough to follow `(here) <https://docs.sylabs.io/guides/3.0/user-guide/installation.html>`__.
 
 However, make sure you follow these subsections:
@@ -78,6 +80,9 @@ This means there is a complexity to the installation, and that Docker is general
 
 Installations
 ^^^^^^^^^^^^^
+
+*It seems like Docker running Linux do not work well on MacOS with M1/M2 CPU*
+
 It is always important to verify if a software is already installed before installing it, but it is **really** important with Docker.
 
 The documentation to install Singularity is easy enough to follow `(here) <https://docs.docker.com/engine/install/ubuntu>`__.
