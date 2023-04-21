@@ -30,6 +30,7 @@ in the lab, from using Linux to developing code.
     intro_to/explore_os
     intro_to/explore_python
     intro_to/explore_git
+    intro_to/explore_software
 
 .. toctree::
     :maxdepth: 1
@@ -46,16 +47,8 @@ in the lab, from using Linux to developing code.
     :caption: Common tools
 
     tools/dipy
-    tools/mi-brain
-    tools/environments
-    tools/python
     tools/nextflow_singularity
-    tools/ants
     tools/cbrain
-    tools/fsl_freesurfer
-    tools/civet
-    tools/mrtrix
-    tools/amico
 
 .. toctree::
     :maxdepth: 1
