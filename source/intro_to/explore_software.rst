@@ -176,7 +176,7 @@ We recommand building MRtrix from source if you are on Linux `(here) <https://mr
 
 Be sure to install all dependencies, then follow all the installation step up to *Set up MRtrix3* or add this line you your :bash:`.bashrc`: :bash:`export PATH=~/PATH/TO/MRTRIX3/mrtrix3/bin:${PATH}`
 
-Once installed, you should be able to type \verb|dwi2fod| to see the help display or \verb|mrview| to launch the GUI.
+Once installed, you should be able to type :bash:`dwi2fod` to see the help display or :bash:`mrview` to launch the GUI.
 
 Freesurfer
 ----------

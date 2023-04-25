@@ -31,6 +31,7 @@ in the lab, from using Linux to developing code.
     intro_to/explore_python
     intro_to/explore_git
     intro_to/explore_software
+    intro_to/explore_nextflow
 
 .. toctree::
     :maxdepth: 1
