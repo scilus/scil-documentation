@@ -31,6 +31,7 @@ in the lab, from using Linux to developing code.
     intro_to/explore_python
     intro_to/explore_git
     intro_to/explore_software
+    intro_to/explore_nextflow
 
 .. toctree::
     :maxdepth: 1
@@ -47,7 +48,6 @@ in the lab, from using Linux to developing code.
     :caption: Common tools
 
     tools/dipy
-    tools/nextflow_singularity
     tools/cbrain
 
 .. toctree::
@@ -57,7 +57,6 @@ in the lab, from using Linux to developing code.
     coding/python
     coding/scilpy
     coding/git
-    coding/nextflow_singularity
 
 
 .. toctree::
