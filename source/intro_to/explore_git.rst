@@ -60,7 +60,7 @@ A remote repository is a version of your project stored on a remote server, allo
 Setting up everything the first time
 ------------------------------------
 
-More details specific to Scilpy and how we use Git in the Lab is available at (CROSSREF WHEN DONE)
+More details specific to Scilpy and how we use Git in the Lab is available :doc:`here <../coding/git>`.
 
 .. figure:: /images/intro_to_git_link.png
    :scale: 50 %

@@ -25,12 +25,13 @@ in the lab, from using Linux to developing code.
 
 .. toctree::
     :maxdepth: 1
-    :caption: Intro to Linux
+    :caption: Intro to CS
 
     intro_to/explore_os
     intro_to/explore_python
     intro_to/explore_git
     intro_to/explore_software
+    intro_to/explore_virtual_machines
     intro_to/explore_nextflow
 
 .. toctree::
