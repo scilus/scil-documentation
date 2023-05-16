@@ -14,4 +14,4 @@ Installing Dipy
 
     .. warning::
 
-        Before installing anything, please read the :ref:`ref_environments_page` page!
+        Before installing anything, please read the :ref:`ref_venvs` page!

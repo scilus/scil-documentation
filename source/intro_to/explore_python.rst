@@ -90,6 +90,8 @@ Understanding a *traceback* in Python is crucial for effective debugging of code
     - How to understand *traceback* `[link] <https://realpython.com/python-*traceback*/>`__
     - What are the error type `[link] <https://www.tutorialsteacher.com/python/error-types-in-python/>`__
 
+.. _ref_python_dist:
+
 Installing Python
 """""""""""""""""
 
@@ -111,6 +113,8 @@ That's it! You have successfully installed Python on your Ubuntu system.
 **Sadly**, a decent setup is a lot more complex than this. To have a more complete tutorial on installing Python with Virtual Environment: [TODO]
 
 (*It should have been already installed anyway*)
+
+.. _ref_venvs:
 
 Virtual Environment
 """""""""""""""""""

@@ -1,3 +1,5 @@
+.. _ref_nextflow:
+
 Intro to Nextflow
 =================
 

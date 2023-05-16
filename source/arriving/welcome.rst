@@ -50,13 +50,13 @@ Preparing your computer
 
 We recommend using linux, but Mac can be an option. With Windows, your life will definitely be more complicated.
 
-1. First, you should work in a virtual environment to avoid breaking your python installation. See the :ref:`ref_environments_page`.
+1. First, you should work in a virtual environment to avoid breaking your python installation. See the :ref:`ref_venvs`.
 
 2. Install scilpy (see the :ref:`ref_scilpy` page). This will install Dipy too.
 
 3. You may want to install Tractoflow (see :ref:`ref_tractoflow`) or our other tools (see :ref:`ref_other_pipelines`).
 
-4. You may want to install other tools that are often useful for people in our lab (see the pages for MI-brain, Ants, MRtrix, FSL and Freesurfer, etc.)
+4. You may want to install other tools that are often useful for people in our lab (see the :doc:`here <../intro_to/explore_software>` page for MI-brain, Ants, MRtrix, FSL and Freesurfer, etc.) 
 
 Getting set up on super computers
 """""""""""""""""""""""""""""""""

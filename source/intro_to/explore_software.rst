@@ -102,6 +102,7 @@ It is common to add these lines to your :bash:`.bashrc` to make FSL easier to us
 
 Once installed, you should be able to type :bash:`bet` or :bash:`fast` to see the help display. :bash:`fsleyes` will launch the visualization tool.
 
+.. _ref_ants:
 
 ANTs
 ----
