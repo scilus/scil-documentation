@@ -39,14 +39,6 @@ You will need :ref:`ref_ants`
 
         # Defining subj folders
         subj_folder=${tractoflow_folder}/${subj}
-        rbx_folder=${subj_folder}/RecobundlesX
-        if [ ! -d "${rbx_folder}" ]; then
-          mkdir "${rbx_folder}"
-        else
-          echo "The RecobundlesX folder already exists! Please delete it first."
-          echo "(${rbx_folder})"
-          exit 1
-        fi
 
         # Defining inputs
         subj_trk=${subj_folder}/Tracking/${subj}__local_tracking*.trk
@@ -78,10 +70,8 @@ You will need :ref:`ref_ants`
         #   inverse is to use the inverse affine
         ###
         mkdir ${rbx_folder}/multi_bundles
-        scil_recognize_multi_bundles.py ${subj}_filtered_trk ${model_config} ${model_streamlines_files} ${affine} \
+        scil_recognize_multi_bundles.py ${subj}_filtered_trk ${model_config} ${atlas_dir} ${affine} \
             --out_dir ${rbx_folder}/multi_bundles \
-            --multi_parameters ${nb_total_executions} \
-            --tractogram_clustering_thr ${thresh_dist}  \
             --processes ${processes} --seeds ${seed}  \
             --minimal_vote_ratio ${minimal_vote} \
             --log_level DEBUG --inverse -f 

@@ -25,7 +25,7 @@ Finally, for a html version of the help, you will find the description of all sc
 
 Installing scilpy
 
-Scilpy currently supports python versions 3.6 to 3.8. There are many ways to install a python version on your system. We refer the reader to section :ref:`ref_python_dist` for one such method. Once your python distribution is correctly installed, Scilpy can be installed by following the procedure outlined below.
+Scilpy currently supports python versions 3.8 to 3.10. There are many ways to install a python version on your system. We refer the reader to section :ref:`ref_python_dist` for one such method. Once your python distribution is correctly installed, Scilpy can be installed by following the procedure outlined below.
 
     - Users: you can follow the instructions on the Github page or follow these instructions :
 
@@ -39,4 +39,4 @@ Scilpy currently supports python versions 3.6 to 3.8. There are many ways to ins
 
     .. warning::
 
-        Before installing anything, please read the :ref:`ref_environments_page` page!
+        Before installing anything, please read the :ref:`ref_venvs` page!
