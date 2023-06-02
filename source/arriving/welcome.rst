@@ -5,7 +5,7 @@ Onboarding new students
 
 Important rooms and places
 """"""""""""""""""""""""""
-Chantal Proulx, Lynn Lebrun, Marie-Pier Côté and generally the Faculty’s offices are important and you should know where they are. Ask someone in the lab or Maxime to guide you.
+Chantal Proulx, Marie-Pier Côté and generally the `Faculty’s offices <https://www.usherbrooke.ca/informatique/nous-joindre/personnel>`_ are important and you should know where they are. Ask someone in the lab or Maxime to guide you.
 
 Subscriptions
 """""""""""""
@@ -15,11 +15,11 @@ Don't hesitate to remind Maxime or his research assistants if some of the follow
 Keys to the lab
     Maxime will ask them for you. You should receive an email.
 
-Google Calendar
+Google Calendar + Teams Calendar
     Maxime will add you to the lab calendar. We note our lab meetings, events and other important information and we use it everyday, so you should make a habit of following it! Maxime can also add you to his personal calendar so you can follow his availabilities.  * Tip. It's easier if you have a gmail account.
 
 Mailing list
-    When Maxime wants to send a message to everyone, we either use Slack or our mailing list. Ask Maxime to add you.
+    When Maxime wants to send a message to everyone, we either use Teams or our mailing list. Ask Maxime to add you.
 
 Teams
     We use Microsoft Teams as means of communication. You can use your CIP and university's password to connect. You can ask Maxime to add you to the SCIL's "team". Then, you can explore the various conversations, called "channels". When lab meetings are online, you can join them via the "General" channel. Also, we encourage you to explore the videos in the video tab from the General channel. You can find there the recording of previous lab meetings, videos of Max's dMRI class and more.

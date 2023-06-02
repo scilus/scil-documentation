@@ -17,7 +17,7 @@ Our team
        | - Gabriel Girard
      - | Manon Edde
        | Graham Little
-     - | - `Emmanuelle Renauld <https://sites.google.com/site/renauldemmanuelle/home>`_
+     - | - Emmanuelle Renauld
        | - Charles Poirier
        | - Alex Valcourt Caron
        | - Antoine Théberge
