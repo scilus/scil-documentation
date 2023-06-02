@@ -22,6 +22,7 @@ in the lab, from using Linux to developing code.
 
     arriving/welcome
     arriving/useful_links
+    arriving/our_team
 
 .. toctree::
     :maxdepth: 1
