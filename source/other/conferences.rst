@@ -8,47 +8,35 @@ Interesting conferences
 Summary, coming events and deadlines
 ------------------------------------
 
-(Last update: 2023-03-29)
+(Last update: 2023-08-10)
 
-2023
 
-    - **April 17-19: I AM**, London, UK + Online: https://www.iambrain.org/
+2024
 
-        - March 17: Abstract submission deadline
+    - **March 11 - 15, Dipy Workshop**, Indiana, Bloomington, https://dipy.org/workshops/dipy-workshop-2024
 
-    - **April 24 - 28, Dipy Workshop**, Los Angeles
+    - **May 04-09: ISMRM**: Singapore, https://www.ismrm.org/24m/
 
-    - **May 25, QBIN / RBIQ Scientific day**, Quebec https://rbiq-qbin.qc.ca/fr/2023/03/27/qbin-scientific-day-2023-save-the-date/
+        - Nov 8: Abstract submission
 
-        - April 27: Abstract submission deadline.
-        - May 19: Registration deadline.
+    - **June 23-27: OHBM**, Korea: https://www.humanbrainmapping.org/i4a/pages/index.cfm?pageid=3298
 
-    - **June 03-08: ISMRM**, Toronto, CA: https://www.ismrm.org/23m/
+        - Dates to be announced
 
-        - Nov 09 (2022): Abstract submission deadline
+    - **July 3-5: MIDL**, Paris: https://2023.midl.io/
 
-    - **July 10-12: MIDL**, Nashville: https://2023.midl.io/
+        - Dates to be announced
 
-        - January 15: Paper submission deadline.
-        - April 6: Last day for early price registration.
-        - April 7: Short papers submission deadline.
+    - | **Oct 6-10: MICCAI**, Morocco http://www.miccai.org/news/2020/12/31/and-the-location-of-miccai-2024-is
 
-    - **July 22-26: OHBM**, Montreal, CA: https://event.fourwaves.com/ohbm2023/
-
-        - January 13: Content submission deadline.
-
-    - | **Oct 8-12: MICCAI**, Vancouver, CA. https://conferences.miccai.org/2023/en/
-      | ( + CDMRI Workshop; online : http://cmic.cs.ucl.ac.uk/cdmri/ )
-
-        - Feb 23: Intention to submit
-        - March 09: Paper submission deadline
-        - June: Page for registration will open.
+        - Dates to be announced
 
 Dates to be announced:
 
-    - UNIQUE: MAIN event 2023 + Student symposium 2023 (hybrid) https://unique-students.github.io/2023/uss
-    - Neuromatch conference 2023.
-    - 2024 HIBALL winter school.
+    - UNIQUE: MAIN event 2023/2024 + Student symposium 2024  https://unique-students.github.io/2023/uss
+    - Neuromatch conference 2023/2024. https://conference.neuromatch.io/
+    - Next I AM Brain https://www.iambrain.org/
+    - QBIN / RBIQ Scientific Day https://rbiq-qbin.qc.ca/fr/2023/03/27/qbin-scientific-day-2023-save-the-date/
 
 
 International events
@@ -82,10 +70,10 @@ MIDL
     - **Annual** international conference since 2018. Last conferences: Netherlands, England. MIDL 2020 and 2021 were virtual due to COVID-19.
 
 Dipy workshop
-    - DIPY offers an **annual** workshop which is a good way to get acquainted with DIPY. It is held in Indiana (Indiana University is DIPY's main sponsor) around March. Link here: `2022's workshop <https://dipy.org/workshops/dipy-workshop-2022>`_.
+    - DIPY offers an **annual** workshop which is a good way to get acquainted with DIPY. It is held in Indiana (Indiana University is DIPY's main sponsor) around March.
 
 I AM BRAIN
-    - New association. Their first event will be in April 2023.
+    - New association. Their first event was in April 2023. https://www.iambrain.org/
 
 Local events
 ------------
