@@ -33,6 +33,7 @@ in the lab, from using Linux to developing code.
     intro_to/explore_software
     intro_to/explore_virtual_machines
     intro_to/explore_nextflow
+    intro_to/code_with_nextflow
 
 .. toctree::
     :maxdepth: 1
