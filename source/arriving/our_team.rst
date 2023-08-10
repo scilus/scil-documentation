@@ -26,22 +26,47 @@ Our team
        | - Erick Hernandez Gutierrez
      - Antoine Royer
 
+
+Former students and more
+************************
+
 .. list-table::
-   :widths: 100
+   :widths: 33 33 33
    :header-rows: 1
 
    * - Former students
-   * - | - Jean-Christophe Houde
-       | - Michaël Paquette
-       | - Marc-Alexandre Côté
-       | - Samuel St-Jean
-       | - Maxime Chamberland
-       | - Gabriel Girard
-       | - François Rheault
-       | - Étienne St-Onge
-       | - Gabrielle Grenier
-       | - Philippe Poulin
+     - Former students (co-direction)
+     - Other
+   * - | - Marc-Alexandre Côté
+       | - Etienne Saint-Amant (master: 2011)
+       | - Michaël Bernier (master: 2012)
+       | - Arnaud Boré (master: 2012)
+       | - Caroline Presseau (master: 2014)
+       | - Samuel St-Jean (master: 2015)
+       | - Alexandre Gauvin (master: 2016)
+       | - Louis-Philippe Ledoux (master: 2017)
+       | - Gabriel Girard (master: 2013, PhD: 2016)
+       | - Maxime Chamberland (master: 2013, PhD: 2017)
+       | - Michaël Paquette (PhD: 2017)
+       | - François Rheault (PhD: 2020)
+       | - Étienne St-Onge (master: 2016, PhD: 2020)
+       | - Ann-Marie Beaudoin (master: 2021)
+       | - Anthony Gagnon (master: 2022)
+       | - Gabrielle Grenier (master: 2022)
+       | - Philippe Poulin (PhD: 2022)
+       | - Jasmeen Sidhu (PhD: 2022)
+       | - Guillaume Theaud (PhD: 2022)
+       | - Jon Haitz Legarreta Gorrono (PhD: 2023)
        | - Sami Obaid
-       | - Matteo Batocchio
-       | - Jon Haitz Legarreta Gorrono
-       | - Guillaume Theaud
+       | - Emmanuelle Renauld (master: 2015, PhD: ongoing)
+       | - Philippe Karan (master: 2021, PhD: ongoing)
+       | - Antoine Théberge (master: 2021, PhD: ongoing)
+       | - Alex Valcourt Caron (master: 2022, PhD: ongoing)
+       | - Charles Poirier (master: 2023, PhD: ongoing)
+     - | - Vincent Méthot (master: 2016)
+       | - Marc-Alexandre Côté (master: 2012, PhD: 2017)
+       | - Alexandre Bizeau (master: 2017)
+       | - Matteo Batocchio (PhD: 2022)
+       | - Jérémie Fouquet ( )
+       | - Martin Cousineau (master: 2017)
+     - | - Jean-Christophe Houde
