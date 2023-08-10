@@ -6,15 +6,13 @@
 Welcome to the SCIL lab documentation!
 =============================================
 
-Our lab works in diffusion MRI. You can visit our official website for more information on Maxime Descoteaux, the director, and
-on the students in the lab, for a list of our publications, and more. http://scil.usherbrooke.ca/en/
+Our lab works in diffusion MRI, from the acquisition sequences and local reconstruction to tractography and its usages in applied contexts, including tractometry.
 
 .. image:: ./images/scil_unique_2019.jpg
     :scale: 10 %
     :align: center
 
-Here, you will find a summary of the tools we develop, and some clues on how we do things
-in the lab, from using Linux to developing code.
+Here, you will find a summary of the tools we develop, and some clues on how we do things in the lab, from using Linux to developing code.
 
 .. toctree::
     :maxdepth: 1
@@ -22,10 +20,11 @@ in the lab, from using Linux to developing code.
 
     arriving/welcome
     arriving/useful_links
+    arriving/our_team
 
 .. toctree::
     :maxdepth: 1
-    :caption: Intro to CS
+    :caption: Intro to Computer Science
 
     intro_to/explore_os
     intro_to/explore_python
