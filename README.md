@@ -4,9 +4,17 @@
 
 Here is the link to our web site: https://scil-documentation.readthedocs.io/
 
+# Developpers
 
-*Note for developers: To test your changes, you can build the website locally with:
+The documententation is generated using [Sphinx](https://www.sphinx-doc.org/en/master/). 
+Here is how to install the required Python dependencies in your interpreter :
+
+```
+pip install sphinx sphinx-rtd-theme
+```
+
+Then, to test your changes, build the website locally with:
 
     make html
 
-Then go to scil-documentation/build/html/  and click on index.html.
+The website can be accessed by clicking on **index.html** in the  **scil-documentation/build/html/** directory.

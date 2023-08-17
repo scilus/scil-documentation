@@ -78,6 +78,8 @@ This means there is a complexity to the installation, and that Docker is general
 
 :bash:`docker stop`: This command is used to stop a running container. It takes the container ID or name as an argument, and can be used to gracefully shut down the container.
 
+.. _ref_docker_installation:
+
 Installations
 ^^^^^^^^^^^^^
 
