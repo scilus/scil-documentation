@@ -32,6 +32,8 @@ Related links
     - Video tutorial `[link] <https://www.youtube.com/playlist?list=PLfVC14bBRTsVHzuWqfzrPp3MtYfPETDgu>`__
     - Conference abstract `[link] <https://www.researchgate.net/publication/312190253_MI-Brain_a_software_to_handle_tractograms_and_perform_interactive_virtual_dissection>`__
 
+.. _ref_scil_dependencies:
+
 FSL
 ---
 
