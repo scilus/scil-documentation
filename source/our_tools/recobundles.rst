@@ -2,7 +2,7 @@ RecobundlesX
 ============
 
 Recobundles is a tool to separate your wholebrain tracking result into different bundles divided into separate files. Dipy has a published version, called Recobundles. It is single atlas and single parameter while our version (which we call RecobundlesX) is multi-atlas and multi-parameter, and shown to be more robust in Rheault 2020 (PhD thesis, chapter 4, https://savoirs.usherbrooke.ca/handle/11143/17255).
-An atlas is available `on zenodo <https://zenodo.org/record/5165374#.YlcGUXXMKiM/>`_ (models, config and reference).
+An atlas is available `on zenodo <https://zenodo.org/records/7950602>`_ (models, config and reference).
 There is a Nextflow pipeline for this tool, available `on Github <https://github.com/scilus/rbx_flow/>`_
 
 
