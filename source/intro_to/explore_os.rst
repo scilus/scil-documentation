@@ -299,23 +299,25 @@ Bash environment
 When a program is invoked it is given an array of strings called the environment. This is a list of name-value pairs, of the form name=value.
 
 You can view all environment variables set on your system with the env command. The list is long, so pipe the output through more to make it easier to read:
+
 .. code-block:: bash
 
     env | more
 
 Environment variables can be useful when you want to override default settings, or when you need to manage new settings.
 
-when you type a command, the only reason your computer knows how to find the application corresponding to that command is that the PATH environment variable tells it where to look. 
+When you type a command, the only reason your computer knows how to find the application corresponding to that command is that the PATH environment variable tells it where to look. 
 
 You can add a location to your path the way you create throw-away variables. It works, but only as long as the shell you used to modify your system path remains open.
+
 .. code-block:: bash
 
-    # modify your system path:modify an environment variable
+    # Modify your system path:modify an environment variable
     export PATH=$PATH:/home/seth/bin
 
 .. code-block:: bash
 
-    # show your new path:
+    # Show your new path:
     echo $PATH
 
 Then close your session and open a new one. You'll see that the PATH has returned to its default state.
@@ -329,11 +331,12 @@ To edit your .bashrc file use a command line editor like vim or nano:
     vim ~/.bashrc
     nano ~/.bashrc
 
-From your .bashrc you can modify your part default environment by adding lines to it. This includes loading modules, modifying environment variables, and activating Python virtual environments.
+From your .bashrc you can modify your part default environment by adding lines to it. This includes defining alias, modifying environment variables, and activating Python virtual environments.
+
 .. code-block:: bash
 
-    # to load a module:
-    module load <module>
+    # To define an alias:
+    alias ..='cd ..'
 
 .. code-block:: bash
 
