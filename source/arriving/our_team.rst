@@ -24,6 +24,7 @@ Our team
        | - Philippe Karan
        | - Anthony Gagnon
        | - Erick Hernandez Gutierrez
+       | - Stanislas Thoumyre
      - Antoine Royer
 
 

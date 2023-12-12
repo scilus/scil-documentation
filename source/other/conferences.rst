@@ -21,13 +21,14 @@ Summary, coming events and deadlines
 
     - **June 23-27: OHBM**, Korea: https://www.humanbrainmapping.org/i4a/pages/index.cfm?pageid=3298
 
-        - Dates to be announced
+        - Dec 1: Abstract submission
 
-    - **July 3-5: MIDL**, Paris: https://2023.midl.io/
+    - **July 3-5: MIDL**, Paris: https://2024.midl.io/
 
-        - Dates to be announced
+        - Feb 7: Full paper submission
+        - Apr 10: Short paper submission
 
-    - | **Oct 6-10: MICCAI**, Morocco http://www.miccai.org/news/2020/12/31/and-the-location-of-miccai-2024-is
+    - | **Oct 6-10: MICCAI**, Morocco https://conferences.miccai.org/2024/en/
 
         - Dates to be announced
 

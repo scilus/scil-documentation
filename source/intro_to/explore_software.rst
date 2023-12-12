@@ -175,7 +175,7 @@ Installation
 
 We recommand building MRtrix from source if you are on Linux `(here) <https://mrtrix.readthedocs.io/en/latest/installation/build_from_source.html>`__. If you are on MacOS you can use :bash:`brew install mrtrix3`.
 
-Be sure to install all dependencies, then follow all the installation step up to *Set up MRtrix3* or add this line you your :bash:`.bashrc`: :bash:`export PATH=~/PATH/TO/MRTRIX3/mrtrix3/bin:${PATH}`
+Be sure to install all dependencies, then follow all the installation step up to *Set up MRtrix3* or add this line to your :bash:`.bashrc`: :bash:`export PATH=~/PATH/TO/MRTRIX3/mrtrix3/bin:${PATH}`
 
 Once installed, you should be able to type :bash:`dwi2fod` to see the help display or :bash:`mrview` to launch the GUI.
 
