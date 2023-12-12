@@ -38,6 +38,7 @@ Here, you will find a summary of the tools we develop, and some clues on how we 
     :caption: Our tools
 
     our_tools/scilpy
+    our_tools/flows
     our_tools/tractoflow
     our_tools/recobundles
     our_tools/other_pipelines
