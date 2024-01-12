@@ -21,6 +21,7 @@ Here, you will find a summary of the tools we develop, and some clues on how we 
     arriving/welcome
     arriving/useful_links
     arriving/our_team
+    arriving/anatomy
 
 .. toctree::
     :maxdepth: 1
