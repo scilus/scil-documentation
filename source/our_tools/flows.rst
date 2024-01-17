@@ -70,11 +70,11 @@ Tractoflow
 
         for i in data_tuto_1.6.0/sub-*; do cp ${i}/* tractoflow_test/raw/$(basename $i)/; done
 
-    .. note::
-    
-        The data are composed of 3 subjects and each subject contains 7 files: aparc+aseg.nii.gz, bval, bvec, dwi.nii.gz, rev_b0.nii.gz, t1.nii.gz, wmparc.nii.gz.
-        By default only bval, bvec, dwi.nii.gz, t1.nii.gz are necessary to run tractoflow. 
-        But here we're using tractoflow ABS, so aparc+aseg.nii.gz, rev_b0.nii.gz, and wmparc.nii.gz are required.
+.. note::
+
+    The data are composed of 3 subjects and each subject contains 7 files: aparc+aseg.nii.gz, bval, bvec, dwi.nii.gz, rev_b0.nii.gz, t1.nii.gz, wmparc.nii.gz.
+    By default only bval, bvec, dwi.nii.gz, t1.nii.gz are necessary to run tractoflow. 
+    But here we're using tractoflow ABS, so aparc+aseg.nii.gz, rev_b0.nii.gz, and wmparc.nii.gz are required.
 
 #. Run tractoflow (this can take a long time).
 
@@ -104,8 +104,11 @@ Here, tractoflow is set to be as fast as possible if you want to check more opti
 
 Or you can check the documentation from tractoflow documentation `here <https://tractoflow-documentation.readthedocs.io/en/latest/pipeline/options.html>`_.
     
-    .. warning::
-        Once tractoflow is launched, a large number of files are created. Be careful, the files in results are only symlinks to the work. Do not delete your work!
+.. warning::
+    Once tractoflow is launched, a large number of files are created. Be careful, the files in results are only symlinks to the work. Do not delete your work!
+
+References :
+    * Theaud et al. (2020). TractoFlow: A robust, efficient and reproducible diffusion MRI pipeline leveraging Nextflow & Singularity. `<https://doi.org/10.1016/J.NEUROIMAGE.2020.116889>`_
 
 Rbx_flow
 ********
@@ -151,13 +154,17 @@ For more details about rbx_flow use the command:
 
 Or you can check the documentation for reconbundles `here <https://scil-documentation.readthedocs.io/en/latest/our_tools/recobundles.html>`_.
 
-    .. warning:: RBx_flow has no function for choosing the direction of the output, so in a second step we need to move our RBx_flow result in the RBx_flow_test direction.
+.. warning:: RBx_flow has no function for choosing the direction of the output, so in a second step we need to move our RBx_flow result in the RBx_flow_test direction.
 
-        .. code-block:: bash
+    .. code-block:: bash
 
-            mv results_rbx RBx_flow_test
+        mv results_rbx RBx_flow_test
 
-tractometry_flow
+References : 
+    * St-Onge et al. (2023). BundleSeg: A versatile, reliable and reproducible approach to white matter bundle segmentation. `<https://arxiv.org/pdf/2308.10958.pdf>`_
+    * Rheault, Francois. (2020). Analyse et reconstruction de faisceaux de la matière blanche. page 137-170. `<https://savoirs.usherbrooke.ca/handle/11143/17255>`_
+
+Tractometry_flow
 ****************
 
 #. Create the necessary direction for tractometry_flow inputs.
@@ -166,7 +173,7 @@ tractometry_flow
 
         for i in tractometry_flow_test/raw/*; do mkdir ${i}/metrics ${i}/centroids ${i}/bundles; done
 
-#. Import of data for tractometry_flow: diffusion metrics (fa, ad, md, rd) from tractoflow, and centroids transformed and clean bundles from RBx_flow.
+#. Import of data for tractometry_flow: diffusion metrics (fa, ad, md, rd) from tractoflow, centroids transformed and clean bundles from RBx_flow.
 
     .. code-block:: bash
 
@@ -205,7 +212,11 @@ For more details about tractometry_flow use the command:
 
 Or you can check the documentation for tractometry_flow `here <https://github.com/scilus/tractometry_flow>`_.
 
-visualization
+References :
+    * Beaudoin et al. (2021). Modern Technology in Multi-Shell Diffusion MRI Reveals Diffuse White Matter Changes in Young Adults With Relapsing-Remitting Multiple Sclerosis. `<https://doi.org/10.3389/FNINS.2021.665017>`_
+    * Cousineau et al. (2017). A test-retest study on Parkinson's PPMI dataset yields statistically significant white matter fascicles. `<https://doi.org/10.1016/j.nicl.2017.07.020>`_
+
+Visualization
 *************
 
 Once you've run your different scripts, you'll get different files in your different results. The first thing to do is to check your DTI metric in `MI-Brain <https://scil-documentation.readthedocs.io/en/latest/intro_to/explore_software.html#mi-brain>`_.
