@@ -11,9 +11,9 @@ Here we'll look at how to move from the raw diffusion imaging data to the tracto
 Requirements
 ************
 
-* For this test, there is a necessity that you have a nextflow version between 19.04.2 and 21.12.1, the various git flows cloned (tractoflow, rbx_flow, tractometry_flow) and have a container installed.
+* For this test, there is a necessity that you have a Nextflow version between 19.04.2 and 21.12.1, the various git flows cloned (tractoflow, rbx_flow, tractometry_flow) and have a container installed.
 * For Nextflow and tractoflow you can check the `installation guide <https://tractoflow-documentation.readthedocs.io/en/latest/installation/install.html>`_ from the tractoflow documentation. Otherwise, the installation of Nextflow is also presented `here <https://scil-documentation.readthedocs.io/en/latest/intro_to/explore_nextflow.html#installation>`_.
-* To `git clone <https://scil-documentation.readthedocs.io/en/latest/intro_to/explore_git.html#summary-of-git-commands>`_ the differents flow you can follow those link:
+* To `git clone <https://scil-documentation.readthedocs.io/en/latest/intro_to/explore_git.html#summary-of-git-commands>`_ the different flows you can follow these links:
 
    - `tractoflow <https://github.com/scilus/tractoflow>`_
    - `rbx_flow <https://github.com/scilus/rbx_flow>`_
@@ -105,7 +105,7 @@ Here, tractoflow is set to be as fast as possible if you want to check more opti
 Or you can check the documentation from tractoflow documentation `here <https://tractoflow-documentation.readthedocs.io/en/latest/pipeline/options.html>`_.
     
     .. warning::
-        Once tractoflow is launched, a large number of files are created. be careful, the files in results are only symlinks to the work. do not delete your work!
+        Once tractoflow is launched, a large number of files are created. Be careful, the files in results are only symlinks to the work. Do not delete your work!
 
 Rbx_flow
 ********
@@ -166,7 +166,7 @@ tractometry_flow
 
         for i in tractometry_flow_test/raw/*; do mkdir ${i}/metrics ${i}/centroids ${i}/bundles; done
 
-#. Import of data for tractometry_flow: difussion metrics (fa, ad, md, rd) from tractoflow, and centroids transformed and clean bundles from RBx_flow.
+#. Import of data for tractometry_flow: diffusion metrics (fa, ad, md, rd) from tractoflow, and centroids transformed and clean bundles from RBx_flow.
 
     .. code-block:: bash
 
