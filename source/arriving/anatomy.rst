@@ -16,28 +16,42 @@ Consult the introduction to anatomy given by our anatomist collaborator Laurent 
 A few famous bundles
 ********************
 
-Here are pictures of reference bundles. Here, we took the bundles used as reference when using Recobundles. They are in MNI space. To see an example of bundles recovered in a real subject, see the :ref:`ref_recobundles` page. The bundles used in the pictures below are the ones that were used when processing the `Tractoinferno <https://www.nature.com/articles/s41597-022-01833-1>`_ database. You can also discover similar bundles associated with the phantom from the `ISMRM 2015 Tractography Challenge <https://tractometer.org/ismrm2015/home/>`_. The differences between these simulated bundles and real anatomical ones were discussed in `Renauld et al, 2023 <https://www.nature.com/articles/s41598-023-28560-w>`_.
+*Anatomical description*: Description of famous bundles can be found in atlas descriptions in the literature, ex `here, Radwan et al (2022) <An atlas of white matter anatomy, its variability, and reproducibility based on constrained spherical deconvolution of diffusion MRI>`_.
+
+*Atlas bundles as reference*: Below, we show pictures of reference bundles taken from Recobundles' reference bundles (here, the ones that were used when processing the `Tractoinferno <https://www.nature.com/articles/s41597-022-01833-1>`_ database). They are in MNI space.
+
+*Bundles recovered through tractography*: To see an example of bundles recovered in a real subject, see the :ref:`ref_recobundles` page.
+
+*Simulated bundles*: You can also discover similar bundles associated with the phantom from the `ISMRM 2015 Tractography Challenge <https://tractometer.org/ismrm2015/home/>`_. The differences between these simulated bundles and real anatomical ones were discussed in `Renauld et al, 2023 <https://www.nature.com/articles/s41598-023-28560-w>`_. In this case, the bundles are not entirely simulated; they were created by tracking from real subjects with deterministic, bundle-wise parameters. However, the dwi accompanying the data is entirely simulated.
+
+**Comissural fibers**: They connect the two hemispheres of the brain. They are mostly in a left-right orientation.
+
+    - AC: Anterior comissure
+    - CC: Corpus callosum
+    - PC: Posterior comissure
+    - FX: Fornix
+
+**Projection fibers**: They connect the cortex with lower parts of the brain or with the spinal cord. They are mostly in a z orientation (top-bottom).
+
+    - FPT: Frontopontine Tract
+    - IFOF: Inferior fronto-occipital fasciculus
+    - ILF: Inferior fronto-occipital fasciculus
+    - MCP: Middle cerebellar peduncle
+    - MdLF: Middle longitudinal fascicle
+    - OR, or OR_ML: Optic radiation (with Meyer's loop)
+    - POPT: Parieto-occipital pontine tract
+    - PYT: Pyramidal tract
+    - SCP: Superior cerebellar peduncle
+    - SLF: Superior longitudinal fasciculus
+    - UF: Uncinate fasciculus
 
 
-- AC:
-- AF: Arcuate fasciculus.
-- CC: Corpus callosum.
-- CG: Cingulum.
-- FAT:
-- FPT:
-- FX: Fornix
-- ICP:
-- IFOF:
-- ILF:
-- MCP:
-- MdLF:
-- OR, or OR_ML: Optic radiation (with Meyer's loop)
-- PC
-- POPT:
-- PYT:
-- SCP:
-- SLF:
-- UF:
+**Association fibers**: They connect two cortex regions in a same hemisphere.
+    - AF: Arcuate fasciculus.
+    - CG: Cingulum.
+    - FAT: Frontal aslant tract
+    - ICP: Inferior cerebellar peduncle
+
 
 The corpus callosum is probably the easiest bundle to recognize from a raw diffusion / tensor / fODF image because of its strong anisotropy. It is a good choice of bundle to assess that the data was read correctly during processing.
 
