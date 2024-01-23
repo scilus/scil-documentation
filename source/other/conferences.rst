@@ -15,6 +15,8 @@ Summary, coming events and deadlines
 
     - **March 11 - 15, Dipy Workshop**, Indiana, Bloomington, https://dipy.org/workshops/dipy-workshop-2024
 
+        -
+
     - **April 14-17: I AM**, London, UK, https://www.iambrain.org/
 
         - March 15: Abstract submission
@@ -24,6 +26,8 @@ Summary, coming events and deadlines
         - Nov 8: Abstract submission
 
     - **May 25: QBIN / RBIQ Scientific Day**, Montreal, https://rbiq-qbin.qc.ca/fr/2024/01/17/qbin-scientific-day-2024-save-the-date/
+
+        - Dates to be announced.
 
     - **June 23-27: OHBM**, Korea: https://www.humanbrainmapping.org/i4a/pages/index.cfm?pageid=4229
 
