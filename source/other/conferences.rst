@@ -15,11 +15,17 @@ Summary, coming events and deadlines
 
     - **March 11 - 15, Dipy Workshop**, Indiana, Bloomington, https://dipy.org/workshops/dipy-workshop-2024
 
+    - **April 14-17: I AM**, London, UK, https://www.iambrain.org/
+
+        - March 15: Abstract submission
+
     - **May 04-09: ISMRM**: Singapore, https://www.ismrm.org/24m/
 
         - Nov 8: Abstract submission
 
-    - **June 23-27: OHBM**, Korea: https://www.humanbrainmapping.org/i4a/pages/index.cfm?pageid=3298
+    - **May 25: QBIN / RBIQ Scientific Day**, Montreal, https://rbiq-qbin.qc.ca/fr/2024/01/17/qbin-scientific-day-2024-save-the-date/
+
+    - **June 23-27: OHBM**, Korea: https://www.humanbrainmapping.org/i4a/pages/index.cfm?pageid=4229
 
         - Dec 1: Abstract submission
 
@@ -30,14 +36,14 @@ Summary, coming events and deadlines
 
     - | **Oct 6-10: MICCAI**, Morocco https://conferences.miccai.org/2024/en/
 
-        - Dates to be announced
+        - Feb 22: Intention to submit
+        - March 7: Full manuscript submission
 
 Dates to be announced:
 
-    - UNIQUE: MAIN event 2023/2024 + Student symposium 2024  https://unique-students.github.io/2023/uss
+    - UNIQUE: MAIN event 2023/2024 + Scientific Retreat 2024 (~Oct) https://sites.google.com/prod/view/unique-neuro-ai/activities + Student symposium 2024 (~June)  https://unique-students.github.io/2023/uss
     - Neuromatch conference 2023/2024. https://conference.neuromatch.io/
-    - Next I AM Brain https://www.iambrain.org/
-    - QBIN / RBIQ Scientific Day https://rbiq-qbin.qc.ca/fr/2023/03/27/qbin-scientific-day-2023-save-the-date/
+    - Neurolinks 2024: Journée carrière offerte par CERVOLET. Suivre leur facebook: https://www.facebook.com/CERVOLET/. Événement facebook officiel pour la version 2022, seulement une publication pour la version 2023. Voir la `photo <https://www.facebook.com/photo/?fbid=621390726873282&set=a.383350987343925>`_.
 
 
 International events
