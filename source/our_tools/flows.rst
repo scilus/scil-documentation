@@ -132,11 +132,14 @@ For the RBx_flow step, we are only interested in two files: the local tracking f
         unzip -qq atlas/atlas.zip -d atlas/
         unzip -qq atlas/config.zip -d atlas/
 
+.. note::
+    Rbx_flow segments the tractogram into bundles. To do this, it needs the complete tractogram, of course, but also the FA metric and the reference. That's why we've integrated the bundle atlas (centroids) into our script.
+
 #. Run RBx_flow.
 
     .. code-block:: bash
 
-        nextflow ${FLOW_DIR}/rbx_flow/main.nf --input RBx_flow_test/raw --atlas_directory atlas \
+        nextflow ${FLOW_DIR}/rbx_flow/main.nf --input RBx_flow_tmake htmlest/raw --atlas_directory atlas \
          -with-singularity ./containers_scilus_1.6.0.sif -w RBx_flow_test/work -resume
 
 Parameters:
@@ -187,6 +190,9 @@ Tractometry_flow
 
         for i in RBx_flow_test/results_rbx/*; do cp ${i}/Clean_Bundles/*.trk tractometry_flow_test/raw/$(basename $i)/bundles/; done
         for i in tractometry_flow_test/raw/sub-*; do rm ${i}/bundles/*_Brainstem_cleaned.trk; done
+
+.. note::
+    Tractometry_flow segments the bundles into different sections (20 by default) and estimates the different values of the diffusion and lesion metrics in each section. At the end, we obtain the bundles profile for each metric.
 
 #. Run tractometry_flow.
 
