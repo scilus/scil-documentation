@@ -3,3 +3,4 @@ _build
 source/_static
 source/_templates
 .vscode
+.idea/
