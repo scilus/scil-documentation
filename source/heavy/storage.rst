@@ -12,7 +12,7 @@ Brain imaging data can be very heavy! It is very probable that you won't be able
 
     path_local=braindata  # Make a directory somewhere.
     mkdir $path_local
-    sshfs USER@braindata.scil.usherbrooke.ca:/braindata $path_local
+    sshfs USER@braindata.scil.usherbrooke.ca:/data/braindata $path_local
 
 The main directories inside BrainData are:
 
