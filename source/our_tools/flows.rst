@@ -239,3 +239,14 @@ The second thing you can do is view the mosaic of your different bundles:
 Finally, tractometry_flow directly generates plots of the various profilometries of your bundles with DTI metrics.
 These are very basic, but give you an initial overview of the profile of your bundles. In addition, it also generates json files with all the tractometry_flow data.
 You can check these files either with Excel, or in python with pandas or polars.
+
+Complete processing
+*******************
+
+If you want to launch all the different steps in one you call download this script :  `all_in_flow <https://nextcloud.computecanada.ca/index.php/s/WeRndPaSwx8MBk6>`_.
+To use this script you just have to modify the pathway for your library flow in the script.
+Then run the script with this command :
+
+    .. code-block:: bash
+
+        bash all_in_flow.sh
