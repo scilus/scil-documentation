@@ -19,13 +19,13 @@ Requirements
    - `rbx_flow <https://github.com/scilus/rbx_flow>`_
    - `tractometry_flow <https://github.com/scilus/tractometry_flow>`_
 
-* I recommend that you store the various pipelines in places that are easy to find and whose direction you know.
+* We recommend that you store the various pipelines in places that are easy to find and whose direction you know.
 * Finally, you will need a container as Apptainer or Singularity. The whole documentation about it and how to install it is `here <https://scil-documentation.readthedocs.io/en/latest/intro_to/explore_virtual_machines.html#singularity>`_.
 
 Initialization
 **************
 
-#. Open a terminal and navigates to a working folder you create for the test or use this command:
+#. Open a terminal and navigate to a working folder you will create for the test or use this command:
 
     .. code-block:: bash
 
@@ -39,7 +39,7 @@ Initialization
         #Example <export FLOW_DIR="/home/user/libraries/flows/">
 
 
-#. If it's your first time to use our flow we recommand you to use this set of data who has been prepared for this introduction.
+#. If it's your first time using our flow, we recommand that you should use the following set of data which has been prepared for this introduction.
 
     .. code-block:: bash
 
@@ -53,7 +53,7 @@ Initialization
 
         curl https://nextcloud.computecanada.ca/index.php/s/NijdKTP7WWbP7Na/download -o containers_scilus_1.6.0.sif
 
-#. Finally, create the different directions for the different flows according to the structure of the inputs required for each.
+#. Finally, create the different directories for the different flows according to the structure of the inputs required for each.
 
     .. code-block:: bash
 
@@ -63,6 +63,9 @@ Initialization
 
 Tractoflow
 **********
+
+The first flow we will use is Tractoflow. It will preprocess the DWI and T1 data (denoising, resampling, etc), it will register the T1 to the DWI space and segment it into masks (wm, gm), it will compute the local modelling of diffusion information (DTI, fODF) and do the tractography.
+See here for the complete list of steps. `<https://tractoflow-documentation.readthedocs.io/en/latest/pipeline/steps.html>`_.
 
 #. Add the data needed to launch tractoflow from downloaded data.
 
@@ -75,6 +78,7 @@ Tractoflow
     The data are composed of 3 subjects and each subject contains 7 files: aparc+aseg.nii.gz, bval, bvec, dwi.nii.gz, rev_b0.nii.gz, t1.nii.gz, wmparc.nii.gz.
     By default only bval, bvec, dwi.nii.gz, t1.nii.gz are necessary to run tractoflow. 
     But here we're using tractoflow ABS, so aparc+aseg.nii.gz, rev_b0.nii.gz, and wmparc.nii.gz are required.
+    For more information about ABS, see the reference below.
 
 #. Run tractoflow (this can take a long time).
 
@@ -85,18 +89,18 @@ Tractoflow
          -with-report tractoflow_test/report.html -w tractoflow_test/work -resume
 
  Parameters:
-  - :bash:`--input`: direction of our data
+  - :bash:`--input`: directory of our data
   - :bash:`--local_nbr_seeds`: number of seeds related to the seeding type param
   - :bash:`--run_eddy`: activate or not eddy
   - :bash:`--run_topup`: activate or not topup
-  - :bash:`--output_dir`: direction where results will be generate
+  - :bash:`--output_dir`: directory where results will be generate
   - :bash:`-profile ABS`: choose the profile TractoFlow-ABS (Atlas Based Segmentation)
-  - :bash:`-with-singularity`: direction of singularity we want to use
+  - :bash:`-with-singularity`: directory of singularity we want to use
   - :bash:`-with-report`: generate a report a the end of the command
-  - :bash:`-w`: direction where work will be generate
+  - :bash:`-w`: directory where work will be generate
   - :bash:`-resume`: use the results already created in the work if the command has already been executed
 
-Here, tractoflow is set to be as fast as possible if you want to check more options run the command :
+Here, tractoflow was set to be as fast as possible. If you want to check more options, run the command :
 
     .. code-block:: bash
         
@@ -105,15 +109,16 @@ Here, tractoflow is set to be as fast as possible if you want to check more opti
 Or you can check the documentation from tractoflow documentation `here <https://tractoflow-documentation.readthedocs.io/en/latest/pipeline/options.html>`_.
     
 .. warning::
-    Once tractoflow is launched, a large number of files are created. Be careful, the files in results are only symlinks to the work. Do not delete your work!
-
+    Once tractoflow is launched, a large number of files aFor more information about ABS, see the reference below.
 References :
     * Theaud et al. (2020). TractoFlow: A robust, efficient and reproducible diffusion MRI pipeline leveraging Nextflow & Singularity. `<https://doi.org/10.1016/J.NEUROIMAGE.2020.116889>`_
+    * Theaud et al. (2020). TractoFlow-ABS (Atlas-Based Segmentation). `<https://www.biorxiv.org/content/10.1101/2020.08.03.197384v1>`_
 
 Rbx_flow
 ********
 
-For the RBx_flow step, we are only interested in two files: the local tracking file and the fractional anisotropy (fa) from tractoflow.
+RBx_flow is a flow that separates your wholebrain tractogram into predefined bundles using a centroid atlas.
+For that, RBx_flow use two files: the local tracking file and the fractional anisotropy (fa) from tractoflow.
 
 #. Import local tracking and fa files to RBx_flow inputs.
 
@@ -122,7 +127,7 @@ For the RBx_flow step, we are only interested in two files: the local tracking f
         for i in tractoflow_test/results_tf/sub-*; do cp ${i}/*/*fa.nii.gz RBx_flow_test/raw/$(basename $i)/; done
         for i in tractoflow_test/results_tf/sub-*; do cp ${i}/*/*tracking*.trk RBx_flow_test/raw/$(basename $i)/; done
 
-#. Download an atlas and config files for RBx_flow, in our case using the atlas and config in zenodo. However, the RBx_flow input architecture must be retained.
+#. Download an atlas and config files for RBx_flow. In our case, we will obtain the atlas and config from zenodo. However, the RBx_flow input architecture must be retained.
 
     .. code-block:: bash
 
@@ -143,10 +148,10 @@ For the RBx_flow step, we are only interested in two files: the local tracking f
          -with-singularity ./containers_scilus_1.6.0.sif -w RBx_flow_test/work -resume
 
 Parameters:
-  - :bash:`--input`: direction of our data
-  - :bash:`--atlas_directory`: direction of our atlas
-  - :bash:`-with-singularity`: direction of singularity we want to use
-  - :bash:`-w`: direction where work will be generate
+  - :bash:`--input`: directory of our data
+  - :bash:`--atlas_directory`: directory of our atlas
+  - :bash:`-with-singularity`: directory of singularity we want to use
+  - :bash:`-w`: directory where work will be generate
   - :bash:`-resume`: use the results already created in the work if the command has already been executed
 
 For more details about rbx_flow use the command:
@@ -157,7 +162,7 @@ For more details about rbx_flow use the command:
 
 Or you can check the documentation for reconbundles `here <https://scil-documentation.readthedocs.io/en/latest/our_tools/recobundles.html>`_.
 
-.. warning:: RBx_flow has no function for choosing the direction of the output, so in a second step we need to move our RBx_flow result in the RBx_flow_test direction.
+.. warning:: RBx_flow has no function for choosing the output directory, so in a second step we need to move our RBx_flow result in the RBx_flow_test directory.
 
     .. code-block:: bash
 
@@ -170,7 +175,11 @@ References :
 Tractometry_flow
 ****************
 
-#. Create the necessary direction for tractometry_flow inputs.
+This flow allows you to extract tractometry information by combining subjects's fiber bundles, diffusion MRI metrics and lesion metrics.
+In a first time, tractometry_flow creates a distance map between streamlines and the centroid of the same bundle, and a label map where the bundle is segmented into n segment (20 by default).
+In a seconde time, it caculates and compiles the metrics along the segmented bundles.
+
+#. Create the necessary directory for tractometry_flow inputs.
 
     .. code-block:: bash
 
@@ -203,11 +212,11 @@ Tractometry_flow
          -w tractometry_flow_test/work -resume
 
 Parameters:
-  - :bash:`--input`: direction of our data
+  - :bash:`--input`: directory of our data
   - :bash:`--use_provided_centroids`: Use the provided pre-computed centroids from rbx_flow rather than using automatic computation
-  - :bash:`--output_dir`: direction where results will be generate
-  - :bash:`-with-singularity`: direction of singularity we want to use
-  - :bash:`-w`: direction where work will be generate
+  - :bash:`--output_dir`: directory where results will be generated
+  - :bash:`-with-singularity`: directory of singularity we want to use
+  - :bash:`-w`: directory where work will be generated
   - :bash:`-resume`: use the results already created in the work if the command has already been executed
 
 For more details about tractometry_flow use the command:
@@ -225,7 +234,7 @@ References :
 Visualization
 *************
 
-Once you've run your different scripts, you'll get different files in your different results. The first thing to do is to check your DTI metric in `MI-Brain <https://scil-documentation.readthedocs.io/en/latest/intro_to/explore_software.html#mi-brain>`_.
+Once you've run your scripts, you'll get various files in your results directories. The first thing to do is to check your DTI metric in `MI-Brain <https://scil-documentation.readthedocs.io/en/latest/intro_to/explore_software.html#mi-brain>`_.
 
 The second thing you can do is view the mosaic of your different bundles: 
 
@@ -240,6 +249,8 @@ Finally, tractometry_flow directly generates plots of the various profilometries
 These are very basic, but give you an initial overview of the profile of your bundles. In addition, it also generates json files with all the tractometry_flow data.
 You can check these files either with Excel, or in python with pandas or polars.
 
+For further information about quality assurance and check, please see the `Checks and Stats section <https://scil-documentation.readthedocs.io/en/latest/our_tools/other_pipelines.html>`_.
+
 Complete processing
 *******************
 
@@ -249,4 +260,4 @@ Then run the script with this command :
 
     .. code-block:: bash
 
-        bash all_in_flow.sh
+        bash all_in_flow.shmore informations
