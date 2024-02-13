@@ -109,7 +109,8 @@ Here, tractoflow was set to be as fast as possible. If you want to check more op
 Or you can check the documentation from tractoflow documentation `here <https://tractoflow-documentation.readthedocs.io/en/latest/pipeline/options.html>`_.
     
 .. warning::
-    Once tractoflow is launched, a large number of files aFor more information about ABS, see the reference below.
+    Once tractoflow is launched, a large number of files are created. Be careful, files in the results folder (--output_dir) are only symlinks to the "work" folder created by nextflow. Do not delete your "work" folder!
+
 References :
     * Theaud et al. (2020). TractoFlow: A robust, efficient and reproducible diffusion MRI pipeline leveraging Nextflow & Singularity. `<https://doi.org/10.1016/J.NEUROIMAGE.2020.116889>`_
     * Theaud et al. (2020). TractoFlow-ABS (Atlas-Based Segmentation). `<https://www.biorxiv.org/content/10.1101/2020.08.03.197384v1>`_
@@ -260,4 +261,4 @@ Then run the script with this command :
 
     .. code-block:: bash
 
-        bash all_in_flow.shmore informations
+        bash all_in_flow.sh
