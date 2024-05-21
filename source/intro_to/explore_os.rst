@@ -242,6 +242,7 @@ Advanced Commands
 -----------------
 
 Here is a few tasks with example commands:
+
 .. code-block:: bash
 
     # Iterate over all unique filenames in the directory (similar to a set)
