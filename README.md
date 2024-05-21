@@ -2,16 +2,21 @@
 
 # scil-documentation
 
-Here is the link to our web site: https://scil-documentation.readthedocs.io/
+The reference website of the Sherbrooke Connectivity Imaging Laboratory (SCIL) [is available here](https://scil-documentation.readthedocs.io/).
 
+> [!NOTE]
+> `scil-documentation` describes useful tools and resources for working at the SCIL.
 
-*Note for developers: To test your changes, first install sphinx-rtd-theme with:
+## Contributing
+Contributions to the website are welcome. The website is tested for `python3`. To install locally, first clone the repo. Then, install `sphinx` and `sphinx-rtd-theme` with:
 
-    sudo apt-get install python3-sphinx
-    pip install sphinx-rtd-theme
+```
+pip install sphinx sphinx-rtd-theme
+```
 
 And build the website locally with:
+```
+make html
+```
 
-    make html
-
-Then go to scil-documentation/build/html/  and click on index.html.
+The built documentation is available under `./build/html/`. To explore your local version of the documentation, open `./build/html/index.html` in your favorite web browser.
