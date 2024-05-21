@@ -3,17 +3,7 @@
 Setting up your computer
 ========================
 
-We recommend using linux, but Mac can be an option. With Windows, your life will definitely be more complicated. (A popular setup is having a Linux machine in the lab and SSH-ing from a Windows machine when working from home).
-
-The developper setup for working at the SCIL
-    1. Install an up-to-date python version with development headers
-    2. Create a virtual environment
-    3. Install scilpy
-    4. (mrtrix and mibrain)
-    5. Nextflow and Docker/Apptainer
-
-..
-    Old version still makes sense but we need to figure out how we make it the easiest for new students/interns.
+We recommend using linux, but Mac can be an option. With Windows, your life will definitely be more complicated.
 
 1. First, you should work in a virtual environment to avoid breaking your python installation. See the :ref:`ref_venvs`.
 
