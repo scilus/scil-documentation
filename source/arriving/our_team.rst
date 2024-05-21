@@ -25,7 +25,8 @@ Our team
        | - Anthony Gagnon
        | - Erick Hernandez Gutierrez
        | - Stanislas Thoumyre
-     - Antoine Royer
+     - | - Antoine Royer
+       | - Zineb El yamani
 
 
 Former students and more
