@@ -7,15 +7,11 @@ Before you can start working with the tools commonly-used or developped in the l
 
 *This section is a work in progress. Eventually, it should cover OS choices, IDE choice, python and virtualenv installation, scilpy installation, nextflow and singularity/docker.*
 
-We recommend using linux, but Mac can be an option. With Windows, your life will definitely be more complicated.
+We recommend using Linux, but Mac and Windows can also be viable. If you already have a computer with Linux (or Mac) installed, proceed to the next step. If you want to install Linux on your personal computer but also want to keep Windows, you have two choices:
 
-1. First, you should work in a virtual environment to avoid breaking your python installation. See the :ref:`ref_venvs`.
+    1) You can dual-boot Linux and Windows by following one of the many tutorials online, such as this `one <https://www.freecodecamp.org/news/how-to-dual-boot-windows-10-and-ubuntu-linux-dual-booting-tutorial/>`_. This process can be tedious so don't hesitate to ask for help in the lab.
 
-2. Install scilpy (see the :ref:`ref_scilpy` page). This will install Dipy too.
-
-3. You may want to install Tractoflow (see :ref:`ref_tractoflow`) or our other tools (see :ref:`ref_other_pipelines`).
-
-4. You may want to install other tools that are often useful for people in our lab (see the :doc:`here <../intro_to/explore_software>` page for MI-brain, Ants, MRtrix, FSL and Freesurfer, etc.) 
+    2) You can use WSL2 on Windows 10 or 11. A step-by-step guide is available here (*TODO add link*) to help you install WSL2.
 
 Getting set up on super computers
 """""""""""""""""""""""""""""""""
