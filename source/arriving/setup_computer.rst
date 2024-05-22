@@ -3,6 +3,10 @@
 Setting up your computer
 ========================
 
+Before you can start working with the tools commonly-used or developped in the lab, you need to setup your computer. Follow this step-by-step guide to get your computer ready to work.
+
+*This section is a work in progress. Eventually, it should cover OS choices, IDE choice, python and virtualenv installation, scilpy installation, nextflow and singularity/docker.*
+
 We recommend using linux, but Mac can be an option. With Windows, your life will definitely be more complicated.
 
 1. First, you should work in a virtual environment to avoid breaking your python installation. See the :ref:`ref_venvs`.
