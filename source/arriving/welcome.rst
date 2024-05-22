@@ -23,7 +23,7 @@ To get started, complete these steps. Don't hesitate to contact your supervisor 
   | Your supervisor will ask them for you. You should receive an email.
 
 * | **Ask to be added to the SCIL Team**
-  | You can connect to the SCIL Team on Microsoft Teams with your CIP and university's password.
+  | You can connect to the SCIL Team on Microsoft Teams with your CIP and University password.
 
 * | **Join the calendars**
   | Ask a supervisor to add you to the SCIL Google calendars. We note our lab meetings, events and other important information there. Your supervisor can also add you to his personal calendar. * Tip. It's easier if you have a gmail account.
