@@ -3,12 +3,14 @@
 Onboarding new students
 =======================
 
-Important rooms and places
+Rooms of interest
 """"""""""""""""""""""""""
-The Sherbrooke Connectivity Imaging Laboratory is located in the Faculty of Sciences of the University of Sherbrooke (room number **D6-0051**). Other important rooms include the Faculty’s offices:
+The Sherbrooke Connectivity Imaging Laboratory is located in the Faculty of Sciences of the University of Sherbrooke (room number **D6-0051**). Other rooms of interest include:
 
-* The `Faculty of Sciences offices <https://www.usherbrooke.ca/sciences/nous-joindre>`_ are located at **D3-1044**.
-* The `Department of Computer Sciences offices <https://www.usherbrooke.ca/informatique/nous-joindre>`_ are located at **D4-1010-1**.
+* `Pr. Maxime Descoteaux' office <https://www.usherbrooke.ca/informatique/nous-joindre/personnel/corps-professoral/professeurs/maxime-descoteaux>`_, located at **D4-1016-2**;
+* `Pr. François Rheault's office <https://www.usherbrooke.ca/informatique/nous-joindre/personnel/corps-professoral/professeurs/francois-rheault>`_, located at **D4-1010-5**;
+* The `Faculty of Sciences offices <https://www.usherbrooke.ca/sciences/nous-joindre>`_, located at **D3-1044**;
+* The `Department of Computer Sciences offices <https://www.usherbrooke.ca/informatique/nous-joindre>`_, located at **D4-1010-1**.
 
 Don't hesitate to ask someone in the lab to guide you if you ever feel lost.
 
@@ -33,7 +35,7 @@ To get started, complete these steps. Don't hesitate to contact your supervisor 
   | For code versioning, we use Git and `Github <https://github.com/>`_.
 
 * | **Make sure you have access to BrainData (optional)**
-  | You should be able to access our data server, Braindata, using your CIP and password. Braindata is useful for heavy data storage. To connect to the server, see :ref:`this link <ref_heavy_storage>`.
+  | You should be able to access our data server, Braindata, using your CIP and University password. Braindata is useful for heavy data storage. To connect to the server, see :ref:`this link <ref_heavy_storage>`.
 
 * | **Create a Digital Research Alliance of Canada account (optional)**
   | This gives you access to high performance computers (HPC). `Create an account here <https://ccdb.computecanada.ca/security/login>`_. When creating your account, ask your supervisor for your sponsor's ID.
