@@ -1,5 +1,8 @@
 .. _ref_setupcomputer:
 
+.. role:: bash(code)
+   :language: bash
+
 Setting up your computer
 ========================
 
@@ -11,7 +14,22 @@ We recommend using Linux, but Mac and Windows can also be viable. If you already
 
     1) You can dual-boot Linux and Windows by following one of the many tutorials online, such as this `one <https://www.freecodecamp.org/news/how-to-dual-boot-windows-10-and-ubuntu-linux-dual-booting-tutorial/>`_. This process can be tedious so don't hesitate to ask for help in the lab.
 
-    2) You can use WSL2 on Windows 10 or 11. A step-by-step guide is available here (*TODO add link*) to help you install WSL2.
+    2) You can use WSL2 on Windows 10 or 11. A step-by-step guide is available here (*TODO add link to new section*) to help you install WSL2.
+
+Choosing your IDE
+"""""""""""""""""
+
+An integrated development environment (IDE) is an application made for software development, including code editing, debugging, and testing. Most people at the lab use `VSCode <https://code.visualstudio.com/download>`_, which is always free and compatible on all platforms. Installing this first will be helpful for some of the next steps.
+
+Terminal and bash
+"""""""""""""""""
+
+Now is the time to open a bash terminal, also known as the command line. The terminal allows you to execute commands, manage files and folders, and automate tasks. You will use it to install all you need to complete the setup of your computer.
+
+It is useful to learn some of the basics of the bash language to help you play around. Please refer to this cheat sheet on the bash language (*TODO add link to new section*).
+
+Before proceeding to the next steps, here are some useful additions you can make to your terminal "settings", by modifying what we call the *bashrc*. Open the bashrc in VSCode by typing in the terminal :bash:`code .bashrc` (you need to be in your home directory, simply type :bash:`cd`).
+
 
 Getting set up on super computers
 """""""""""""""""""""""""""""""""
