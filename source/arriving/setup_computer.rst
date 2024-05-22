@@ -16,8 +16,8 @@ We recommend using Linux, but Mac and Windows can also be viable. If you already
 
     2) You can use WSL2 on Windows 10 or 11. A step-by-step guide is available here (*TODO add link to new section*) to help you install WSL2.
 
-Choosing your IDE
-"""""""""""""""""
+IDE
+"""
 
 An integrated development environment (IDE) is an application made for software development, including code editing, debugging, and testing. Most people at the lab use `VSCode <https://code.visualstudio.com/download>`_, which is always free and compatible on all platforms. Installing this first will be helpful for some of the next steps.
 
@@ -84,19 +84,37 @@ Before proceeding to the next steps, here are some useful additions you can make
     bind '"\e[5~": history-search-backward'
     bind '"\e[6~": history-search-forward'
 
-Getting set up on super computers
-"""""""""""""""""""""""""""""""""
+Python
+""""""
+
+Virtual environments
+""""""""""""""""""""
+
+Git
+"""
+
+Scilpy
+""""""
+
+Containers
+""""""""""
+
+Nextflow
+""""""""
+
+Super computers
+"""""""""""""""
 
 The first use of a computing platform can be tricky but you'll get used to it. Please see the (:ref:`ref_heavy_computing`) tab for more information and for our first-use tutorial. If your goal is to use the computing platform to run Tractoflow, you will find instructions on the :ref:`ref_tractoflow` page. Else see the :ref:`ref_other_pipelines` page.
 
-Working from home
-"""""""""""""""""
+SSH and VPN
+"""""""""""
 
-    If you work from home, you might need to connect to the UdeS network. Do the following:
+    If you work from home, you might need to connect to the UdeS network for the follow reasons.
 
-    1) To have access to scientific papers (ex, free access to many articles in Google scholar): See the VPN information below or go on the University's `library's website <https://www.usherbrooke.ca/biblio/trouver-des/articles-de-periodiques-revues-et-journaux/>`_ and click on "Outil de découverte" if your are logged in with your CIP (top-right corner, the connexion button).
+    * | To have access to scientific papers (ex, free access to many articles in Google scholar): See the VPN information below or go on the University's `library's website <https://www.usherbrooke.ca/biblio/trouver-des/articles-de-periodiques-revues-et-journaux/>`_ and click on "Outil de découverte" if your are logged in with your CIP (top-right corner, the connexion button).
 
-    2) To connect to your lab computer: Use ssh or TeamViewer (see below).
+    * | To connect to your lab computer: Use ssh (see below).
 
 VPN
     Follow `these instructions <https://www.usherbrooke.ca/services-informatiques/repertoire/reseaux/rpv/>`_ to connect through **VPN**.
@@ -106,13 +124,14 @@ VPN
 SSH
     1. Connect to the University's VPN.
 
-    2. You must know your lab computer's IP address or its University code (ex: DINF-0000-00a). (Ask casius at https://casius.usherbrooke.ca/sp if you don't know).
+    2. You must know your lab computer's IP address or its University code (ex: DINF-0000-00a), which should be written on the computer. (Ask a research assistant if you don't know).
 
-    3. | Connect with ssh. On Linux or Mac, ssh can be simply used via the terminal. The option -X is to make sure the applications you use appear at home.
+    3. | Connect with ssh. On Linux, Mac or WSL (Windows), ssh can be simply used via the terminal. The option -X is to make sure the applications you use appear at home.
        | ``ssh -x your_cip@your_computer_IPaddress``, or
        | ``ssh -X your_cip@DINF-0000-00a.dinf.fsci.usherbrooke.ca``.
 
-       On Windows, you can use MobaXterm. Download it, then click on Session, SSH. In Remote host, enter your IP address. In Advanced SSH settings, make sure the X11-Forwarding button is clicked.
+       It can be useful to create an alias for this in your personal computer's bashrc. Simply open the bashrc and copy-paste this at the end of it (you can change the name ScilTour for whatever you want):
 
-TeamViewer (anyone still uses TeamViewer? we could replace by vscode remote ssh extension)
-    You can use **screen sharing** software such as TeamViewer. You must first install TeamViewer while you are at the University and note the ID and password. Then you can install TeamViewer at home.
+       :bash:`alias ScilTour='ssh -X your_cip@DINF-0000-00a.dinf.fsci.usherbrooke.ca -o ServerAliveInterval=10'`
+
+    On Windows, you can also use MobaXterm. Download it, then click on Session, SSH. In Remote host, enter your IP address. In Advanced SSH settings, make sure the X11-Forwarding button is clicked.
