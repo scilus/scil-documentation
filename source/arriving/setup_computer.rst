@@ -87,6 +87,16 @@ Before proceeding to the next steps, here are some useful additions you can make
 Python
 """"""
 
+Although your Linux distribution most likely already includes a python distribution, it may be necessary to install additionnal python packages for software development. There are many alternatives for installing python. On Ubuntu, we can use the `deadsnakes <https://launchpad.net/~deadsnakes/+archive/ubuntu/ppa>`_ repository to download and install a specific version:
+
+.. code-block:: bash
+
+        sudo add-apt-repository ppa:deadsnakes/ppa
+        sudo apt-get install python3.10-dev python3.10-venv python3.10-tk python3-pip
+        python3.10 -m pip install pip  # update pip (python package manager) to latest version
+
+Other python packages can be installed by replacing python3.X by a version of your choice.
+
 Virtual environments
 """"""""""""""""""""
 
