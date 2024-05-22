@@ -19,6 +19,7 @@ Here, you will find a summary of the tools we develop, and some clues on how we 
     :caption: Arriving in the lab
 
     arriving/welcome
+    arriving/setup_computer
     arriving/useful_links
     arriving/our_team
 
