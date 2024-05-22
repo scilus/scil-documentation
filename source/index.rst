@@ -20,7 +20,6 @@ Here, you will find a summary of the tools we develop, and some clues on how we 
 
     arriving/welcome
     arriving/setup_computer
-    arriving/remote_work
     arriving/useful_links
     arriving/our_team
 
