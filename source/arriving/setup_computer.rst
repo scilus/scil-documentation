@@ -28,8 +28,61 @@ Now is the time to open a bash terminal, also known as the command line. The ter
 
 It is useful to learn some of the basics of the bash language to help you play around. Please refer to this cheat sheet on the bash language (*TODO add link to new section*).
 
-Before proceeding to the next steps, here are some useful additions you can make to your terminal "settings", by modifying what we call the *bashrc*. Open the bashrc in VSCode by typing in the terminal :bash:`code .bashrc` (you need to be in your home directory, simply type :bash:`cd`).
+Before proceeding to the next steps, here are some useful additions you can make to your terminal "settings", by modifying what we call the *bashrc*. First, open the bashrc in VSCode by typing in the terminal :bash:`code .bashrc` (make sure you are in your home directory by simply typing :bash:`cd`). Then, choose the features you like!
 
+* | If you want your terminal to display helpful colors and show your current git branch:
+
+.. code-block:: bash
+
+    # Replace this part:
+
+    if [ "$color_prompt" = yes ]; then
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    else
+        PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+    fi
+    unset color_prompt force_color_prompt
+
+    # by this part:
+
+    ########### Custom prompt for GIT ###############
+    parse_git_branch () {
+     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+    }
+
+    parse_git_tag () {
+     git describe --tags 2> /dev/null
+    }
+
+    parse_git_branch_or_tag() {
+     local OUT="$(parse_git_branch)"
+     if [ "$OUT" == " ((no branch))" ]; then
+       OUT="($(parse_git_tag))";
+     fi
+     echo $OUT
+    }
+    #################################################
+
+    if [ "$color_prompt" = yes ]; then
+        # Using Git branch parsing
+        PS1="${debian_chroot:+($debian_chroot)}\[\e[34;1m\]\u@\[\e[33;1m\]\h:\[\033[01;34m\]\w\[\e[32;1m\]\$(parse_git_branch_or_tag)\[\e[31;1m\]\[\033[00m\]\[\e[31;1m\]$\[\e[0m\] "
+    else
+        # Using Git branch parsing
+        PS1="${debian_chroot:+($debian_chroot)}\u@\h:\w\$(parse_git_branch_or_tag)\$ "
+    fi
+    unset color_prompt force_color_prompt
+
+* | If you want some useful aliases and keybinds, copy this at the end of your bashrc:
+
+.. code-block:: bash
+
+    # Useful aliases
+    alias c='clear'
+    alias histg='history | grep'
+
+    # History auto-complete navigation
+    bind '"\e[5~": history-search-backward'
+    bind '"\e[6~": history-search-forward'
 
 Getting set up on super computers
 """""""""""""""""""""""""""""""""
