@@ -142,14 +142,51 @@ You might want to always have a specific environment when opening a terminal. To
 Git
 """
 
+TODO
+
+..
+  Talk about the three principal ways of using git. 
+  1) git clone a repo you want to use only.
+  2) git clone a fork of a repo you want to use and modify (talk about remotes).
+  3) use git to do versioning of your own project.
+
 Scilpy
 """"""
+
+Scilpy currently supports python versions 3.8 to 3.10, so make sure you have followed all the previous steps. Once your python distribution is correctly installed, Scilpy can be installed by following the procedure outlined below, depending on if you are to be a user or a developper of Scilpy.
+
+    - **Users** can follow the instructions on the `Github page <https://github.com/scilus/scilpy>`_ or follow these instructions:
+
+    .. code-block:: bash
+
+        # First, go where you want the scilpy folder to be.
+        git clone https://github.com/scilus/scilpy.git 
+        cd scilpy 
+        pip install -e .
+
+    - **Developpers** should follow these instructions instead:
+
+    .. code-block:: bash
+
+        # First, make a fork of scilpy (online).
+        # Second, go where you want the scilpy folder to be.
+        git clone https://github.com/YOUR_GIT_NAME/scilpy.git
+        cd scilpy
+        git remote add upstream https://github.com/scilus/scilpy.git
+        pip install -r requirements.txt
+        python setup.py develop
+
+In any case, please refer to the `Github page <https://github.com/scilus/scilpy>`_ if you encounter problems.
 
 Containers
 """"""""""
 
+TODO
+
 Nextflow
 """"""""
+
+TODO
 
 Super computers
 """""""""""""""
@@ -187,3 +224,5 @@ SSH
 
 Other tools
 """""""""""
+
+TODO
