@@ -22,7 +22,6 @@ Here, you will find a summary of the tools we develop, and some clues on how we 
     arriving/setup_computer
     arriving/useful_links
     arriving/our_team
-    arriving/anatomy
 
 .. toctree::
     :maxdepth: 1
@@ -35,6 +34,12 @@ Here, you will find a summary of the tools we develop, and some clues on how we 
     intro_to/explore_virtual_machines
     intro_to/explore_nextflow
     intro_to/code_with_nextflow
+
+.. toctree::
+    :maxdepth: 1
+    :caption: Intro to Medical Imaging
+
+    intro_to/anatomy
 
 .. toctree::
     :maxdepth: 1
