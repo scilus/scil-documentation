@@ -6,15 +6,9 @@
 Setting up your computer
 ========================
 
-Before you can start working with the tools commonly-used or developped in the lab, you need to setup your computer. Follow this step-by-step guide to get your computer ready to work.
+Before you can start working with the tools commonly-used or developped in the lab, you need to setup your computer. Follow this step-by-step guide to get your computer ready to work. 
 
-*This section is a work in progress. Eventually, it should cover OS choices, IDE choice, python and virtualenv installation, scilpy installation, nextflow and singularity/docker.*
-
-We recommend using Linux, but Mac and Windows can also be viable. If you already have a computer with Linux (or Mac) installed, proceed to the next step. If you want to install Linux on your personal computer but also want to keep Windows, you have two choices:
-
-    1) You can dual-boot Linux and Windows by following one of the many tutorials online, such as this `one <https://www.freecodecamp.org/news/how-to-dual-boot-windows-10-and-ubuntu-linux-dual-booting-tutorial/>`_. This process can be tedious so don't hesitate to ask for help in the lab.
-
-    2) You can use WSL2 on Windows 10 or 11. A step-by-step guide is available here (*TODO add link to new section*) to help you install WSL2.
+*If you work on a personal computer, you might be interested in visiting* :ref:`ref_setuppersocomputer` *first!*
 
 IDE
 """
@@ -63,7 +57,7 @@ Virtual environments are a good way to separate the system's python installation
     sudo pip install virtualenvwrapper
     mkdir ~/Envs
 
-Then you should add these lines in your .bashrc:
+Then you should add these lines in your .bashrc (:bash:`code ~/.bashrc`):
 
 .. code-block:: bash
 
@@ -89,11 +83,9 @@ Finally, you can restart the terminal and create an environment:
     # Note. To download a python version to your /usr/bin without installing it:
     # https://www.python.org/downloads/
 
-When everything is set, restart your terminal. You should now be able to work in a chosen environmnent by using :bash:`workon $NAME`. Now everytime you need to install a new library inside the environment, you should always try to use :bash:`pip install your_library`. The environment will use the right pip based on the current python version. *Don't use sudo pip!* It will use the pip of the system!
+When everything is set, restart your terminal. You should now be able to work in a chosen environmnent by using :bash:`workon $NAME`. Now everytime you need to install a new library inside the environment, you should always try to use :bash:`pip install your_library`. The environment will use the right pip based on the current python version. *Don't use sudo pip!* It will use the pip of the system! If the library can't be installed via pip, however, you can use :bash:`sudo apt-get install your_library`. In this case the `sudo` will not be a problem.
 
-If the library can't be installed via pip, however, you can use :bash:`sudo apt-get install your_library`. In this case the `sudo` will not be a problem.
-
-You might want to always have a specific environment when opening a terminal. To do so, simply open the .bashrc and copy-paste this :bash:`workon somename` at the end of it (don't forget to replace :bash:`somename` by the actual name of your environment!). Before moving on to the next steps, make sure to have a virtual environment active!
+You might want to always have a specific environment when opening a terminal. To do so, simply open the .bashrc and copy-paste this :bash:`workon somename` at the end of it (don't forget to replace :bash:`somename` by the actual name of your environment). Before moving on to the next steps, make sure to have a virtual environment active!
 
 Git
 """
@@ -168,37 +160,6 @@ Super computers
 TODO
 
 The first use of a computing platform can be tricky but you'll get used to it. Please see the (:ref:`ref_heavy_computing`) tab for more information and for our first-use tutorial. If your goal is to use the computing platform to run Tractoflow, you will find instructions on the :ref:`ref_tractoflow` page. Else see the :ref:`ref_other_pipelines` page.
-
-SSH and VPN
-"""""""""""
-
-    If you work from home, you might need to connect to the UdeS network for the following reasons.
-
-    * | To have access to scientific papers (ex, free access to many articles in Google scholar): See the VPN information below or go on the University's `library's website <https://www.usherbrooke.ca/biblio/trouver-des/articles-de-periodiques-revues-et-journaux/>`_ and click on "Outil de découverte" if your are logged in with your CIP (top-right corner, the connexion button).
-
-    * | To connect to your lab computer: Use ssh (see below).
-
-VPN
-    Follow `these instructions <https://www.usherbrooke.ca/services-informatiques/repertoire/reseaux/rpv/>`_ to connect through **VPN**.
-
-    **(we might want to write a summary for English speakers)**
-
-SSH
-    1. Connect to the University's VPN.
-
-    2. You must know your lab computer's IP address or its University code (ex: DINF-0000-00a), which should be written on the computer. (Ask a research assistant if you don't know).
-
-    3. | Connect with ssh. On Linux, Mac or WSL (Windows), ssh can be simply used via the terminal. The option -X is to make sure the applications you use appear at home.
-       | ``ssh -x your_cip@your_computer_IPaddress``, or
-       | ``ssh -X your_cip@DINF-0000-00a.dinf.fsci.usherbrooke.ca``.
-
-       It can be useful to create an alias for this in your personal computer's .bashrc. Simply open the .bashrc and copy-paste this at the end of it (you can change the name ScilTour for whatever you want):
-
-       :bash:`alias ScilTour='ssh -X your_cip@DINF-0000-00a.dinf.fsci.usherbrooke.ca -o ServerAliveInterval=10'`
-
-    On Windows, you can also use MobaXterm. Download it, then click on Session, SSH. In Remote host, enter your IP address. In Advanced SSH settings, make sure the X11-Forwarding button is clicked.
-
-    For further information, please refer to this `link <https://www.usherbrooke.ca/informatique/etudiants-actuels/faq/acces-a-distance-aux-serveurs-ubuntu>`_.
 
 Other tools
 """""""""""
