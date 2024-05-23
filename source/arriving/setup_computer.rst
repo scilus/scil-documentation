@@ -137,7 +137,7 @@ When everything is set, restart your terminal. You should now be able to work in
 
 If the library can't be installed via pip, however, you can use :bash:`sudo apt-get install your_library`. In this case the `sudo` will not be a problem.
 
-You might want to always have a specific environment when opening a terminal. To do so, simply open the .bashrc and copy-paste this :bash:`workon somename` at the end of it (don't forget to replace :bash:`somename` by the actual name of your environment!).
+You might want to always have a specific environment when opening a terminal. To do so, simply open the .bashrc and copy-paste this :bash:`workon somename` at the end of it (don't forget to replace :bash:`somename` by the actual name of your environment!). Before moving on to the next steps, make sure to have a virtual environment active!
 
 Git
 """
@@ -155,7 +155,7 @@ Scilpy
 
 Scilpy currently supports python versions 3.8 to 3.10, so make sure you have followed all the previous steps. Once your python distribution is correctly installed, Scilpy can be installed by following the procedure outlined below, depending on if you are to be a user or a developper of Scilpy.
 
-    - **Users** can follow the instructions on the `Github page <https://github.com/scilus/scilpy>`_ or follow these instructions:
+    - **Users** who not only want to use scilpy but also access the code easily can follow the instructions on the `Github page <https://github.com/scilus/scilpy>`_ or follow these instructions:
 
     .. code-block:: bash
 
@@ -163,6 +163,9 @@ Scilpy currently supports python versions 3.8 to 3.10, so make sure you have fol
         git clone https://github.com/scilus/scilpy.git 
         cd scilpy 
         pip install -e .
+
+    - **Users** who only want to use scilpy can now install it in a virtual environment through pip: :bash:`pip install scilpy`.
+        *Note: For Mac users, you might have to use this command instead* :bash:`pip install scilpy==2.0.0 --use-pep517`.
 
     - **Developpers** should follow these instructions instead:
 
