@@ -40,4 +40,4 @@ To get started, complete these steps. Don't hesitate to contact your supervisor 
 * | **Create a Digital Research Alliance of Canada account (optional)**
   | This gives you access to high performance computers (HPC). `Create an account here <https://ccdb.computecanada.ca/security/login>`_. When creating your account, ask your supervisor for your sponsor's ID.
 
-Now get going with the next step, setting up your computer!
+Now get going with the next step, :ref:`ref_setupcomputer`!

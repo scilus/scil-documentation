@@ -28,51 +28,7 @@ Now is the time to open a bash terminal, also known as the command line. The ter
 
 It is useful to learn some of the basics of the bash language to help you play around. Please refer to this cheat sheet on the bash language (*TODO add link to new section*).
 
-Before proceeding to the next steps, here are some useful additions you can make to your terminal "settings", by modifying what we call the *.bashrc*. First, open the .bashrc in VSCode by typing in the terminal :bash:`code .bashrc` (make sure you are in your home directory by simply typing :bash:`cd`). Then, choose the features you like!
-
-* | If you want your terminal to display helpful colors and show your current git branch:
-
-.. code-block:: bash
-
-    # Replace this part:
-
-    if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-    else
-        PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
-    fi
-    unset color_prompt force_color_prompt
-
-    # by this part:
-
-    ########### Custom prompt for GIT ###############
-    parse_git_branch () {
-     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
-    }
-
-    parse_git_tag () {
-     git describe --tags 2> /dev/null
-    }
-
-    parse_git_branch_or_tag() {
-     local OUT="$(parse_git_branch)"
-     if [ "$OUT" == " ((no branch))" ]; then
-       OUT="($(parse_git_tag))";
-     fi
-     echo $OUT
-    }
-    #################################################
-
-    if [ "$color_prompt" = yes ]; then
-        # Using Git branch parsing
-        PS1="${debian_chroot:+($debian_chroot)}\[\e[34;1m\]\u@\[\e[33;1m\]\h:\[\033[01;34m\]\w\[\e[32;1m\]\$(parse_git_branch_or_tag)\[\e[31;1m\]\[\033[00m\]\[\e[31;1m\]$\[\e[0m\] "
-    else
-        # Using Git branch parsing
-        PS1="${debian_chroot:+($debian_chroot)}\u@\h:\w\$(parse_git_branch_or_tag)\$ "
-    fi
-    unset color_prompt force_color_prompt
-
-* | If you want some useful aliases and keybinds, copy this at the end of your .bashrc:
+Before proceeding to the next steps, here are some useful additions you can make to your terminal "settings", by modifying what we call the *.bashrc*. First, open the .bashrc in VSCode by typing in the terminal :bash:`code ~/.bashrc`, then, copy-paste these lines at the end of it:
 
 .. code-block:: bash
 
@@ -81,8 +37,8 @@ Before proceeding to the next steps, here are some useful additions you can make
     alias histg='history | grep'
 
     # History auto-complete navigation
-    bind '"\e[5~": history-search-backward'
-    bind '"\e[6~": history-search-forward'
+    bind '"\e[5~": history-search-backward' # Press page-up button to go backward in history
+    bind '"\e[6~": history-search-forward' # Press page-down button to go forward in history
 
 Python
 """"""
@@ -149,98 +105,50 @@ Git is a version control software system often used for versioning of source cod
     git config --global user.name "FIRST_NAME LAST_NAME"
     git config --global user.email "MY_NAME@example.com"
 
-Then, there are three principal ways you might use Git.
+You can also add these lines in your .bashrc (:bash:`code ~/.bashrc`) to see the current Git branch in your terminal:
 
-    * | **To clone a repository for use only**
-      | If you want to "download" the code from a repository on your computer and never modify the code, you can *clone* the repository. Simply get the web URL from the Github page of the repository by clicking on the green "<> Code" button.
+.. code-block:: bash
 
-        .. code-block:: bash
+    # Custom prompt for Git 
+    git_branch() {
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[\1] /'
+    }
+    PS1="\$(git_branch)$PS1"
 
-            # Cloning the code in the current directory
-            git clone ${link_to_the_repo}
-            cd the_repo/
+In the next steps, you will have to *clone* and *fork* Git repositories. In short, *cloning* a repository means "downloading" it to your computer using the :bash:`git clone` command with the URL found by clicking on the green "<> Code" button on the Github page of the repository. Moreover, *forking* a repository means creating your own version of the repository by clicking on the "Fork" button on the Github page of the repository.
 
-            # If you want to get a specific version or branch of the code
-            git checkout VERSION
-            
-            # If you want to update the code to the most recent version
-            git pull origin master
-            # You might have to change "master" for "main" or the name of the branch
-
-      | Don't forget that the repository might evolve in time so updating the code frequently might be a good practice.
-
-
-    * | **To clone a personal fork of a repository for use and development**
-      | If you want to contribute to or modify the code from a repository, you can *fork* the repository directly on its Github page by clicking on the "Fork" button. This will create your own version of the code that you will be able to modify at will without fear of breaking the original code. We use *remotes* to keep track of the two versions of code, so you can *pull* updates from the main version to your fork and *push* modifcations from your fork to the main version of the repository.
-
-        .. code-block:: bash
-
-            # Cloning the code in the current directory
-            git clone ${link_to_my_fork}
-            cd my_fork/
-
-            # Telling git who are the upstream and origin
-            git remote add upstream ${link_to_upstream}
-            git remote add origin ${link_to_my_fork} # Should be set automatically
-            git remote -v # To verify everything.
-
-            # Pulling the main version to your fork (updating)
-            git pull upstream master
-
-    * | **To do versioning of a personal repository**
-      | If you want to have your personal code saved online and keep track of its evolution, we also suggest to use Github. This time, you will create a new repository by following these steps:
-
-        .. code-block:: bash
-
-            # First, go where you want to create the new repository
-            cd my_codes/
-
-            # Second, create the new repository
-            mkdir ${my_new_repo}
-            cd ${my_new_repo}/
-
-            # Third, initialize the repository with git init
-            git init
-
-      | You can now start adding new code and keeping track of it with Git. 
-      
-These points only explain the very basics of setting up with Git and Github. More details on the use of Git are available :doc:`here <../coding/git>`.
-
-..
-  First, talk about setting up (username, email)
-  Second, talk about the three principal ways of using git. 
-  1) git clone a repo you want to use only.
-  2) git clone a fork of a repo you want to use and modify (talk about remotes).
-  3) use git to do versioning of your own project.
+More details on the use of Git are available here: :ref:`ref_git`.
 
 Scilpy
 """"""
 
-Scilpy currently supports python versions 3.8 to 3.10, so make sure you have followed all the previous steps. Once your python distribution is correctly installed, Scilpy can be installed by following the procedure outlined below, depending on if you are to be a user or a developper of Scilpy.
-
-    - **Users** who not only want to use scilpy but also access the code easily can follow the instructions on the `Github page <https://github.com/scilus/scilpy>`_ or follow these instructions:
+`Scilpy <https://github.com/scilus/scilpy>`_ is the main library supporting research and development at the lab. It currently supports python versions 3.8 to 3.10, so make sure you have followed all the previous steps. Once your python distribution is correctly installed, Scilpy can be installed by following the procedure outlined below:
 
     .. code-block:: bash
 
-        # First, go where you want the scilpy folder to be.
-        git clone https://github.com/scilus/scilpy.git 
+        # If you never installed libfreetype6-dev
+        sudo apt install libfreetype6-dev
+
+        # If you intend to use COMMIT/AMICO (on LINUX or WSL)
+        sudo apt install libblas-dev liblapack-dev
+
+        # If you intend to use COMMIT/AMICO (on MAC)
+        brew install openblas lapack
+
+        # Make a fork of scilpy to be able to modify your own version of the code.
+        # Go where you want the scilpy folder to be, then:
+        git clone https://github.com/YOUR_USERNAME/scilpy.git # Don't forget to replace YOUR_USERNAME
         cd scilpy 
         pip install -e .
 
-    - **Users** who only want to use scilpy can now install it in a virtual environment through pip: :bash:`pip install scilpy`.
-        *Note: For Mac users, you might have to use this command instead* :bash:`pip install scilpy==2.0.0 --use-pep517`.
+        # Setup your Git remotes
+        git remote add upstream https://github.com/scilus/scilpy.git # Link to the main version of scilpy
+        git remote add origin https://github.com/YOUR_USERNAME/scilpy.git # Should be set automatically
+        git remote -v # To verify everything is in order
 
-    - **Developpers** should follow these instructions instead:
+| *Note: Scilpy can now be installed in a virtual environment through pip:* :bash:`pip install scilpy`.
+| *Note: For Mac users, you might have to use this command instead* :bash:`pip install scilpy==2.0.0 --use-pep517`.
 
-    .. code-block:: bash
-
-        # First, make a fork of scilpy (online).
-        # Second, go where you want the scilpy folder to be.
-        git clone https://github.com/YOUR_GIT_NAME/scilpy.git
-        cd scilpy
-        git remote add upstream https://github.com/scilus/scilpy.git
-        pip install -r requirements.txt
-        python setup.py develop
 
 In any case, please refer to the `Github page <https://github.com/scilus/scilpy>`_ if you encounter problems.
 
@@ -264,7 +172,7 @@ The first use of a computing platform can be tricky but you'll get used to it. P
 SSH and VPN
 """""""""""
 
-    If you work from home, you might need to connect to the UdeS network for the follow reasons.
+    If you work from home, you might need to connect to the UdeS network for the following reasons.
 
     * | To have access to scientific papers (ex, free access to many articles in Google scholar): See the VPN information below or go on the University's `library's website <https://www.usherbrooke.ca/biblio/trouver-des/articles-de-periodiques-revues-et-journaux/>`_ and click on "Outil de découverte" if your are logged in with your CIP (top-right corner, the connexion button).
 
@@ -289,6 +197,8 @@ SSH
        :bash:`alias ScilTour='ssh -X your_cip@DINF-0000-00a.dinf.fsci.usherbrooke.ca -o ServerAliveInterval=10'`
 
     On Windows, you can also use MobaXterm. Download it, then click on Session, SSH. In Remote host, enter your IP address. In Advanced SSH settings, make sure the X11-Forwarding button is clicked.
+
+    For further information, please refer to this `link <https://www.usherbrooke.ca/informatique/etudiants-actuels/faq/acces-a-distance-aux-serveurs-ubuntu>`_.
 
 Other tools
 """""""""""
