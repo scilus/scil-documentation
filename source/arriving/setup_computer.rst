@@ -142,10 +142,73 @@ You might want to always have a specific environment when opening a terminal. To
 Git
 """
 
-TODO
+Git is a version control software system often used for versioning of source code by developers. In the lab, we use the website `Github <https://github.com/>`_ to help us store and manage our code using Git in a user-friendly way. You should get used to it from the beginning, as it is a powerful and very helpful tool. If you have never used Git on your computer, the first step would be to set your user.name and user.email:
+
+.. code-block:: bash
+
+    git config --global user.name "FIRST_NAME LAST_NAME"
+    git config --global user.email "MY_NAME@example.com"
+
+Then, there are three principal ways you might use Git.
+
+    * | **To clone a repository for use only**
+      | If you want to "download" the code from a repository on your computer and never modify the code, you can *clone* the repository. Simply get the web URL from the Github page of the repository by clicking on the green "<> Code" button.
+
+        .. code-block:: bash
+
+            # Cloning the code in the current directory
+            git clone ${link_to_the_repo}
+            cd the_repo/
+
+            # If you want to get a specific version or branch of the code
+            git checkout VERSION
+            
+            # If you want to update the code to the most recent version
+            git pull origin master
+            # You might have to change "master" for "main" or the name of the branch
+
+      | Don't forget that the repository might evolve in time so updating the code frequently might be a good practice.
+
+
+    * | **To clone a personal fork of a repository for use and development**
+      | If you want to contribute to or modify the code from a repository, you can *fork* the repository directly on its Github page by clicking on the "Fork" button. This will create your own version of the code that you will be able to modify at will without fear of breaking the original code. We use *remotes* to keep track of the two versions of code, so you can *pull* updates from the main version to your fork and *push* modifcations from your fork to the main version of the repository.
+
+        .. code-block:: bash
+
+            # Cloning the code in the current directory
+            git clone ${link_to_my_fork}
+            cd my_fork/
+
+            # Telling git who are the upstream and origin
+            git remote add upstream ${link_to_upstream}
+            git remote add origin ${link_to_my_fork} # Should be set automatically
+            git remote -v # To verify everything.
+
+            # Pulling the main version to your fork (updating)
+            git pull upstream master
+
+    * | **To do versioning of a personal repository**
+      | If you want to have your personal code saved online and keep track of its evolution, we also suggest to use Github. This time, you will create a new repository by following these steps:
+
+        .. code-block:: bash
+
+            # First, go where you want to create the new repository
+            cd my_codes/
+
+            # Second, create the new repository
+            mkdir ${my_new_repo}
+            cd ${my_new_repo}/
+
+            # Third, initialize the repository with git init
+            git init
+
+      | You can now start adding new code and keeping track of it with Git. 
+      
+These points only explain the very basics of setting up with Git and Github. More details on the use of Git are available :doc:`here <../coding/git>`.
 
 ..
-  Talk about the three principal ways of using git. 
+  First, talk about setting up (username, email)
+  Second, talk about the three principal ways of using git. 
   1) git clone a repo you want to use only.
   2) git clone a fork of a repo you want to use and modify (talk about remotes).
   3) use git to do versioning of your own project.
@@ -193,6 +256,8 @@ TODO
 
 Super computers
 """""""""""""""
+
+TODO
 
 The first use of a computing platform can be tricky but you'll get used to it. Please see the (:ref:`ref_heavy_computing`) tab for more information and for our first-use tutorial. If your goal is to use the computing platform to run Tractoflow, you will find instructions on the :ref:`ref_tractoflow` page. Else see the :ref:`ref_other_pipelines` page.
 
