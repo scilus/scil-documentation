@@ -22,6 +22,7 @@ Here, you will find a summary of the tools we develop, and some clues on how we 
     arriving/setup_computer
     arriving/useful_links
     arriving/our_team
+    arriving/wsl_tuto
 
 .. toctree::
     :maxdepth: 1
