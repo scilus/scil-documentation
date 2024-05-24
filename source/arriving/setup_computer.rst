@@ -41,6 +41,7 @@ Although your Linux distribution most likely already includes a python distribut
 
 .. code-block:: bash
 
+        sudo apt-get update
         sudo add-apt-repository ppa:deadsnakes/ppa
         sudo apt-get install python3.10-dev python3.10-venv python3.10-tk python3-pip
         python3.10 -m pip install pip  # update pip (python package manager) to latest version
