@@ -90,7 +90,7 @@ You might want to always have a specific environment when opening a terminal. To
 Git
 """
 
-Git is a version control software system often used for versioning of source code by developers. In the lab, we use the website `Github <https://github.com/>`_ to help us store and manage our code using Git in a user-friendly way. You should get used to it from the beginning, as it is a powerful and very helpful tool. If you have never used Git on your computer, the first step would be to set your user.name and user.email:
+Git is a version control software system that allows to store and keep track of the changes made to a code base. It is a kind of a "dropbox" for code, which saves the whole evolution (versions) of the code. In the lab, we use the website `Github <https://github.com/>`_ to help us store and manage our code using Git in a user-friendly way. You should get used to it from the beginning, as it is a powerful and very helpful tool. If you have never used Git on your computer, the first step would be to set your user.name and user.email:
 
 .. code-block:: bash
 
