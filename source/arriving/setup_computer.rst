@@ -83,9 +83,9 @@ Finally, you can restart the terminal and create an environment:
     # Note. To download a python version to your /usr/bin without installing it:
     # https://www.python.org/downloads/
 
-When everything is set, restart your terminal. You should now be able to work in a chosen environmnent by using :bash:`workon $NAME`. Now everytime you need to install a new library inside the environment, you should always try to use :bash:`pip install your_library`. The environment will use the right pip based on the current python version. *Don't use sudo pip!* It will use the pip of the system! If the library can't be installed via pip, however, you can use :bash:`sudo apt-get install your_library`. In this case the `sudo` will not be a problem.
+When everything is set, restart your terminal. You should now be able to work in a chosen environment by using :bash:`workon $NAME`. Now everytime you need to install a new library inside the environment, you should always try to use :bash:`pip install your_library`. The environment will use the right pip based on the current python version. *Don't use sudo pip!* It will use the pip of the system!
 
-You might want to always have a specific environment when opening a terminal. To do so, simply open the .bashrc and copy-paste this :bash:`workon somename` at the end of it (don't forget to replace :bash:`somename` by the actual name of your environment). Before moving on to the next steps, make sure to have a virtual environment active!
+You might want to always have a specific environment when opening a terminal. To do so, simply open the .bashrc and copy-paste this :bash:`workon somename` at the end of it (don't forget to replace :bash:`somename` by the actual name of your environment).
 
 Git
 """
@@ -107,14 +107,16 @@ You can also add these lines in your .bashrc (:bash:`code ~/.bashrc`) to see the
     }
     PS1="\$(git_branch)$PS1"
 
-In the next steps, you will have to *clone* and *fork* Git repositories. In short, *cloning* a repository means "downloading" it to your computer using the :bash:`git clone` command with the URL found by clicking on the green "<> Code" button on the Github page of the repository. Moreover, *forking* a repository means creating your own version of the repository by clicking on the "Fork" button on the Github page of the repository.
+In the next steps, you will have to *clone* and *fork* Git repositories. In short, *cloning* a repository means "downloading" it to your computer using the :bash:`git clone` command with the link found by clicking on the green "<> Code" button on the Github page of the repository, under the SSH tab. Moreover, *forking* a repository means creating your own version of the repository by clicking on the "Fork" button on the Github page of the repository.
+
+To connect to Github without supplying your username and password each time you interact with Git, it is useful to add a SSH key to your Github account. This `link <https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account?platform=linux>`_ explains in details the procedure. For the next steps, we assume that your SSH key is set and working. If it is not the case, you can always use the URL in the HTTPS tab of the green "<> Code" button when cloning a repository.
 
 More details on the use of Git are available here: :ref:`ref_git`.
 
 Scilpy
 """"""
 
-`Scilpy <https://github.com/scilus/scilpy>`_ is the main library supporting research and development at the lab. It currently supports python versions 3.8 to 3.10, so make sure you have followed all the previous steps. Once your python distribution is correctly installed, Scilpy can be installed by following the procedure outlined below:
+`Scilpy <https://github.com/scilus/scilpy>`_ is the main library supporting research and development at the lab. It currently supports python versions 3.8 to 3.10, so make sure you have followed all the previous steps. Once your python distribution is correctly installed and your virtual environment is active, scilpy can be installed by following the procedure outlined below:
 
     .. code-block:: bash
 
@@ -129,13 +131,13 @@ Scilpy
 
         # Make a fork of scilpy to be able to modify your own version of the code.
         # Go where you want the scilpy folder to be, then:
-        git clone https://github.com/YOUR_USERNAME/scilpy.git # Don't forget to replace YOUR_USERNAME
+        git clone git@github.com:YOUR_USERNAME/scilpy.git # Don't forget to replace YOUR_USERNAME
         cd scilpy 
         pip install -e .
 
         # Setup your Git remotes
-        git remote add upstream https://github.com/scilus/scilpy.git # Link to the main version of scilpy
-        git remote add origin https://github.com/YOUR_USERNAME/scilpy.git # Should be set automatically
+        git remote add upstream git@github.com:scilus/scilpy.git # Link to the main version of scilpy
+        git remote add origin git@github.com:YOUR_USERNAME/scilpy.git # Should be set automatically
         git remote -v # To verify everything is in order
 
 | *Note: Scilpy can now be installed in a virtual environment through pip:* :bash:`pip install scilpy`.
