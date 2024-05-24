@@ -36,6 +36,8 @@ If this guide is not enough or if you encounter any problems, please refer to th
     
       :bash:`ln -s /mnt/c/Users/<your Windows username>/Documents Documents`
 
+You should now be able to use your Ubuntu terminal on Windows as if it was on Linux. You should be able to proceed with setting up your computer. If you have any questions that the previously cited guides can't answer, don't hesitate to ask around in the lab.
+
 ..
     #. **Enable X11 forwarding**
         * The principal drawback from WSL is the interaction with external windows, like when plotting with matplotlib or visualizing data. One workaround is to use VcXsrv.
