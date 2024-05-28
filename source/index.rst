@@ -8,8 +8,8 @@ Welcome to the SCIL lab documentation!
 
 Our lab works in diffusion MRI, from the acquisition sequences and local reconstruction to tractography and its usages in applied contexts, including tractometry.
 
-.. image:: ./images/scil_unique_2019.jpg
-    :scale: 10 %
+.. image:: ./images/scil_picture.jpg
+    :scale: 18 %
     :align: center
 
 Here, you will find a summary of the tools we develop, and some clues on how we do things in the lab, from using Linux to developing code.
@@ -21,7 +21,6 @@ Here, you will find a summary of the tools we develop, and some clues on how we 
     arriving/welcome
     arriving/setup_computer
     arriving/setup_personal_computer
-    arriving/useful_links
     arriving/our_team
 
 .. toctree::
