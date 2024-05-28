@@ -157,12 +157,46 @@ Nextflow
 
 TODO
 
-Super computers
-"""""""""""""""
+High performance computers
+""""""""""""""""""""""""""
 
-TODO
+The first use of a computing platform can be tricky but you'll get used to it. Here we explain how to get started on Beluga, one of the high performance computers (HPC) of the Digital Research Alliance of Canada (formerly Compute Canada). 
 
-The first use of a computing platform can be tricky but you'll get used to it. Please see the (:ref:`ref_heavy_computing`) tab for more information and for our first-use tutorial. If your goal is to use the computing platform to run Tractoflow, you will find instructions on the :ref:`ref_tractoflow` page. Else see the :ref:`ref_other_pipelines` page.
+Connect to Beluga via ssh with :bash:`ssh USER@beluga.computecanada.ca`.
+
+On your first visit, you will probably want to edit your .bashrc with your preferences. Since VSCode will not be available, you will have to use an editor built in the terminal like Nano (:bash:`nano ~/.bashrc`) or Vim (:bash:`vim ~/.bashrc`). Please refer to the :ref:`ref_linux` if you don't know these tools. Here is an example of things you may copy and paste into your .bashrc:
+
+    .. code-block:: bash
+
+        # .bashrc
+
+        # Source global definitions
+        if [ -f /etc/bashrc ]; then
+            . /etc/bashrc
+        fi
+
+        # Uncomment the following line if you don't like systemctl's auto-paging feature:
+        # export SYSTEMD_PAGER=
+
+        # User specific aliases and functions
+
+        # Loading the modules necessary for scilpy and our flows
+        module load python/3.11.5
+        module load scipy-stack/2023b
+        module load python-build-bundle/2023b
+        module load java/11.0.16_8
+        module load nextflow
+        module load apptainer
+
+        #export PATH=$PATH:/home/USER/scripts  # if you have scripts
+        export PATH=$PATH:$HOME/nextflow
+
+        export SLURM_ACCOUNT=rrg-descotea
+        export SBATCH_ACCOUNT=$SLURM_ACCOUNT
+        export SALLOC_ACCOUNT=$SLURM_ACCOUNT
+
+
+Please see the (:ref:`ref_heavy_computing`) tab for more information about the usage of such resources. If your goal is to use the computing platform to run Tractoflow, you will find instructions on the :ref:`ref_tractoflow` page.
 
 Other tools
 """""""""""
