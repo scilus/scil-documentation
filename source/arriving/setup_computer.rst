@@ -155,7 +155,46 @@ TODO
 Nextflow
 """"""""
 
-TODO
+Nextflow is an open-source pipelining tool that makes processing massive computational workflows somewhat easy. We use it in the lab to run our various :ref:`ref_flow`. 
+
+Nextflow can be used on Linux, MacOS and WSL (Windows). It requires Bash 3.2 (or later) and Java 11 (or later, up to 20) to be installed. To find your Java version, use :bash:`java -version`. If it is not satisfying the requirement, follow these steps in a terminal:
+
+.. code-block:: bash
+
+    # Install SDKMAN
+    curl -s https://get.sdkman.io | bash
+
+    # Open a new terminal
+    sdk install java 17.0.10-tem
+    
+    # Confirm that everything is alright
+    java -version
+
+
+It is common to explicitely tell Nextflow where Java is. Use this command: :bash:`readlink -f \`which javac\` | sed "s:/bin/javac::"` to get the full path. Then, add this line to your .bashrc: :bash:`export JAVA_HOME=/PATH/FOR/JAVA/YOU/JUST/GOT`
+
+Now you can install Nextflow by opening a terminal and executing the following lines in a directory of your choice (likely next to the rest of your tools):
+
+.. code-block:: bash
+
+    # Don't forget to be in your chosen directory
+    curl -s https://get.nextflow.io | bash
+    chmod +x nextflow
+
+    # Confirm that Nextflow is installed correctly
+    nextflow info
+
+    # Change the Nextflow version to v21.12.1 (required for our flows)
+    echo 'export NXF_VER=21.12.1-edge' >> ~/.bashrc
+
+    # To execute Nextflow from anywhere, we add the current directory to PATH in your .bashrc
+    echo 'export PATH=$PATH:'$(pwd) >> ~/.bashrc
+
+    # Apply the changes to .bashrc
+    source ~./bashrc
+
+    # Test Nextflow
+    ./nextflow run hello
 
 Super computers
 """""""""""""""
