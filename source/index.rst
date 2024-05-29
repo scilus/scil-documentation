@@ -38,6 +38,12 @@ Here, you will find a summary of the tools we develop, and some clues on how we 
 
 .. toctree::
     :maxdepth: 1
+    :caption: Intro to Medical Imaging
+
+    intro_to/anatomy
+
+.. toctree::
+    :maxdepth: 1
     :caption: Our tools
 
     our_tools/scilpy
