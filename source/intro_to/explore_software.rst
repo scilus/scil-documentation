@@ -1,3 +1,5 @@
+.. _ref_software:
+
 Intro to Software
 =================
 

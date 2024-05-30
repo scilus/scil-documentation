@@ -167,4 +167,11 @@ The first use of a computing platform can be tricky but you'll get used to it. P
 Other tools
 """""""""""
 
-TODO
+Here are other tools you might want to install on your computer, depending on your project and needs. Please refer to the :ref:`ref_software` page for more information on the usage of these tools.
+
+MI-Brain
+^^^^^^^^
+`Mi-Brain <https://github.com/imeka/mi-brain/releases>`_ is a GUI viewer developped by `IMEKA <https://imeka.ca/>`_. To install it, follow these instructions depending on your OS, or refer to the `FAQ <https://github.com/imeka/mi-brain/wiki/FAQ#how-to-install>`_.
+
+    * | **On Linux**
+      | Download the 
