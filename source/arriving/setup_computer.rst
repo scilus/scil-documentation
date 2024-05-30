@@ -145,7 +145,9 @@ Scilpy
 | *Note: For Mac users, you might have to use this command instead* :bash:`pip install scilpy==2.0.0 --use-pep517`.
 
 
-In any case, please refer to the `Github page <https://github.com/scilus/scilpy>`_ if you encounter problems.
+In any case, please refer to the `Github page <https://github.com/scilus/scilpy>`__ if you encounter problems.
+
+.. _ref_containers:
 
 Containers
 """"""""""
@@ -171,7 +173,25 @@ Here are other tools you might want to install on your computer, depending on yo
 
 MI-Brain
 ^^^^^^^^
+
 `Mi-Brain <https://github.com/imeka/mi-brain/releases>`_ is a GUI viewer developped by `IMEKA <https://imeka.ca/>`_. To install it, follow these instructions depending on your OS, or refer to the `FAQ <https://github.com/imeka/mi-brain/wiki/FAQ#how-to-install>`_.
 
-    * | **On Linux**
-      | Download the 
+    **On Linux**
+        * Download the Linux version of MI-Brain `here <https://github.com/imeka/mi-brain/releases>`_.
+        * In a terminal, extract the .tar.gz release archive using :bash:`tar -xvzf NAME_OF_THE_FILE.tar.gz -C DIRECTORY_TO_PUT_MI_BRAIN`.
+        * Add this to your .bashrc: :bash:`alias MI-Brain="bash DIRECTORY_TO_PUT_MI_BRAIN/MI-Brain.sh"`.
+        * You can now open MI-Brain by typing :bash:`MI-Brain` in the terminal and pressing enter.
+    
+    **On MacOS**
+        * Download the MacOS version of MI-Brain `here <https://github.com/imeka/mi-brain/releases>`_.
+        * Open the .dmg file and drag the MI-Brain icon in the Application folder.
+
+    **On Windows**
+        * Download the Windows version of MI-Brain `here <https://github.com/imeka/mi-brain/releases>`_, along with the file named "vc_redist.x64.exe.zip".
+        * Double-click on the "vc_redist.x64.exe" executable inside "vc_redist.x64.exe.zip" to install Microsoft Visual C++ 2015 Redistributable.
+        * Double-click on the MI-Brain executable and follow the instructions.
+
+ANTs
+^^^^
+ANTs (Advanced Normalization Tools) is a powerful open-source software package for (medical) image analysis registration and segmentation. Since its installation is not that easy and it takes a few GB of space, you might want to consider using :ref:`ref_containers` for occasional use. If you want to install ANTs, their `Github page <https://github.com/ANTsX/ANTs/wiki/Compiling-ANTs-on-Linux-and-Mac-OS>`__ explains in details the steps to follow. Once you are finished, you should be able to type :bash:`antsRegistration` to see the help display.
+
