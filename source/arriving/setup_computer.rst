@@ -266,6 +266,11 @@ Then, add these lines to your :bash:`.bashrc`:
 
 Once installed, you should be able to type :bash:`recon-all` or :bash:`mri_convert` to see the help display.
 
+dMRI-explorer
+^^^^^^^^^^^^^
+
+If you want to visualize tensor and multi-tensor images in MRtrix, DIPY and FSL format as well as spherical functions expressed as a series of spherical harmonics coefficients, `dMRI-explorer <https://github.com/CHrlS98/dmri-explorer>`_ is another great tool produced in the lab. It allows for real-time diffusion MRI slicing on Linux and Windows using OpenGL 4.6. For installation and usage, a thorough guide is available on the `Github page <https://github.com/CHrlS98/dmri-explorer>`__.
+
 DICOM converters
 ^^^^^^^^^^^^^^^^
 
