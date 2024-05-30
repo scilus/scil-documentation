@@ -147,6 +147,8 @@ Scilpy
 
 In any case, please refer to the `Github page <https://github.com/scilus/scilpy>`_ if you encounter problems.
 
+.. _ref_containers:
+
 Containers
 """"""""""
 
@@ -191,7 +193,7 @@ In the future, you will need to follow these steps to work with scilpy after ope
     module load StdEnv/2023 python/3.10 vtk
     source ~/Envs/scilpy/bin/activate
 
-Note that it is currently not possible to work with both scilpy and Nextflow on the same session, as they require different module versions.
+Note that it is currently not possible to work with both scilpy and Nextflow on the same session, as they require different module versions. If you need both these packages at the same time, you might want to consider using :ref:`ref_containers`.
 
 Please see the (:ref:`ref_heavy_computing`) tab for more information about the usage of such resources. If your goal is to use the computing platform to run Tractoflow, you will find instructions on the :ref:`ref_tractoflow` page.
 
