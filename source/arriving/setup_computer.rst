@@ -228,3 +228,49 @@ ANTs (Advanced Normalization Tools) is a powerful open-source software package f
 
 Once you are finished, you should be able to type :bash:`antsRegistration` to see the help display.
 
+FSL
+^^^
+
+FSL (FMRIB Software Library) is an open-source software library for neuroimaging analysis.
+
+Visit this `website <https://fsl.fmrib.ox.ac.uk/fsl/fslwiki>`_ for download and install instructions as well as a general overview of tools available in the package.
+
+You will have to download a Python file install (after accepting a license) and then install FSL (by executing the Python installer).
+
+It is common to add these lines to your :bash:`.bashrc` to make FSL easier to use:
+
+.. code-block:: bash
+
+    # export FSLDIR=/PATH/TO/FSL
+    . ${FSLDIR}/etc/fslconf/fsl.sh
+    export PATH=${FSLDIR}/bin:${PATH}
+
+Once installed, you should be able to type :bash:`bet` or :bash:`fast` to see the help display. :bash:`fsleyes` will launch the visualization tool.
+
+Freesurfer
+^^^^^^^^^^
+
+Freesurfer is an open-source software package for brain surface reconstruction and analysis.
+
+Install instructions for release 7 are available `here <https://surfer.nmr.mgh.harvard.edu/fswiki/rel7downloads>`__. In the table shown, pick your OS (verify which Linux distribution) and pick either *deb* (or *pkg* on MacOS) or *tar.gz*.
+
+If you picked the package option, you will have to install it using your OS package manager. If you picked the *tar.gz* option, you will have to use the following command: :bash:`tar -zxpf freesurfer-linux-centos7_*.tar.gz`
+This will extract a folder in the **current** directory, so make sure to navigate to a directory for your software.
+
+Then, add these lines to your :bash:`.bashrc`:
+
+.. code-block:: bash
+
+    export FREESURFER_HOME="/PATH/TO/FREESURFER/freesurfer"
+    . ${FREESURFER_HOME}/SetUpFreeSurfer.sh
+
+Once installed, you should be able to type :bash:`recon-all` or :bash:`mri_convert` to see the help display.
+
+DICOM converters
+^^^^^^^^^^^^^^^^
+
+To convert DICOM data to the NIFTI format our tools understand, we typically use :bash:`dcm2niix` or :bash:`dcm2bids`. 
+
+Install :bash:`dcm2niix` with :bash:`curl -fLO https://github.com/rordenlab/dcm2niix/releases/latest/download/dcm2niix_lnx.zip`, and visit their `Github page <https://github.com/rordenlab/dcm2niix>`__ for more information.
+
+If you want a more complete convertion which follows `BIDS <https://bids.neuroimaging.io/>`_, install :bash:`dcm2bids` in a python virtual environment using :bash:`pip install dcm2bids`.
