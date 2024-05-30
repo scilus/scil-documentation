@@ -174,7 +174,7 @@ Here are other tools you might want to install on your computer, depending on yo
 MI-Brain
 ^^^^^^^^
 
-`Mi-Brain <https://github.com/imeka/mi-brain/releases>`_ is a GUI viewer developped by `IMEKA <https://imeka.ca/>`_. To install it, follow these instructions depending on your OS, or refer to the `FAQ <https://github.com/imeka/mi-brain/wiki/FAQ#how-to-install>`_.
+`Mi-Brain <https://github.com/imeka/mi-brain/releases>`_ is a GUI viewer developped by `IMEKA <https://imeka.ca/>`_. To install it (it might already be installed on a lab computer), follow these instructions depending on your OS, or refer to the `FAQ <https://github.com/imeka/mi-brain/wiki/FAQ#how-to-install>`_.
 
     **On Linux**
         * Download the Linux version of MI-Brain `here <https://github.com/imeka/mi-brain/releases>`_.
@@ -191,7 +191,40 @@ MI-Brain
         * Double-click on the "vc_redist.x64.exe" executable inside "vc_redist.x64.exe.zip" to install Microsoft Visual C++ 2015 Redistributable.
         * Double-click on the MI-Brain executable and follow the instructions.
 
+MRtrix
+^^^^^^
+
+MRtrix is an open-source software package to analyse diffusion MRI data, with plenty of very useful tools. To install it on Linux or WSL (Windows), follow these steps in a terminal:
+
+    .. code-block:: bash
+
+        # Start by installing all the dependencies
+        sudo apt-get install g++ libeigen3-dev zlib1g-dev libqt5opengl5-dev libqt5svg5-dev libgl1-mesa-dev libfftw3-dev libtiff5-dev libpng-dev
+
+        # Then install MRtrix via Github. Make sure to be in the repository where you want it installed!
+        git clone https://github.com/MRtrix3/mrtrix3.git
+        cd mrtrix3
+        ./configure
+        ./build
+        ./set_path
+
+Open a new terminal and type :bash:`mrview`. This should open a GUI for you.
+
+*Note: MacOS users can use* :bash:`brew install mrtrix3` *to install MRtrix.*
+
 ANTs
 ^^^^
-ANTs (Advanced Normalization Tools) is a powerful open-source software package for (medical) image analysis registration and segmentation. Since its installation is not that easy and it takes a few GB of space, you might want to consider using :ref:`ref_containers` for occasional use. If you want to install ANTs, their `Github page <https://github.com/ANTsX/ANTs/wiki/Compiling-ANTs-on-Linux-and-Mac-OS>`__ explains in details the steps to follow. Once you are finished, you should be able to type :bash:`antsRegistration` to see the help display.
+ANTs (Advanced Normalization Tools) is a powerful open-source software package for (medical) image analysis registration and segmentation. Since its installation is not that easy and it takes a few GB of space, you might want to consider using :ref:`ref_containers` for occasional use. However if you want to install ANTs, follow these steps or visit their `Github page <https://github.com/ANTsX/ANTs/wiki/Compiling-ANTs-on-Linux-and-Mac-OS>`__:
+
+    * Create a folder that will contain the ANTs scripts and go in it. For instance: :bash:`mkdir ~/YOUR_SOFTWARES/ANTs; cd ~/YOUR_SOFTWARES/ANTs`.
+    * Download this `file <https://github.com/cookpa/antsInstallExample/blob/master/installANTs.sh>`_ and put it in your ANTs folder.
+    * Run :bash:`bash installANTs.sh`.
+    * Add those two lines to your .bashrc:
+
+        .. code-block:: bash
+
+            export ANTSPATH=~/YOUR_SOFTWARES/ANTs/bin
+            export PATH=${ANTSPATH}:$PATH
+
+Once you are finished, you should be able to type :bash:`antsRegistration` to see the help display.
 
