@@ -11,6 +11,7 @@ The Sherbrooke Connectivity Imaging Laboratory is located in the Faculty of Scie
 * `Pr. François Rheault's office <https://www.usherbrooke.ca/informatique/nous-joindre/personnel/corps-professoral/professeurs/francois-rheault>`_, located at **D4-1010-5**;
 * The `Faculty of Sciences offices <https://www.usherbrooke.ca/sciences/nous-joindre>`_, located at **D3-1044**;
 * The `Department of Computer Sciences offices <https://www.usherbrooke.ca/informatique/nous-joindre>`_, located at **D4-1010-1**.
+* The printer's room which gives you free access to a printer, located at **D4-1013**.
 
 Don't hesitate to ask someone in the lab to guide you if you ever feel lost.
 
