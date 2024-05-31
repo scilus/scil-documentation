@@ -20,32 +20,11 @@ Using Nextflow can make a huge difference in how quickly and efficiently, you're
 
     Nextflow is simply a tool that helps users to create efficient pipeline, assembling processes, facilitate logging, organize your files, and launch large processing jobs on a variety of infracstructures.
 
-Installation
-------------
-
-First, Nextflow can be used on any Linux and MacOS. It requires Bash 3.2 (or later) and Java 11 (or later, up to 20) to be installed. You can find the right `Java <https://www.oracle.com/java/technologies/downloads/>`__ version, then install it for your system.
-
-It is common to explicitely tell Nextflow where Java is. Use this command: :bash:`readlink -f \`which javac\` | sed "s:/bin/javac::"` to get the full path. Then, add this line to your :bash:`.bashrc`: :bash:`export JAVA_HOME=/PATH/FOR/JAVA/YOU/JUST/GOT`
-
-These instructions are for Nextflow v21.12, if needed you can pick another Nextflow release `here <https://github.com/nextflow-io/nextflow/releases/tag/>`__. Make sure to execute this in a directory you will remember (likely next to the rest of your tools).
-
-.. code-block:: bash
-
-    wget https://github.com/nextflow-io/nextflow/releases/download/v21.12.1-edge/nextflow-21.12.1-edge-all
-    mv nextflow-21.12.1-edge-all nextflow
-    chmod +x nextflow
-    ./nextflow run hello
-
-To execute :bash:`nextflow` from anywhere, add the directory where you downloaded it to your *PATH* in your :bash:`.bashrc`: :bash:`export PATH=/PATH/TO/NEXTFLOW:${PATH}`
-
 Overview
 --------
 
 Usage & Help
 ^^^^^^^^^^^^
-
-Assuming you installed Nextflow (and most other :doc:`software <explore_software>`)., you can get the help to display by typing:
-:bash:`nextflow /PATH/TO/PIPELINE/main.nf --help`
 
 The lab has multiple Nextflow pipeline (Tractoflow, Connectoflow, RBx-Flow, Freesurfer-Flow, etc.), and they all have a very similar organization.
 
@@ -58,7 +37,7 @@ Once cloned, there is 4 files to understand:
     - :bash:`main.nf` contains the pipeline itself, all the processes that will be run and how to inter-connect them.
     
 
-Assuming you installed Nextflow (and most other software) :doc:`here <explore_software>`., you can get the help to display by typing:
+Assuming you installed Nextflow, you can get the help to display by typing:
 :bash:`nextflow /PATH/TO/PIPELINE/main.nf --help`
 
 .. figure:: /images/intro_to_nextflow_help.png

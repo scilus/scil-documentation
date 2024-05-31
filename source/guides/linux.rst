@@ -71,6 +71,7 @@ Syanptic is more powerful and was designed as a package manager. Software Center
 
     The Software Center allows you to install much useful software often less related to coding and programming.
 
+.. _ref_terminal:
 
 The Terminal
 """"""""""""
