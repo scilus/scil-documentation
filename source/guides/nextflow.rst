@@ -1,7 +1,7 @@
 .. _ref_nextflow:
 
-Intro to Nextflow: users
-========================
+Nextflow: users
+===============
 
 .. role:: bash(code)
    :language: bash

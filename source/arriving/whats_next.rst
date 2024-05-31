@@ -18,6 +18,7 @@ Now that you have set up your computer with the common SCIL setup, you are ready
         * :ref:`ref_freesurfer`
         * :ref:`ref_dmri_explorer`
         * :ref:`ref_dicom_converters`
+        * :ref:`ref_mricrogl`
 
       | Follow the links and see the installation steps for the tools you want.
 

@@ -1,5 +1,5 @@
-Intro to Linux
-=======================
+Linux
+=====
 
 .. role:: bash(code)
    :language: bash

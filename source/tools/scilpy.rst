@@ -6,7 +6,7 @@ SCILPY
 .. role:: bash(code)
    :language: bash
 
-Scilpy is closely related to :ref:`ref_dipy`: it follows the same organization. But it also contains work that has been developped by our lab and that is not included yet into Dipy. We have a `public version <https://github.com/scilus/scilpy>`_ of Scilpy on Github, with work that has been tested and that we want to share with the community, and a private version on Bitbucket (you have to ask for access) with our work that is either not tested, still being developped or not converted into python 3.
+Scilpy is closely related to `DIPY <https://dipy.org/index.html>`_ it follows the same organization. But it also contains work that has been developped by our lab and that is not included yet into DIPY. We have a `public version <https://github.com/scilus/scilpy>`_ of Scilpy on Github, with work that has been tested and that we want to share with the community, and a private version on Bitbucket (you have to ask for access) with our work that is either not tested, still being developped or not converted into python 3.
 
 For each script, you can use the -h option for explanations on how to use it. Ex:
 
