@@ -112,7 +112,7 @@ In the next steps, you will have to *clone* and *fork* Git repositories. In shor
 
 To connect to Github without supplying your username and password each time you interact with Git, it is useful to add a SSH key to your Github account. This `link <https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account?platform=linux>`_ explains in details the procedure. For the next steps, we assume that your SSH key is set and working. If it is not the case, you can always use the URL in the HTTPS tab of the green "<> Code" button when cloning a repository.
 
-More details on the use of Git are available here: :ref:`ref_git`.
+See the :ref:`ref_git` page for more details of its usage.
 
 Scilpy
 """"""
