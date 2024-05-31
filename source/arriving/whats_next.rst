@@ -32,4 +32,4 @@ Now that you have set up your computer with the common SCIL setup, you are ready
       | In parallel to all of that, your supervisor will probably give you lots of reading to do. Whenever you come across a concept you don't understand, don't hesitate to reach out in the lab and seek help. You will most certainly find someone who can explain the concept to you.
 
     * | **Get to know the people in the lab**
-      | Our lab has a nice social vibe, so don't hesitate to talk to people outside of "work". It always makes for a better experience!
+      | Our lab has a nice social vibe, so don't hesitate to talk to people outside of "work". It always makes for a better experience! You can also have a look at the `team <https://scil.usherbrooke.ca/pages/team/>`__ on the SCIL `website <https://scil.usherbrooke.ca/>`__.
