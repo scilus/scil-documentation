@@ -21,6 +21,7 @@ Here, you will find a summary of the tools we develop, and some clues on how we 
     arriving/welcome
     arriving/setup_computer
     arriving/setup_personal_computer
+    arriving/whats_next
 
 .. toctree::
     :maxdepth: 1

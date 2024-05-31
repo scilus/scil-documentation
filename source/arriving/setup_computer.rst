@@ -166,10 +166,14 @@ TODO
 
 The first use of a computing platform can be tricky but you'll get used to it. Please see the (:ref:`ref_heavy_computing`) tab for more information and for our first-use tutorial. If your goal is to use the computing platform to run Tractoflow, you will find instructions on the :ref:`ref_tractoflow` page. Else see the :ref:`ref_other_pipelines` page.
 
+.. _ref_other_tools:
+
 Other tools
 """""""""""
 
 Here are other tools you might want to install on your computer, depending on your project and needs. Please refer to the :ref:`ref_software` page for more information on the usage of these tools.
+
+.. _ref_mi_brain:
 
 MI-Brain
 ^^^^^^^^
@@ -190,6 +194,8 @@ MI-Brain
         * Download the Windows version of MI-Brain `here <https://github.com/imeka/mi-brain/releases>`_, along with the file named "vc_redist.x64.exe.zip".
         * Double-click on the "vc_redist.x64.exe" executable inside "vc_redist.x64.exe.zip" to install Microsoft Visual C++ 2015 Redistributable.
         * Double-click on the MI-Brain executable and follow the instructions.
+
+.. _ref_mrtrix:
 
 MRtrix
 ^^^^^^
@@ -212,6 +218,8 @@ Open a new terminal and type :bash:`mrview`. This should open a GUI for you.
 
 *Note: MacOS users can use* :bash:`brew install mrtrix3` *to install MRtrix.*
 
+.. _ref_ants:
+
 ANTs
 ^^^^
 ANTs (Advanced Normalization Tools) is a powerful open-source software package for (medical) image analysis registration and segmentation. Since its installation is not that easy and it takes a few GB of space, you might want to consider using :ref:`ref_containers` for occasional use. However if you want to install ANTs, follow these steps or visit their `Github page <https://github.com/ANTsX/ANTs/wiki/Compiling-ANTs-on-Linux-and-Mac-OS>`__:
@@ -227,6 +235,8 @@ ANTs (Advanced Normalization Tools) is a powerful open-source software package f
             export PATH=${ANTSPATH}:$PATH
 
 Once you are finished, you should be able to type :bash:`antsRegistration` to see the help display.
+
+.. _ref_fsl:
 
 FSL
 ^^^
@@ -247,6 +257,8 @@ It is common to add these lines to your :bash:`.bashrc` to make FSL easier to us
 
 Once installed, you should be able to type :bash:`bet` or :bash:`fast` to see the help display. :bash:`fsleyes` will launch the visualization tool.
 
+.. _ref_freesurfer:
+
 Freesurfer
 ^^^^^^^^^^
 
@@ -266,10 +278,14 @@ Then, add these lines to your :bash:`.bashrc`:
 
 Once installed, you should be able to type :bash:`recon-all` or :bash:`mri_convert` to see the help display.
 
+.. _ref_dmri_explorer:
+
 dMRI-explorer
 ^^^^^^^^^^^^^
 
 If you want to visualize tensor and multi-tensor images in MRtrix, DIPY and FSL format as well as spherical functions expressed as a series of spherical harmonics coefficients, `dMRI-explorer <https://github.com/CHrlS98/dmri-explorer>`_ is another great tool produced in the lab. It allows for real-time diffusion MRI slicing on Linux and Windows using OpenGL 4.6. For installation and usage, a thorough guide is available on the `Github page <https://github.com/CHrlS98/dmri-explorer>`__.
+
+.. _ref_dicom_converters:
 
 DICOM converters
 ^^^^^^^^^^^^^^^^

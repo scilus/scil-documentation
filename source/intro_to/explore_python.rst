@@ -1,3 +1,5 @@
+.. _ref_python:
+
 Intro to Python
 ===============
 

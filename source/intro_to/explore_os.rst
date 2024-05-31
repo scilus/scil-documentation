@@ -146,6 +146,8 @@ You can also use apt to update existing packages and keep them up to date. To up
 Finally, you can search for packages available for installation. To do this, use the command:
 :bash:`sudo apt search <package-name>`
 
+.. _ref_bash:
+
 Bash Language
 """""""""""""
 
