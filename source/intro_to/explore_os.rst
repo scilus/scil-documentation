@@ -1,3 +1,5 @@
+.. _ref_linux:
+
 Intro to Linux
 =======================
 
