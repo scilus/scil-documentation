@@ -1,7 +1,7 @@
 .. _ref_anat:
 
-Discover the brain anatomy
-==========================
+Brain anatomy
+=============
 
 Lobes, sulcus, gyri and more
 ****************************

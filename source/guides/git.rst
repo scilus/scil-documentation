@@ -1,5 +1,7 @@
-Intro to Git
-============
+.. _ref_git:
+
+Git
+===
 
 .. role:: bash(code)
    :language: bash

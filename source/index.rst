@@ -21,42 +21,32 @@ Here, you will find a summary of the tools we develop, and some clues on how we 
     arriving/welcome
     arriving/setup_computer
     arriving/setup_personal_computer
+    arriving/whats_next
 
 .. toctree::
     :maxdepth: 1
-    :caption: Intro to Computer Science
+    :caption: Tools
 
-    intro_to/explore_os
-    intro_to/explore_python
-    intro_to/explore_git
-    intro_to/explore_software
-    intro_to/explore_virtual_machines
-    intro_to/explore_nextflow
-    intro_to/code_with_nextflow
-
-.. toctree::
-    :maxdepth: 1
-    :caption: Intro to Medical Imaging
-
-    intro_to/anatomy
-
-.. toctree::
-    :maxdepth: 1
-    :caption: Our tools
-
-    our_tools/scilpy
-    our_tools/flows
-    our_tools/tractoflow
-    our_tools/recobundles
-    our_tools/other_pipelines
-    our_tools/machine_learning
-
-.. toctree::
-    :maxdepth: 1
-    :caption: Common tools
-
+    tools/scilpy
     tools/dipy
-    tools/cbrain
+    tools/flows
+    tools/tractoflow
+    tools/recobundles
+    tools/other_pipelines
+    tools/machine_learning
+    tools/others
+
+.. toctree::
+    :maxdepth: 1
+    :caption: Guides
+
+    guides/linux
+    guides/python
+    guides/git
+    guides/virtual_machines
+    guides/nextflow
+    guides/code_with_nextflow
+    guides/anatomy
 
 .. toctree::
     :maxdepth: 1

@@ -112,7 +112,7 @@ In the next steps, you will have to *clone* and *fork* Git repositories. In shor
 
 To connect to Github without supplying your username and password each time you interact with Git, it is useful to add a SSH key to your Github account. This `link <https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account?platform=linux>`_ explains in details the procedure. For the next steps, we assume that your SSH key is set and working. If it is not the case, you can always use the URL in the HTTPS tab of the green "<> Code" button when cloning a repository.
 
-More details on the use of Git are available here: :ref:`ref_git`.
+See the :ref:`ref_git` page for more details of its usage.
 
 Scilpy
 """"""
@@ -145,7 +145,7 @@ Scilpy
 | *Note: For Mac users, you might have to use this command instead* :bash:`pip install scilpy==2.0.0 --use-pep517`.
 
 
-In any case, please refer to the `Github page <https://github.com/scilus/scilpy>`_ if you encounter problems.
+In any case, please refer to the `Github page <https://github.com/scilus/scilpy>`__ if you encounter problems.
 
 .. _ref_containers:
 
@@ -235,8 +235,3 @@ In the future, you will need to follow these steps to work with scilpy after ope
 Note that it is currently not possible to work with both scilpy and Nextflow on the same session, as they require different module versions. If you need both these packages at the same time, you might want to consider using :ref:`ref_containers`.
 
 Please see the (:ref:`ref_heavy_computing`) tab for more information about the usage of such resources. If your goal is to use the computing platform to run Tractoflow, you will find instructions on the :ref:`ref_tractoflow` page.
-
-Other tools
-"""""""""""
-
-TODO

@@ -1,5 +1,5 @@
-Intro to Nextflow: coding your own flow
-=======================================
+Nextflow: coding your own flow
+==============================
 
 .. role:: bash(code)
    :language: bash

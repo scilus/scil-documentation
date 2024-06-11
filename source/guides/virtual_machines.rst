@@ -1,5 +1,5 @@
-Intro to Virtual Machines
-=========================
+Virtual Machines
+================
 
 .. role:: bash(code)
    :language: bash
@@ -57,6 +57,7 @@ The easiest way to install a container it's by Apptainer `(here) <https://apptai
 
 Otherwise, the documentation to install Singularity is easy enough to follow `(here) <https://docs.sylabs.io/guides/3.0/user-guide/installation.html>`__.
 However, for Singularity, make sure you follow these subsections:
+
     - Install Dependencies (:bash:`sudo apt install` for Ubuntu)
     - Install Go (change :bash:`export VERSION=1.11` to :bash:`export VERSION=1.13`)
     - Download and install Singularity from a release (change :bash:`export VERSION=3.0.3` to :bash:`export VERSION=3.7.4`)
