@@ -159,9 +159,40 @@ Nextflow
 
 TODO
 
-Super computers
-"""""""""""""""
+High performance computers
+""""""""""""""""""""""""""
 
-TODO
+The first use of a computing platform can be tricky but you'll get used to it. Here we explain how to get started on Beluga, one of the high performance computers (HPC) of the Digital Research Alliance of Canada (formerly Compute Canada). 
 
-The first use of a computing platform can be tricky but you'll get used to it. Please see the (:ref:`ref_heavy_computing`) tab for more information and for our first-use tutorial. If your goal is to use the computing platform to run Tractoflow, you will find instructions on the :ref:`ref_tractoflow` page. Else see the :ref:`ref_other_pipelines` page.
+Connect to Beluga via ssh with :bash:`ssh USER@beluga.computecanada.ca`.
+
+On your first visit, you will probably want to edit your .bashrc with your preferences. Since VSCode will not be available, you will have to use an editor built in the terminal like Nano (:bash:`nano ~/.bashrc`) or Vim (:bash:`vim ~/.bashrc`). Please refer to the :ref:`ref_linux` if you don't know these tools.
+
+Everytime you log in Beluga, you will need to load the modules necessary for your needs (scilpy, tractoflow, etc). Here are the modules currently needed for running Nextflow pipelines:
+
+.. code-block:: bash
+
+    module load StdEnv/2020
+    module load nextflow/21.10.3
+    module load apptainer/1.1.8
+
+However, if you want to install scilpy, open a new session and follow these steps:
+
+.. code-block:: bash
+
+    module load StdEnv/2023 python/3.10 vtk
+    virtualenv --no-download --clear ~/Envs/scilpy && source ~/Envs/scilpy/bin/activate
+    pip install --no-index --upgrade pip
+    pip install pygit2~=1.12.0 scilpy==2.0.2
+    python -c 'import scilpy'
+
+In the future, you will need to follow these steps to work with scilpy after opening a new session:
+
+.. code-block:: bash
+
+    module load StdEnv/2023 python/3.10 vtk
+    source ~/Envs/scilpy/bin/activate
+
+Note that it is currently not possible to work with both scilpy and Nextflow on the same session, as they require different module versions. If you need both these packages at the same time, you might want to consider using :ref:`ref_containers`.
+
+Please see the (:ref:`ref_heavy_computing`) tab for more information about the usage of such resources. If your goal is to use the computing platform to run Tractoflow, you will find instructions on the :ref:`ref_tractoflow` page.
