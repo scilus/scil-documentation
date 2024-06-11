@@ -155,7 +155,7 @@ TODO
 Nextflow
 """"""""
 
-Nextflow is an open-source pipelining tool that makes processing massive computational workflows somewhat easy. We use it in the lab to run our various :ref:`ref_flow`. 
+Nextflow is an open-source pipelining tool that makes processing massive datasets and building workflows somewhat easy. We use it in the lab to run our various :ref:`ref_flow`. 
 
 Nextflow can be used on Linux, MacOS and WSL (Windows). It requires Bash 3.2 (or later) and Java 11 (or later, up to 20) to be installed. To find your Java version, use :bash:`java -version`. If it is not satisfying the requirement, follow these steps in a terminal:
 
