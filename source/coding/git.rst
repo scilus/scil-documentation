@@ -1,12 +1,12 @@
-.. _ref_git:
+.. _ref_git_coding:
 
-Git
-===
+Git good practice
+=================
 
 .. role:: bash(code)
    :language: bash
 
-If you do not know what is Git, you should visit the page :doc:`Intro to Git <../intro_to/explore_git>` to learn about the basic concepts and commands of Git. This page is specifically to learn how we use Git in the lab, what we expect and how you can contribute.
+If you do not know what is Git, you should visit our guide to :ref:`ref_git` to learn about the basic concepts and commands of Git. This page is specifically to learn how we use Git in the lab, what we expect and how you can contribute.
 
 For users
 ---------

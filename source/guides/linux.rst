@@ -1,5 +1,5 @@
-Intro to Linux
-=======================
+Linux
+=====
 
 .. role:: bash(code)
    :language: bash
@@ -71,6 +71,7 @@ Syanptic is more powerful and was designed as a package manager. Software Center
 
     The Software Center allows you to install much useful software often less related to coding and programming.
 
+.. _ref_terminal:
 
 The Terminal
 """"""""""""
@@ -145,6 +146,8 @@ You can also use apt to update existing packages and keep them up to date. To up
 
 Finally, you can search for packages available for installation. To do this, use the command:
 :bash:`sudo apt search <package-name>`
+
+.. _ref_bash:
 
 Bash Language
 """""""""""""

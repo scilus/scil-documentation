@@ -1,5 +1,7 @@
-Intro to Python
-===============
+.. _ref_python:
+
+Python
+======
 
 .. role:: bash(code)
    :language: bash
