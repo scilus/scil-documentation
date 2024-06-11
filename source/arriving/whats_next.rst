@@ -25,7 +25,7 @@ Now that you have set up your computer with the common SCIL setup, you are ready
     * | **Become familiar with the tools**
       | The Tools section is a great resource to learn more about all the tools you have installed and more. For instance, it is where you can learn about our multiple :ref:`ref_flow` like :ref:`ref_tractoflow`. Don't forget to go back to this section whenever you forget something about a tool.
 
-    * | **Improve your knowlegde with our guides**
+    * | **Improve your knowledge with our guides**
       | The Guides section provides additionnal information on various subjects. It is a useful resource to gather more knowlegde about :ref:`ref_git`, :ref:`ref_python`, :ref:`ref_terminal`, :ref:`ref_bash` or :ref:`ref_anat`, to name a few important ones.
 
     * | **Start reading about your project**

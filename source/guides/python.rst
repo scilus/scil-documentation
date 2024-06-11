@@ -92,30 +92,6 @@ Understanding a *traceback* in Python is crucial for effective debugging of code
     - How to understand *traceback* `[link] <https://realpython.com/python-*traceback*/>`__
     - What are the error type `[link] <https://www.tutorialsteacher.com/python/error-types-in-python/>`__
 
-.. _ref_python_dist:
-
-Installing Python
-"""""""""""""""""
-
-To install Python on a clean Ubuntu system, follow these steps:
-
-Open a terminal window and update the package list by running the following command:
-:bash:`sudo apt update`
-
-Install Python by running the following command:
-:bash:`sudo apt install python3`
-
-This will install Python 3, which is the recommended version for most purposes.
-Verify that Python has been installed correctly by running the following command:
-:bash:`python3 --version`
-
-This should display the version number of Python that was installed.
-That's it! You have successfully installed Python on your Ubuntu system.
-
-**Sadly**, a decent setup is a lot more complex than this. To have a more complete tutorial on installing Python with Virtual Environment: [TODO]
-
-(*It should have been already installed anyway*)
-
 .. _ref_venvs:
 
 Virtual Environment

@@ -32,8 +32,8 @@ To install it (it might already be installed on a lab computer), follow these in
     **On Linux**
         * Download the Linux version of MI-Brain `here <https://github.com/imeka/mi-brain/releases>`_.
         * In a terminal, extract the .tar.gz release archive using :bash:`tar -xvzf NAME_OF_THE_FILE.tar.gz -C DIRECTORY_TO_PUT_MI_BRAIN`.
-        * Add this to your .bashrc: :bash:`alias MI-Brain="bash DIRECTORY_TO_PUT_MI_BRAIN/MI-Brain.sh"`.
-        * You can now open MI-Brain by typing :bash:`MI-Brain` in the terminal and pressing enter.
+        * Add this to your .bashrc (you can change the name of the alias to your liking): :bash:`alias mibrain="bash DIRECTORY_TO_PUT_MI_BRAIN/MI-Brain.sh"`.
+        * You can now open MI-Brain by typing :bash:`mibrain` in the terminal and pressing enter.
     
     **On MacOS**
         * Download the MacOS version of MI-Brain `here <https://github.com/imeka/mi-brain/releases>`_.
