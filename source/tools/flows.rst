@@ -145,7 +145,7 @@ For that, RBx_flow use two files: the local tracking file and the fractional ani
 
     .. code-block:: bash
 
-        nextflow ${FLOW_DIR}/rbx_flow/main.nf --input RBx_flow_tmake htmlest/raw --atlas_directory atlas \
+        nextflow ${FLOW_DIR}/rbx_flow/main.nf --input RBx_flow_test/raw --atlas_directory atlas \
          -with-singularity ./containers_scilus_1.6.0.sif -w RBx_flow_test/work -resume
 
 Parameters:
