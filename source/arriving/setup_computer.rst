@@ -152,12 +152,63 @@ In any case, please refer to the `Github page <https://github.com/scilus/scilpy>
 Containers
 """"""""""
 
-TODO
+Container technologies allow applications and services to be packaged into isolated, self-contained units that can be deployed on any cloud or local host. This provides a great deal of flexibility and portability for computing tasks.
+
+By using containers, computer scientists can avoid the time-consuming task of setting up and configuring computing environments, since the containerized applications can run on any platform without modifications. This is especially useful when attempting to replicate research results or share data between teams. Furthermore, the use of containers also helps to ensure that all software dependencies are met, making code more reliable and reproducible.
+
+**TLDR:** They are like tiny isolated computers running on other computers. They keep things separated when dealing with multiple tools that you do not want to install over and over again or to avoid unwanted interactions.
+
+In the lab, we use Docker and Apptainer (formerly Singularity) containers, which we describe below.
+
+Docker
+------
+The most popular container technology is undoubtedly Docker. Docker is supported on Mac, Windows and Linux, although it'd seem like Docker running a Linux instance do not work well on MacOS with M1/M2 CPU. Docker requires root privileges, which may pose a security risk. As such Docker is not available on High Performance Computers from the Digital Alliance of Canada (see section :ref:`ref_highperfcomputer`). To install Docker on your computer, follow the steps below.
+
+The documentation to install Docker is easy enough to follow `(here) <https://docs.docker.com/engine/install/ubuntu>`__.
+
+However, make sure you follow these subsections:
+    - Uninstall old versions (sometimes `this <https://askubuntu.com/questions/935569/how-to-completely-uninstall-docker>`__ is necessary, answer #1)
+    - Install using the apt repository 
+    - Set up the repository
+    - Install Docker Engine
+
+Once installed, you will have to add yourself to the group of users that can run Docker with *sudo* privileges and restart Docker.
+
+.. code-block:: bash
+
+    sudo groupadd docker
+    sudo gpasswd -a ${USER} docker
+    sudo service docker restart
+
+Launch :bash:`docker --version` to verify if it is installed correctly. Since Docker is complex, running :bash:`sudo docker run hello-world` is a good idea to actually test if it works.
+
+Apptainer
+---------
+
+Apptainer (formerly Singularity) containers are designed to be more secure and flexible for high-performance computing and scientific computing workloads. One key difference is that Apptainer containers can run without elevated privileges or root access, making them more suitable for multi-user and shared environment. Apptainer is particularly useful for saving a Docker container to a file which is then useable in High performance computers, without root privileges.
+
+*Do not try to install on MacOS*
+
+The easiest way to install Apptainer is via the official website `(here) <https://apptainer.org/docs/admin/main/installation.html#install-ubuntu-packages>`__.
+
+Otherwise, the documentation to install Apptainer is easy enough to follow `(here) <https://docs.sylabs.io/guides/3.0/user-guide/installation.html>`__.
+However, for Apptainer, make sure you follow these subsections:
+
+    - Install Dependencies (:bash:`sudo apt install` for Ubuntu)
+    - Install Go (change :bash:`export VERSION=1.11` to :bash:`export VERSION=1.13`)
+    - Download and install Apptainer from a release (change :bash:`export VERSION=3.0.3` to :bash:`export VERSION=3.7.4`)
+    - Compile Apptainer
+    - Source bash completion file
+
+Finally, you should be able to launch :bash:`singularity --version` to verify if it is installed correctly.
+
+If you plan on simply being a Scilpy users rather than a developper, using containers can offer a great alternative to manually installing Scilpy. Indeed, a container bundling all the dependencies required for running any flow (see section :ref:`ref_flow`) developped in the lab is available `here <https://hub.docker.com/r/scilus/scilus>`__.
+
 
 Nextflow
 """"""""
 
-Nextflow is an open-source pipelining tool that makes processing massive datasets and building workflows somewhat easy. We use it in the lab to run our various :ref:`ref_flow`. 
+Nextflow is an open-source pipelining tool that makes processing massive datasets and building workflows somewhat easy. We use it in the lab to run our various :ref:`ref_flow`. If you know you will be running flows for your project, you'll first need to install Nextflow.
 
 Nextflow can be used on Linux, MacOS and WSL (Windows). It requires Bash 3.2 (or later) and Java 11 (or later, up to 20) to be installed. To find your Java version, use :bash:`java -version`. If it is not satisfying the requirement, follow these steps in a terminal:
 
@@ -197,6 +248,8 @@ Now you can install Nextflow by opening a terminal and executing the following l
 
     # Test Nextflow
     ./nextflow run hello
+
+.. _ref_highperfcomputer:
 
 High performance computers
 """"""""""""""""""""""""""
