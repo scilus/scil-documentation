@@ -26,8 +26,10 @@ To get started, complete these steps. Don't hesitate to contact your supervisor 
 * | **Ask to be added to the SCIL Team**
   | You can connect to the SCIL Team on Microsoft Teams with your CIP and University password.
 
-* | **Join the SCIL "Boîte partagée" and add it to your calendars**
-  | Ask a supervisor or his research assistant to add you to the SCIL "Boîte partagée". We use it to schedule our lab meetings, events and other important information. Then, add the SCIL "Boîte partagée" to your calendars:
+* | **Join the SCIL "Boîte partagée"**
+  | Ask a supervisor or his research assistant to add you to the SCIL "Boîte partagée". We use it to schedule our lab meetings, events and other important information.
+
+* | **Add the SCIL "Boîte partagée" to your calendars**
 
   * | *Online*: 
     | From Outlook, go to your calendar. Select "Add a calendar", "Add from directory", your email address, and type "sciences.SCIL@usherbrooke.ca".
