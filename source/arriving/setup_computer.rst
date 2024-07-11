@@ -215,12 +215,28 @@ Everytime you log in Beluga, you will need to load the modules necessary for you
     module load nextflow/21.10.3
     module load apptainer/1.1.8
 
-However, if you want to install scilpy, open a new session and follow these steps:
+However, if you want to install scilpy via Git, open a new session and follow these steps:
 
 .. code-block:: bash
 
     module load StdEnv/2023 python/3.10 vtk
     virtualenv --no-download --clear ~/Envs/scilpy && source ~/Envs/scilpy/bin/activate
+    pip install --no-index --upgrade pip
+    git clone https://github.com/scilus/scilpy.git
+    cd scilpy
+
+    # Don't forget to comment these lines in requirements.txt:
+    #dvc==3.48.*
+    #dvc-http==2.32.*
+
+    pip install -e .
+
+Instead, you might want to install scilpy via pip. You cannot have both ways in the same virtual environment, so open a new session and follow these steps:
+
+.. code-block:: bash
+
+    module load StdEnv/2023 python/3.10 vtk
+    virtualenv --no-download --clear ~/Envs/scilpy_release && source ~/Envs/scilpy_release/bin/activate
     pip install --no-index --upgrade pip
     pip install pygit2~=1.12.0 scilpy==2.0.2
     python -c 'import scilpy'
@@ -230,7 +246,12 @@ In the future, you will need to follow these steps to work with scilpy after ope
 .. code-block:: bash
 
     module load StdEnv/2023 python/3.10 vtk
+    # Choose between:
+    # Git version of scilpy
     source ~/Envs/scilpy/bin/activate
+    # Pip version of scilpy
+    source ~/Envs/scilpy_release/bin/activate
+
 
 Note that it is currently not possible to work with both scilpy and Nextflow on the same session, as they require different module versions. If you need both these packages at the same time, you might want to consider using :ref:`ref_containers`.
 
