@@ -27,7 +27,7 @@ To get started, complete these steps. Don't hesitate to contact your supervisor 
   | You can connect to the SCIL Team on Microsoft Teams with your CIP and University password.
 
   * | *Visit the SCIL Team where you can find various channels to follow the activity of the lab.*
-  * | *Visit the SCIL OneDrive by selecting SCIL in OneDrive and clicking on the SCIL folder. There are a lot of useful resources like "images", "presentations", "training", etc.*
+  * | *Visit the SCIL OneDrive where you can find a lot of useful resources like "images", "presentations", "training", etc. in the SCIL folder, or "Recordings" in the General folder.*
 
 * | **Join the SCIL "Boîte partagée"**
   | Ask a supervisor or his research assistant to add you to the SCIL "Boîte partagée". We use it to schedule our lab meetings, events and other important information.
