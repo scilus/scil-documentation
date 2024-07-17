@@ -199,7 +199,7 @@ Finally, launch :bash:`apptainer --version` to verify if it is installed correct
 Nextflow
 """"""""
 
-Nextflow is an open-source pipelining tool that makes processing massive datasets and building workflows somewhat easy. We use it in the lab to run our various :ref:`ref_flow`. If you know you will be running flows for your project, you'll first need to install Nextflow.
+Nextflow is an open-source pipelining tool that makes processing massive datasets and building workflows somewhat easy. We use it in the lab to run our various :ref:`ref_flow`.
 
 Nextflow can be used on Linux, MacOS and WSL (Windows). It requires Bash 3.2 (or later) and Java 11 (or later, up to 20) to be installed. To find your Java version, use :bash:`java -version`. If it is not satisfying the requirement, follow these steps in a terminal:
 
