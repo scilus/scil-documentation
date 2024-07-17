@@ -152,19 +152,11 @@ In any case, please refer to the `Github page <https://github.com/scilus/scilpy>
 Containers
 """"""""""
 
-Container technologies allow applications and services to be packaged into isolated, self-contained units that can be deployed on any cloud or local host. This provides a great deal of flexibility and portability for computing tasks.
-
-By using containers, computer scientists can avoid the time-consuming task of setting up and configuring computing environments, since the containerized applications can run on any platform without modifications. This is especially useful when attempting to replicate research results or share data between teams. Furthermore, the use of containers also helps to ensure that all software dependencies are met, making code more reliable and reproducible.
-
-**TLDR:** They are like tiny isolated computers running on other computers. They keep things separated when dealing with multiple tools that you do not want to install over and over again or to avoid unwanted interactions.
-
-In the lab, we use Docker and Apptainer (formerly Singularity) containers, which we describe below.
+Container technologies allow applications and services to be packaged into isolated, self-contained units that can be deployed on any cloud or local host. They are like tiny isolated computers running on other computers. For more information, visit the guide on containers and virtual machines (:ref:`ref_virtualmachines`). A container bundling all the dependencies required for running any flow (see section :ref:`ref_flow`) developped in the lab is available `here <https://hub.docker.com/r/scilus/scilus>`__. In the lab, we use Docker and Apptainer (formerly Singularity) containers, which we describe below.
 
 Docker
 ------
-The most popular container technology is undoubtedly Docker. Docker is supported on Mac, Windows and Linux, although it'd seem like Docker running a Linux instance do not work well on MacOS with M1/M2 CPU. Docker requires root privileges, which may pose a security risk. As such Docker is not available on High Performance Computers from the Digital Alliance of Canada (see section :ref:`ref_highperfcomputer`). To install Docker on your computer, follow the steps below.
-
-The documentation to install Docker is easy enough to follow `(here) <https://docs.docker.com/engine/install/ubuntu>`__.
+The most popular container technology is undoubtedly Docker. Docker is supported on Mac, Windows and Linux, although it'd seem like Docker running a Linux instance do not work well on MacOS with M1/M2 CPU. The documentation to install Docker is easy enough to follow `(here) <https://docs.docker.com/engine/install/ubuntu>`__.
 
 However, make sure you follow these subsections:
     - Uninstall old versions (sometimes `this <https://askubuntu.com/questions/935569/how-to-completely-uninstall-docker>`__ is necessary, answer #1)
@@ -180,29 +172,28 @@ Once installed, you will have to add yourself to the group of users that can run
     sudo gpasswd -a ${USER} docker
     sudo service docker restart
 
-Launch :bash:`docker --version` to verify if it is installed correctly. Since Docker is complex, running :bash:`sudo docker run hello-world` is a good idea to actually test if it works.
+Launch :bash:`docker --version` to verify if it is installed correctly.
 
 Apptainer
 ---------
 
-Apptainer (formerly Singularity) containers are designed to be more secure and flexible for high-performance computing and scientific computing workloads. One key difference is that Apptainer containers can run without elevated privileges or root access, making them more suitable for multi-user and shared environment. Apptainer is particularly useful for saving a Docker container to a file which is then useable in High performance computers, without root privileges.
+Apptainer (formerly Singularity) is an alternative to Docker. Docker requires root privileges and, as such, is not available on High Performance Computers from the Digital Alliance of Canada (see section :ref:`ref_highperfcomputer`). However, Apptainer containers can run without elevated privileges or root access. Apptainer is particularly useful for saving a Docker container to a file which is then useable in High performance computers, without root privileges.
 
 *Do not try to install on MacOS*
 
-The easiest way to install Apptainer is via the official website `(here) <https://apptainer.org/docs/admin/main/installation.html#install-ubuntu-packages>`__.
+The steps for installing Apptainer on Ubuntu are given below.
 
-Otherwise, the documentation to install Apptainer is easy enough to follow `(here) <https://docs.sylabs.io/guides/3.0/user-guide/installation.html>`__.
-However, for Apptainer, make sure you follow these subsections:
+.. code-block:: bash
 
-    - Install Dependencies (:bash:`sudo apt install` for Ubuntu)
-    - Install Go (change :bash:`export VERSION=1.11` to :bash:`export VERSION=1.13`)
-    - Download and install Apptainer from a release (change :bash:`export VERSION=3.0.3` to :bash:`export VERSION=3.7.4`)
-    - Compile Apptainer
-    - Source bash completion file
+    sudo apt update
+    sudo apt install -y software-properties-common
+    sudo add-apt-repository -y ppa:apptainer/ppa
+    sudo apt update
+    sudo apt install -y apptainer
 
-Finally, you should be able to launch :bash:`singularity --version` to verify if it is installed correctly.
+Additional information can be found on the official docummentation `(here) <https://apptainer.org/docs/admin/main/installation.html#install-ubuntu-packages>`__.
 
-If you plan on simply being a Scilpy users rather than a developper, using containers can offer a great alternative to manually installing Scilpy. Indeed, a container bundling all the dependencies required for running any flow (see section :ref:`ref_flow`) developped in the lab is available `here <https://hub.docker.com/r/scilus/scilus>`__.
+Finally, launch :bash:`apptainer --version` to verify if it is installed correctly.
 
 
 Nextflow
