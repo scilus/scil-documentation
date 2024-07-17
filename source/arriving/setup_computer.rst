@@ -152,12 +152,52 @@ In any case, please refer to the `Github page <https://github.com/scilus/scilpy>
 Containers
 """"""""""
 
-TODO
+Container technologies allow applications and services to be packaged into isolated, self-contained units that can be deployed on any cloud or local host. They are like tiny isolated computers running on other computers. For more information, visit the guide on :ref:`ref_virtualmachines`. A container bundling all the dependencies required for running any flow (see section :ref:`ref_flow`) developped in the lab is available `here <https://hub.docker.com/r/scilus/scilus>`__. In the lab, we use Docker and Apptainer (formerly Singularity) containers, which we describe below.
+
+Docker
+------
+The most popular container technology is undoubtedly Docker. Docker is supported on Mac, Windows and Linux, although it'd seem like Docker running a Linux instance do not work well on MacOS with M1/M2 CPU. To install Docker, follow this `documentation <https://docs.docker.com/engine/install/ubuntu>`__.
+
+However, make sure you follow these subsections:
+    - Uninstall old versions (sometimes `this <https://askubuntu.com/questions/935569/how-to-completely-uninstall-docker>`__ is necessary, answer #1)
+    - Install using the apt repository 
+    - Set up the repository
+    - Install Docker Engine
+
+Once installed, you will have to add yourself to the group of users that can run Docker with *sudo* privileges and restart Docker.
+
+.. code-block:: bash
+
+    sudo groupadd docker
+    sudo gpasswd -a ${USER} docker
+    sudo service docker restart
+
+Launch :bash:`docker --version` to verify if it is installed correctly.
+
+Apptainer
+---------
+
+Apptainer (formerly Singularity) is an alternative to Docker. Docker requires root privileges and, as such, is not available on High Performance Computers from the Digital Alliance of Canada (see :ref:`ref_highperfcomputer`). However, Apptainer containers can run without elevated privileges or root access. Apptainer is particularly useful for saving a Docker container to a file which is then useable in High performance computers, without root privileges.
+
+The steps for installing Apptainer on Ubuntu are given below. **Do not try to install on MacOS!** To use on Digital Alliance of Canada clusters, refer instead to section :ref:`ref_highperfcomputer`.
+
+.. code-block:: bash
+
+    sudo apt update
+    sudo apt install -y software-properties-common
+    sudo add-apt-repository -y ppa:apptainer/ppa
+    sudo apt update
+    sudo apt install -y apptainer
+
+Additional information can be found on the `official documentation <https://apptainer.org/docs/admin/main/installation.html#install-ubuntu-packages>`__.
+
+Finally, launch :bash:`apptainer --version` to verify if it is installed correctly.
+
 
 Nextflow
 """"""""
 
-Nextflow is an open-source pipelining tool that makes processing massive datasets and building workflows somewhat easy. We use it in the lab to run our various :ref:`ref_flow`. 
+Nextflow is an open-source pipelining tool that makes processing massive datasets and building workflows somewhat easy. We use it in the lab to run our various :ref:`ref_flow`.
 
 Nextflow can be used on Linux, MacOS and WSL (Windows). It requires Bash 3.2 (or later) and Java 11 (or later, up to 20) to be installed. To find your Java version, use :bash:`java -version`. If it is not satisfying the requirement, follow these steps in a terminal:
 
@@ -197,6 +237,8 @@ Now you can install Nextflow by opening a terminal and executing the following l
 
     # Test Nextflow
     ./nextflow run hello
+
+.. _ref_highperfcomputer:
 
 High performance computers
 """"""""""""""""""""""""""

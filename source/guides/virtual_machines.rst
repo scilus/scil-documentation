@@ -1,3 +1,5 @@
+.. _ref_virtualmachines:
+
 Virtual Machines
 ================
 
@@ -48,23 +50,6 @@ Since they contain the Operating System (OS), all dependencies, libraries and so
 
 :bash:`singularity build` to create a new container from a recipe file. If you have a recipe file defining how to install everything (LINK). You can create your Singularity from it, it is useful when doing small modifications to the original Singularity. It is also easier to share this recipe on Github or with collaborators than sharing a 10GB Singularity file.
 
-Installations
-^^^^^^^^^^^^^
-
-*Do not try to install on MacOS*
-
-The easiest way to install a container it's by Apptainer `(here) <https://apptainer.org/docs/admin/main/installation.html#install-ubuntu-packages>`__.
-
-Otherwise, the documentation to install Singularity is easy enough to follow `(here) <https://docs.sylabs.io/guides/3.0/user-guide/installation.html>`__.
-However, for Singularity, make sure you follow these subsections:
-
-    - Install Dependencies (:bash:`sudo apt install` for Ubuntu)
-    - Install Go (change :bash:`export VERSION=1.11` to :bash:`export VERSION=1.13`)
-    - Download and install Singularity from a release (change :bash:`export VERSION=3.0.3` to :bash:`export VERSION=3.7.4`)
-    - Compile Singularity
-    - Source bash completion file
-
-Finally, you should be able to launch :bash:`singularity --version` to verify if it is installed correctly.
 
 Docker
 ------
@@ -79,28 +64,3 @@ This means there is a complexity to the installation, and that Docker is general
 :bash:`docker build`: This command is used to build a Docker image from a specified Dockerfile. The Dockerfile is a script that defines the steps required to create the image, such as installing dependencies and setting environment variables.
 
 :bash:`docker stop`: This command is used to stop a running container. It takes the container ID or name as an argument, and can be used to gracefully shut down the container.
-
-Installations
-^^^^^^^^^^^^^
-
-*It seems like Docker running Linux do not work well on MacOS with M1/M2 CPU*
-
-It is always important to verify if a software is already installed before installing it, but it is **really** important with Docker.
-
-The documentation to install Docker is easy enough to follow `(here) <https://docs.docker.com/engine/install/ubuntu>`__.
-
-However, make sure you follow these subsections:
-    - Uninstall old versions (sometimes `this <https://askubuntu.com/questions/935569/how-to-completely-uninstall-docker>`__ is necessary, answer #1)
-    - Install using the apt repository 
-    - Set up the repository
-    - Install Docker Engine
-
-Once installed, you will have to add yourself to the group of users that can run Docker with *sudo* privileges and restart Docker.
-
-.. code-block:: bash
-
-    sudo groupadd docker
-    sudo gpasswd -a ${USER} docker
-    sudo service docker restart
-
-Launch :bash:`docker --version` to verify if it is installed correctly. Since Docker is complex, running :bash:`sudo docker run hello-world` is a good idea to actually test if it works.
