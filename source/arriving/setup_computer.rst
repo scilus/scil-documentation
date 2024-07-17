@@ -152,11 +152,11 @@ In any case, please refer to the `Github page <https://github.com/scilus/scilpy>
 Containers
 """"""""""
 
-Container technologies allow applications and services to be packaged into isolated, self-contained units that can be deployed on any cloud or local host. They are like tiny isolated computers running on other computers. For more information, visit the guide on containers and virtual machines (:ref:`ref_virtualmachines`). A container bundling all the dependencies required for running any flow (see section :ref:`ref_flow`) developped in the lab is available `here <https://hub.docker.com/r/scilus/scilus>`__. In the lab, we use Docker and Apptainer (formerly Singularity) containers, which we describe below.
+Container technologies allow applications and services to be packaged into isolated, self-contained units that can be deployed on any cloud or local host. They are like tiny isolated computers running on other computers. For more information, visit the guide on :ref:`ref_virtualmachines`. A container bundling all the dependencies required for running any flow (see section :ref:`ref_flow`) developped in the lab is available `here <https://hub.docker.com/r/scilus/scilus>`__. In the lab, we use Docker and Apptainer (formerly Singularity) containers, which we describe below.
 
 Docker
 ------
-The most popular container technology is undoubtedly Docker. Docker is supported on Mac, Windows and Linux, although it'd seem like Docker running a Linux instance do not work well on MacOS with M1/M2 CPU. To install Docker, follow this documentation: `<https://docs.docker.com/engine/install/ubuntu>`__.
+The most popular container technology is undoubtedly Docker. Docker is supported on Mac, Windows and Linux, although it'd seem like Docker running a Linux instance do not work well on MacOS with M1/M2 CPU. To install Docker, follow this `documentation <https://docs.docker.com/engine/install/ubuntu>`__.
 
 However, make sure you follow these subsections:
     - Uninstall old versions (sometimes `this <https://askubuntu.com/questions/935569/how-to-completely-uninstall-docker>`__ is necessary, answer #1)
@@ -177,9 +177,9 @@ Launch :bash:`docker --version` to verify if it is installed correctly.
 Apptainer
 ---------
 
-Apptainer (formerly Singularity) is an alternative to Docker. Docker requires root privileges and, as such, is not available on High Performance Computers from the Digital Alliance of Canada (see section :ref:`ref_highperfcomputer`). However, Apptainer containers can run without elevated privileges or root access. Apptainer is particularly useful for saving a Docker container to a file which is then useable in High performance computers, without root privileges.
+Apptainer (formerly Singularity) is an alternative to Docker. Docker requires root privileges and, as such, is not available on High Performance Computers from the Digital Alliance of Canada (see :ref:`ref_highperfcomputer`). However, Apptainer containers can run without elevated privileges or root access. Apptainer is particularly useful for saving a Docker container to a file which is then useable in High performance computers, without root privileges.
 
-The steps for installing Apptainer on Ubuntu are given below. **Do not try to install on MacOS!** To use on Digital Alliance of Canada clusters, refer instead to section: :ref:`ref_highperfcomputer`.
+The steps for installing Apptainer on Ubuntu are given below. **Do not try to install on MacOS!** To use on Digital Alliance of Canada clusters, refer instead to section :ref:`ref_highperfcomputer`.
 
 .. code-block:: bash
 
@@ -189,7 +189,7 @@ The steps for installing Apptainer on Ubuntu are given below. **Do not try to in
     sudo apt update
     sudo apt install -y apptainer
 
-Additional information can be found on the official documentation: `<https://apptainer.org/docs/admin/main/installation.html#install-ubuntu-packages>`__.
+Additional information can be found on the `official documentation <https://apptainer.org/docs/admin/main/installation.html#install-ubuntu-packages>`__.
 
 Finally, launch :bash:`apptainer --version` to verify if it is installed correctly.
 
