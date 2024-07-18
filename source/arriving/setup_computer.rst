@@ -226,12 +226,22 @@ However, if you want to install scilpy, open a new session and follow these step
     git clone https://github.com/scilus/scilpy.git
     cd scilpy
 
-    # You can stay on the master, or choose a precise release of scilpy, for example with the 2.0.2 release:
+You could choose a precise release of scilpy instead of the master, for example with the 2.0.2 release:
+
+.. code-block:: bash
+
     git checkout tags/2.0.2 -b latest_release
 
-    # Don't forget to comment these lines in requirements.txt:
+Then, you need to comment these lines in requirements.txt:
+
+.. code-block:: bash
+
     #dvc==3.48.*
     #dvc-http==2.32.*
+
+Finally, you can pip install scilpy with:
+
+.. code-block:: bash
 
     pip install -e .
 
