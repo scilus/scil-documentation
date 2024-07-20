@@ -264,8 +264,22 @@ However, if you want to install scilpy, open a new session and follow these step
     module load StdEnv/2023 python/3.10 vtk
     virtualenv --no-download --clear ~/Envs/scilpy && source ~/Envs/scilpy/bin/activate
     pip install --no-index --upgrade pip
-    pip install pygit2~=1.12.0 scilpy==2.0.2
-    python -c 'import scilpy'
+    # Go where you want to clone scilpy
+    git clone https://github.com/scilus/scilpy.git
+    cd scilpy
+
+Then, you need to comment these lines in requirements.txt:
+
+.. code-block:: bash
+
+    #dvc==3.48.*
+    #dvc-http==2.32.*
+
+Finally, you can pip install scilpy with:
+
+.. code-block:: bash
+
+    pip install -e .
 
 In the future, you will need to follow these steps to work with scilpy after opening a new session:
 
@@ -273,6 +287,13 @@ In the future, you will need to follow these steps to work with scilpy after ope
 
     module load StdEnv/2023 python/3.10 vtk
     source ~/Envs/scilpy/bin/activate
+
+*Tip*: Right before commenting the lines in requirements.txt, you could choose a precise release of scilpy instead of the master, for example with the 2.0.2 release:
+
+.. code-block:: bash
+
+    git checkout tags/2.0.2 -b latest_release
+
 
 Note that it is currently not possible to work with both scilpy and Nextflow on the same session, as they require different module versions. If you need both these packages at the same time, you might want to consider using :ref:`ref_containers`.
 
