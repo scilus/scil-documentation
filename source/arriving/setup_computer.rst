@@ -224,7 +224,7 @@ Now you can install Nextflow by opening a terminal and executing the following l
     chmod +x nextflow
 
     # Confirm that Nextflow is installed correctly
-    nextflow info
+    ./nextflow info
 
     # Change the Nextflow version to v21.12.1 (required for our flows)
     echo 'export NXF_VER=21.12.1-edge' >> ~/.bashrc
@@ -233,10 +233,10 @@ Now you can install Nextflow by opening a terminal and executing the following l
     echo 'export PATH=$PATH:'$(pwd) >> ~/.bashrc
 
     # Apply the changes to .bashrc
-    source ~./bashrc
+    source ~/.bashrc
 
     # Test Nextflow
-    ./nextflow run hello
+    nextflow run hello
 
 .. _ref_highperfcomputer:
 
