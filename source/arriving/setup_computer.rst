@@ -10,6 +10,8 @@ Before you can start working with the tools commonly-used or developped in the l
 
 *If you work on a personal computer, you might be interested in visiting* :ref:`ref_setuppersocomputer` *first!*
 
+*Don't forget to read the* :ref:`ref_whats_next` *page after completing this one!*
+
 IDE
 """
 
@@ -51,11 +53,14 @@ Other python packages can be installed by replacing python3.X by a version of yo
 Virtual environments
 """"""""""""""""""""
 
-Virtual environments are a good way to separate the system's python installation from the python version you need for your work. It also allows you to have a precise set of python packages with specific versions. While there are many options for environments, we highly recommand using `VirtualEnv <https://virtualenv.pypa.io/en/latest/>`_. Start by installing it and creating a directory where all your environments will be saved:
+Virtual environments are a good way to separate the system's python installation from the python version you need for your work. It also allows you to have a precise set of python packages with specific versions. While there are many options for environments, we highly recommand using `VirtualEnv <https://virtualenv.pypa.io/en/latest/>`_. Start by installing it (using the already installed virtualenv, which you can also use if you don't like virtualenvwrapper) and creating a directory where all your environments will be saved:
 
 .. code-block:: bash
 
-    sudo pip install virtualenvwrapper
+    python3 -m venv ~/.virtualenvs/venv
+    source ~/.virtualenvs/venv/bin/activate
+    pip install virtualenvwrapper
+
     mkdir ~/Envs
 
 Then you should add these lines in your .bashrc (:bash:`code ~/.bashrc`):
@@ -63,8 +68,9 @@ Then you should add these lines in your .bashrc (:bash:`code ~/.bashrc`):
 .. code-block:: bash
 
     export WORKON_HOME=~/Envs/
-    #export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3   # uncomment this line if you have errors when starting your terminal (next step)
-    source /usr/local/bin/virtualenvwrapper.sh
+    export VIRTUALENVWRAPPER_PYTHON=$HOME/.virtualenvs/venv/bin/python
+    export VIRTUALENVWRAPPER_VIRTUALENV=$HOME/.virtualenvs/venv/bin/virtualenv
+    source $HOME/.virtualenvs/venv/bin/virtualenvwrapper.sh
 
 Finally, you can restart the terminal and create an environment:
 
@@ -91,12 +97,14 @@ You might want to always have a specific environment when opening a terminal. To
 Git
 """
 
-Git is a version control software system that allows to store and keep track of the changes made to a code base. It is a kind of a "dropbox" for code, which saves the whole evolution (versions) of the code. In the lab, we use the website `Github <https://github.com/>`_ to help us store and manage our code using Git in a user-friendly way. You should get used to it from the beginning, as it is a powerful and very helpful tool. If you have never used Git on your computer, the first step would be to set your user.name and user.email:
+Git is a version control software system that allows to store and keep track of the changes made to a code base. It is a kind of a "dropbox" for code, which saves the whole evolution (versions) of the code. In the lab, we use the website `Github <https://github.com/>`_ to help us store and manage our code using Git in a user-friendly way. You should get used to it from the beginning, as it is a powerful and very helpful tool. If you have never used Git on your computer, the first step would be to set your user.name and user.email, and set your pull preference:
 
 .. code-block:: bash
 
     git config --global user.name "FIRST_NAME LAST_NAME"
     git config --global user.email "MY_NAME@example.com"
+
+    git config --global pull.rebase false
 
 You can also add these lines in your .bashrc (:bash:`code ~/.bashrc`) to see the current Git branch in your terminal:
 
@@ -298,3 +306,46 @@ In the future, you will need to follow these steps to work with scilpy after ope
 Note that it is currently not possible to work with both scilpy and Nextflow on the same session, as they require different module versions. If you need both these packages at the same time, you might want to consider using :ref:`ref_containers`.
 
 Please see the (:ref:`ref_heavy_computing`) tab for more information about the usage of such resources. If your goal is to use the computing platform to run Tractoflow, you will find instructions on the :ref:`ref_tractoflow` page.
+
+.. _ref_mi_brain:
+
+MI-Brain
+""""""""
+
+MI-Brain is a Diffusion MRI and Tractography visualization software designed to help medical professionals and researchers look and explore their data. It provides many features and tools for processing and visualizing tractograms.
+The software was created by `IMEKA <https://imeka.ca/>`_ (a Sherbrooke company for diffusion MRI analysis co-founded by Maxime Descoteaux & Pierre-Marc Jodoin).
+
+.. figure:: /images/intro_to_software_mi_brain.png
+    :scale: 25 %
+    :align: center
+
+    MI-Brain facilitates bundle segmentation and basic image/mask operations.
+
+Installation
+------------
+
+To install it (it might already be installed on a lab computer), follow these instructions depending on your OS, or refer to the `FAQ <https://github.com/imeka/mi-brain/wiki/FAQ#how-to-install>`_.
+
+    **On Linux**
+        * Download the Linux version of MI-Brain `here <https://github.com/imeka/mi-brain/releases>`_.
+        * In a terminal, extract the .tar.gz release archive using :bash:`tar -xvzf NAME_OF_THE_FILE.tar.gz -C DIRECTORY_TO_PUT_MI_BRAIN`.
+        * Add this to your .bashrc (you can change the name of the alias to your liking): :bash:`alias mibrain="bash DIRECTORY_TO_PUT_MI_BRAIN/MI-Brain.sh"`.
+        * You can now open MI-Brain by typing :bash:`mibrain` in the terminal and pressing enter.
+    
+    **On MacOS**
+        * Download the MacOS version of MI-Brain `here <https://github.com/imeka/mi-brain/releases>`_.
+        * Open the .dmg file and drag the MI-Brain icon in the Application folder.
+
+    **On Windows**
+        * Download the Windows version of MI-Brain `here <https://github.com/imeka/mi-brain/releases>`_, along with the file named "vc_redist.x64.exe.zip".
+        * Double-click on the "vc_redist.x64.exe" executable inside "vc_redist.x64.exe.zip" to install Microsoft Visual C++ 2015 Redistributable.
+        * Double-click on the MI-Brain executable and follow the instructions.
+
+Useful Commands
+---------------
+
+Make sure to read the `wiki <https://github.com/imeka/mi-brain/wiki>`__ and watch the `videos <https://www.youtube.com/playlist?list=PLfVC14bBRTsVHzuWqfzrPp3MtYfPETDgu>`_ for useful tips and tricks.
+
+If you are heavily using MI-Brain in your research, please cite this `conference abstract <https://www.researchgate.net/publication/312190253_MI-Brain_a_software_to_handle_tractograms_and_perform_interactive_virtual_dissection>`_:
+
+    *Rheault, F., Houde, J-C., Goyette, N., Morency, F., Descoteaux, M., MI-Brain, a software to handle tractograms and perform interactive virtual dissection, ISMRM Diffusion study group workshop, Lisbon, 2016*
