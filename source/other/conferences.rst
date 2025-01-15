@@ -8,40 +8,41 @@ Interesting conferences
 Summary, coming events and deadlines
 ------------------------------------
 
-(Last update: 2023-08-10)
+(Last update: 2025-15-1)
 
 
-2024
+2025
 
-    - **March 11 - 15, Dipy Workshop**, Indiana, Bloomington, https://dipy.org/workshops/dipy-workshop-2024
+    - **Febuary 16 - 20, DSG Workshop**, Kyoto, Japan: https://www.ismrm.org/workshops/2025/Diffusion40/
 
-        -
+    - **March 17 - 25, Dipy Workshop**, Indiana, Bloomington: https://workshop.dipy.org/workshops/dipy-workshop-2025
 
-    - **April 14-17: I AM**, London, UK, https://www.iambrain.org/
+    - **March 25 - 26, Nf-core hackathon**, Online: https://nf-co.re/events/2025/hackathon-march-2025
 
-        - March 15: Abstract submission
+        - Registration open in late January
 
-    - **May 04-09: ISMRM**: Singapore, https://www.ismrm.org/24m/
+    - **May 10 - 15: ISMRM**: Honolulu, Hawaii: https: //www.ismrm.org/25m/
 
-        - Nov 8: Abstract submission
+        - **CLOSED** November 6 : Full paper submission
 
-    - **May 25: QBIN / RBIQ Scientific Day**, Montreal, https://rbiq-qbin.qc.ca/fr/2024/01/17/qbin-scientific-day-2024-save-the-date/
+    - **June 25-29: OHBM**, Brisbane, Australie: https://www.humanbrainmapping.org/i4a/pages/index.cfm?pageid=4229
 
-        - Dates to be announced.
+        - **CLOSED** December 18 : Full paper submission
 
-    - **June 23-27: OHBM**, Korea: https://www.humanbrainmapping.org/i4a/pages/index.cfm?pageid=4229
+    - **July 9 - 11: MIDL**, Salt Lake City, Utah: https://2025.midl.io/
 
-        - Dec 1: Abstract submission
+        - January 17 : Full paper registration deadline
+        - January 24 : Full paper submission deadline
+        - April 11 : Short paper submission deadline
 
-    - **July 3-5: MIDL**, Paris: https://2024.midl.io/
+    - **Oct 13 - 16, IST**, Bordeaux, France, https://main--societyfortractography.netlify.app/
 
-        - Feb 7: Full paper submission
-        - Apr 10: Short paper submission
+        - Dates to be announced
 
-    - | **Oct 6-10: MICCAI**, Morocco https://conferences.miccai.org/2024/en/
+    - **September 23 - 27: MICCAI**, Daejeon, Korea  : https://conferences.miccai.org/2025/en/default.asp
 
-        - Feb 22: Intention to submit
-        - March 7: Full manuscript submission
+         - February 13: Intention-to-submit deadline    
+         - February 27: Full manuscript, including supplementary material
 
 Dates to be announced:
 
