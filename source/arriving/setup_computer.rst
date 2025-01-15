@@ -53,14 +53,11 @@ Other python packages can be installed by replacing python3.X by a version of yo
 Virtual environments
 """"""""""""""""""""
 
-Virtual environments are a good way to separate the system's python installation from the python version you need for your work. It also allows you to have a precise set of python packages with specific versions. While there are many options for environments, we highly recommand using `VirtualEnv <https://virtualenv.pypa.io/en/latest/>`_. Start by installing it (using the already installed virtualenv, which you can also use if you don't like virtualenvwrapper) and creating a directory where all your environments will be saved:
+Virtual environments are a good way to separate the system's python installation from the python version you need for your work. It also allows you to have a precise set of python packages with specific versions. While there are many options for environments, we highly recommand using `VirtualEnv <https://virtualenv.pypa.io/en/latest/>`_. Start by installing it and creating a directory where all your environments will be saved:
 
 .. code-block:: bash
 
-    python3 -m venv ~/.virtualenvs/venv
-    source ~/.virtualenvs/venv/bin/activate
-    pip install virtualenvwrapper
-
+    sudo apt install python3-virtualenvwrapper
     mkdir ~/Envs
 
 Then you should add these lines in your .bashrc (:bash:`code ~/.bashrc`):
@@ -68,9 +65,10 @@ Then you should add these lines in your .bashrc (:bash:`code ~/.bashrc`):
 .. code-block:: bash
 
     export WORKON_HOME=~/Envs/
-    export VIRTUALENVWRAPPER_PYTHON=$HOME/.virtualenvs/venv/bin/python
-    export VIRTUALENVWRAPPER_VIRTUALENV=$HOME/.virtualenvs/venv/bin/virtualenv
-    source $HOME/.virtualenvs/venv/bin/virtualenvwrapper.sh
+    #export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3   # uncomment this line if you have errors when starting your terminal (next step)
+    source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
+
+If you get an error in the next steps, refering to "command not found", it is possible that virtualenvwrapper was not installed in :bash:`/usr/share`. In that case, find where it is (:bash:`whereis virtualenvwrapper`) and modify your .bashrc accordingly (:bash:`source WHERE_IS_VIRTUALENVWRAPPER/virtualenvwrapper/virtualenvwrapper.sh`).
 
 Finally, you can restart the terminal and create an environment:
 
@@ -141,7 +139,9 @@ Scilpy
         # Make a fork of scilpy to be able to modify your own version of the code.
         # Go where you want the scilpy folder to be, then:
         git clone git@github.com:YOUR_USERNAME/scilpy.git # Don't forget to replace YOUR_USERNAME
-        cd scilpy 
+        cd scilpy
+        export SETUPTOOLS_USE_DISTUTILS=stdlib # This might change in time.
+        # Please refer to the README from https://github.com/scilus/scilpy if the next step fails.
         pip install -e .
 
         # Setup your Git remotes
