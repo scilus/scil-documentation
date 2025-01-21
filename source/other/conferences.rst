@@ -35,7 +35,7 @@ Summary, coming events and deadlines
         - January 24 : Full paper submission deadline
         - April 11 : Short paper submission deadline
 
-    - **Oct 13 - 16, IST**, Bordeaux, France, https://main--societyfortractography.netlify.app/ , https://tractography.io/
+    - **Oct 13 - 16, IST**, Bordeaux, France, https://tractography.io/
         - Dates to be announced
 
     - **September 23 - 27: MICCAI**, Daejeon, Korea  : https://conferences.miccai.org/2025/en/default.asp
