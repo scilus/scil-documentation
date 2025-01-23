@@ -3,7 +3,7 @@
    :scale: 20 %
    :align: right
 
-Welcome to the SCIL lab documentation!
+Welcome to the Sherbrooke Connectivity Imaging Laboratory documentation!
 =============================================
 
 Our lab works in diffusion MRI, from the acquisition sequences and local reconstruction to tractography and its usages in applied contexts, including tractometry.
