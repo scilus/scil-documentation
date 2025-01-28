@@ -50,15 +50,6 @@ Here, you will find a summary of the tools we develop, and some clues on how we 
 
 .. toctree::
     :maxdepth: 1
-    :caption: Coding standards in the lab
-
-    coding/python
-    coding/scilpy
-    coding/git
-
-
-.. toctree::
-    :maxdepth: 1
     :caption: Dealing with heavy data
 
     heavy/storage
