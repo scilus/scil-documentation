@@ -3,262 +3,219 @@
 Flows
 =====
 
-.. role:: bash(code)
-   :language: bash
-
-Here we'll look at how to move from the raw diffusion imaging data to the tractography metrics, whether for global visualization or at the scale of the invididual, using flows created by our laboratory.
-
-Requirements
-************
-
-* For this test, there is a necessity that you have a Nextflow version between 19.04.2 and 21.12.1, the various git flows cloned (tractoflow, rbx_flow, tractometry_flow) and have a container installed.
-* For Nextflow and tractoflow you can check the `installation guide <https://tractoflow-documentation.readthedocs.io/en/latest/installation/install.html>`_ from the tractoflow documentation. Otherwise, the installation of Nextflow is also presented `here <https://scil-documentation.readthedocs.io/en/latest/intro_to/explore_nextflow.html#installation>`_.
-* To `git clone <https://scil-documentation.readthedocs.io/en/latest/intro_to/explore_git.html#summary-of-git-commands>`_ the different flows you can follow these links:
-
-   - `tractoflow <https://github.com/scilus/tractoflow>`_
-   - `rbx_flow <https://github.com/scilus/rbx_flow>`_
-   - `tractometry_flow <https://github.com/scilus/tractometry_flow>`_
-
-* We recommend that you store the various pipelines in places that are easy to find and whose direction you know.
-* Finally, you will need a container as Apptainer or Singularity. The whole documentation about it and how to install it is `here <https://scil-documentation.readthedocs.io/en/latest/intro_to/explore_virtual_machines.html#singularity>`_.
-
-Initialization
+What's a Flow?
 **************
 
-#. Open a terminal and navigate to a working folder you will create for the test or use this command:
+A *flow* is an automated processing pipeline built with `Nextflow <https://www.nextflow.io>`_.  
+Flows integrate multiple tools and dependencies and are designed to streamline various stages of data processing.
 
-    .. code-block:: bash
+Our Flows
+*********
 
-        mkdir -p flows_tutorial_1.6.0 && cd flows_tutorial_1.6.0
+At the SCIL, we have developed a set of modular flows that cover different stages of diffusion MRI analysis. These flows are designed to work together in sequence or as standalone tools, depending on your needs.
 
-#. To make it easier to write nextflow commands, we recommend that you create a shortcut to the file containing your flows.
+.. image:: ../images/flows.png
+   :align: center
+   :alt: Overview of the SCIL flows
 
-    .. code-block:: bash
+.. list-table:: 
+   :widths: 20 20 20 20
 
-        export FLOW_DIR="/PATH/TO/YOUR/FLOWS/"
-        #Example <export FLOW_DIR="/home/user/libraries/flows/">
+   * - **Flow**
+     - **What it does**
+     - **Version**
+     - **Container**
+   * - **Tractoflow**
+     - Starts from raw DWI and generates a whole-brain tractogram.
+     - ``2.4.4``
+     - ``2.1.0``
+   * - **Rbx_flow**
+     - Extracts bundles from a whole-brain tractogram.
+     - ``2.4.4``
+     - ``2.1.0``
+   * - **Tractometry_flow**
+     - Extracts tractometry information by combining subjects’ fiber bundles and any metric in diffusion space.
+     - ``2.4.4``
+     - ``2.1.0``
+   * - **Connectoflow**
+     - State-of-the-art structural connectivity (connectomics) pipeline.
+     - ``2.4.4``
+     - ``2.1.0``
+   * - **Bst_flow**
+     - Enhances fODFs to run bundle-specific tractography.
+     - ``2.4.4``
+     - ``2.1.0``
+   * - **Freewater_flow**
+     - Computes Free Water–corrected DTI metrics.
+     - ``2.4.4``
+     - ``2.1.0``
+   * - **Noddi_flow**
+     - Runs the NODDI priors estimation and modeling pipeline.
+     - ``2.4.4``
+     - ``2.1.0``
+   * - **Freesurfer_flow**
+     - Surface parcellation using Freesurfer outputs.
+     - ``2.4.4``
+     - ``2.1.0``
+   * - **Mrds_flow**
+     - Models directional signal (MRDS) from dMRI.
+     - ``2.4.4``
+     - ``2.1.0``
+   * - **Dmriqc_flow**
+     - QC for any output from most SCIL flows.
+     - ``1.0.0``
+     - ``1.5.0``
 
+Using a Flow
+************
 
-#. If it's your first time using our flow, we recommand that you should use the following set of data which has been prepared for this introduction.
+No matter which flow you use, the process follows the same basic steps:
 
-    .. code-block:: bash
+1. **Prepare the input data**  
+   Organize your dataset according to the flow’s expected input structure.  
+   If using a sequence of flows, you can use `combine_flows`, a set of bash scripts that connects our flows together. These scripts create a valid input structure for a flow based on another flow’s output.
 
-        mkdir data_tuto_1.6.0
-        curl https://nextcloud.computecanada.ca/index.php/s/jtzgL352cxpxxzt/download -o data_tuto_1.6.0/data_tuto_1.6.0.zip
-        unzip -qq data_tuto_1.6.0/data_tuto_1.6.0.zip -d data_tuto_1.6.0/
+2. **Pull the container**  
+   Make sure the correct container is downloaded. You just need to pull the flow using: ``nextflow pull scilus/<flow_name>``
 
-#. Also, you can download the singularity "container_scilus_1.6.0.sif" necessary for this test with this command:
+3. **Run the flow**  
+   Execute the pipeline using ``nextflow run ...`` with the appropriate parameters.
 
-    .. code-block:: bash
+4. **Quality check the output**  
+   After execution, inspect results manually or use `Dmriqc_flow`, our quality control pipeline for diffusion MRI.  
+   With different profiles, you can QC any output from most SCIL flows.
 
-        curl https://nextcloud.computecanada.ca/index.php/s/NijdKTP7WWbP7Na/download -o containers_scilus_1.6.0.sif
-
-#. Finally, create the different directories for the different flows according to the structure of the inputs required for each.
-
-    .. code-block:: bash
-
-        for i in data_tuto_1.6.0/sub-*; do mkdir -p tractoflow_test/raw/$(basename $i);done
-        for i in data_tuto_1.6.0/sub-*; do mkdir -p RBx_flow_test/raw/$(basename $i);done
-        for i in data_tuto_1.6.0/sub-*; do mkdir -p tractometry_flow_test/raw/$(basename $i); done
-
-Tractoflow
-**********
-
-The first flow we will use is Tractoflow. It will preprocess the DWI and T1 data (denoising, resampling, etc), it will register the T1 to the DWI space and segment it into masks (wm, gm), it will compute the local modelling of diffusion information (DTI, fODF) and do the tractography.
-See here for the complete list of steps. `<https://tractoflow-documentation.readthedocs.io/en/latest/pipeline/steps.html>`_.
-
-#. Add the data needed to launch tractoflow from downloaded data.
-
-    .. code-block:: bash
-
-        for i in data_tuto_1.6.0/sub-*; do cp ${i}/* tractoflow_test/raw/$(basename $i)/; done
 
 .. note::
+   To use our flows, you will need:
 
-    The data are composed of 3 subjects and each subject contains 7 files: aparc+aseg.nii.gz, bval, bvec, dwi.nii.gz, rev_b0.nii.gz, t1.nii.gz, wmparc.nii.gz.
-    By default only bval, bvec, dwi.nii.gz, t1.nii.gz are necessary to run tractoflow. 
-    But here we're using tractoflow ABS, so aparc+aseg.nii.gz, rev_b0.nii.gz, and wmparc.nii.gz are required.
-    For more information about ABS, see the reference below.
+   - `Nextflow <hhttps://www.nextflow.io/docs/latest/install.html#install-nextflow>`_ (version between 19.04.2 and 21.12.1)  
+   - `Singularity <https://apptainer.org/docs/admin/1.4/installation.html#installation-on-linux>`_ (Linux) or `Docker <https://docs.docker.com/engine/install/>`_ (Mac/Linux)  
+   - The corresponding scilus `.sif` or Docker image based on the flow’s container version  
 
-#. Run tractoflow (this can take a long time).
+For detailed instructions, refer to the tutorials below.
 
-    .. code-block:: bash
-
-        nextflow ${FLOW_DIR}/tractoflow/main.nf --input tractoflow_test/raw --local_nbr_seeds 1 --run_eddy False \
-         --run_topup False --output_dir tractoflow_test/results_tf -profile ABS -with-singularity ./containers_scilus_1.6.0.sif \
-         -with-report tractoflow_test/report.html -w tractoflow_test/work -resume
-
- Parameters:
-  - :bash:`--input`: directory of our data
-  - :bash:`--local_nbr_seeds`: number of seeds related to the seeding type param
-  - :bash:`--run_eddy`: activate or not eddy
-  - :bash:`--run_topup`: activate or not topup
-  - :bash:`--output_dir`: directory where results will be generate
-  - :bash:`-profile ABS`: choose the profile TractoFlow-ABS (Atlas Based Segmentation)
-  - :bash:`-with-singularity`: directory of singularity we want to use
-  - :bash:`-with-report`: generate a report a the end of the command
-  - :bash:`-w`: directory where work will be generate
-  - :bash:`-resume`: use the results already created in the work if the command has already been executed
-
-Here, tractoflow was set to be as fast as possible. If you want to check more options, run the command :
-
-    .. code-block:: bash
-        
-        nextflow ${FLOW_DIR}/tractoflow/main.nf --help
-
-Or you can check the documentation from tractoflow documentation `here <https://tractoflow-documentation.readthedocs.io/en/latest/pipeline/options.html>`_.
-    
-.. warning::
-    Once tractoflow is launched, a large number of files are created. Be careful, files in the results folder (--output_dir) are only symlinks to the "work" folder created by nextflow. Do not delete your "work" folder!
-
-References :
-    * Theaud et al. (2020). TractoFlow: A robust, efficient and reproducible diffusion MRI pipeline leveraging Nextflow & Singularity. `<https://doi.org/10.1016/J.NEUROIMAGE.2020.116889>`_
-    * Theaud et al. (2020). TractoFlow-ABS (Atlas-Based Segmentation). `<https://www.biorxiv.org/content/10.1101/2020.08.03.197384v1>`_
-
-Rbx_flow
+Tutorial
 ********
 
-RBx_flow is a flow that separates your wholebrain tractogram into predefined bundles using a centroid atlas.
-For that, RBx_flow use two files: the local tracking file and the fractional anisotropy (fa) from tractoflow.
+In this tutorial, we will show you how to go from **raw data** to **tractometry** and **connectivity maps** using our series of flows.
 
-#. Import local tracking and fa files to RBx_flow inputs.
+To follow along, we recommend using the prepared **dataset** below:
 
-    .. code-block:: bash
+.. code-block:: bash
 
-        for i in tractoflow_test/results_tf/sub-*; do cp ${i}/*/*fa.nii.gz RBx_flow_test/raw/$(basename $i)/; done
-        for i in tractoflow_test/results_tf/sub-*; do cp ${i}/*/*tracking*.trk RBx_flow_test/raw/$(basename $i)/; done
+    mkdir flows_tuto
+    curl https://nextcloud.computecanada.ca/index.php/s/D5oCMGawsEi8Cps/download -o flows_tuto/flows_tuto.tar.gz
+    tar -xzf flows_tuto/flows_tuto.tar.gz -C flows_tuto/
 
-#. Download an atlas and config files for RBx_flow. In our case, we will obtain the atlas and config from zenodo. However, the RBx_flow input architecture must be retained.
+It includes one subject in both BIDS and non-BIDS formats.  
+`BIDS <https://bids.neuroimaging.io/index.html>`_ is a standardized structure for organizing neuroimaging data.
 
-    .. code-block:: bash
+Included files:
 
-        mkdir atlas
-        curl https://zenodo.org/records/7950602/files/atlas.zip?download=1 -o atlas/atlas.zip
-        curl https://zenodo.org/records/7950602/files/config.zip?download=1 -o atlas/config.zip
-        unzip -qq atlas/atlas.zip -d atlas/
-        unzip -qq atlas/config.zip -d atlas/
+- ``t1``: anatomical T1-weighted scan
 
-.. note::
-    Rbx_flow segments the tractogram into bundles. To do this, it needs the complete tractogram, of course, but also the FA metric and the reference. That's why we've integrated the bundle atlas (centroids) into our script.
+- ``dwi``: diffusion-weighted images
 
-#. Run RBx_flow.
+- ``rev_b0``: reverse-phase encoding image (for distortion correction)
 
-    .. code-block:: bash
+Requirements
+~~~~~~~~~~~~
 
-        nextflow ${FLOW_DIR}/rbx_flow/main.nf --input RBx_flow_test/raw --atlas_directory atlas \
-         -with-singularity ./containers_scilus_1.6.0.sif -w RBx_flow_test/work -resume
+Install `Nextflow <https://www.nextflow.io/docs/latest/install.html#install-nextflow>`_ (version between 19.04.2 and 21.12.1)  
+Check installation:
 
-Parameters:
-  - :bash:`--input`: directory of our data
-  - :bash:`--atlas_directory`: directory of our atlas
-  - :bash:`-with-singularity`: directory of singularity we want to use
-  - :bash:`-w`: directory where work will be generate
-  - :bash:`-resume`: use the results already created in the work if the command has already been executed
+.. code-block:: bash
 
-For more details about rbx_flow use the command:
+   nextflow -version
 
-    .. code-block:: bash
+Install either:
 
-        nextflow ${FLOW_DIR}/rbx_flow/main.nf --help
+- `Singularity <https://apptainer.org/docs/admin/1.4/installation.html#installation-on-linux>`_ (Linux)  
 
-Or you can check the documentation for reconbundles `here <https://scil-documentation.readthedocs.io/en/latest/our_tools/recobundles.html>`_.
+  Check installation:
 
-.. warning:: RBx_flow has no function for choosing the output directory, so in a second step we need to move our RBx_flow result in the RBx_flow_test directory.
+  .. code-block:: bash
 
-    .. code-block:: bash
+     singularity --version
 
-        mv results_rbx RBx_flow_test
+- `Docker <https://docs.docker.com/engine/install/>`_ (Mac or Linux)  
 
-References : 
-    * St-Onge et al. (2023). BundleSeg: A versatile, reliable and reproducible approach to white matter bundle segmentation. `<https://arxiv.org/pdf/2308.10958.pdf>`_
-    * Rheault, Francois. (2020). Analyse et reconstruction de faisceaux de la matière blanche. page 137-170. `<https://savoirs.usherbrooke.ca/handle/11143/17255>`_
+  Check installation:
 
-Tractometry_flow
-****************
+  .. code-block:: bash
 
-This flow allows you to extract tractometry information by combining subjects's fiber bundles, diffusion MRI metrics and lesion metrics.
-In a first time, tractometry_flow creates a distance map between streamlines and the centroid of the same bundle, and a label map where the bundle is segmented into n segment (20 by default).
-In a seconde time, it caculates and compiles the metrics along the segmented bundles.
+     docker --version
 
-#. Create the necessary directory for tractometry_flow inputs.
+Now ensure that all required containers are downloaded to run the flows.
 
-    .. code-block:: bash
+If using **Singularity**, download the required container files:
 
-        for i in tractometry_flow_test/raw/*; do mkdir ${i}/metrics ${i}/centroids ${i}/bundles; done
+.. code-block:: bash
 
-#. Import of data for tractometry_flow: diffusion metrics (fa, ad, md, rd) from tractoflow, centroids transformed and clean bundles from RBx_flow.
+   ...
 
-    .. code-block:: bash
+If using **Docker**, the containers will be pulled automatically when running a flow ?
 
-        for i in tractoflow_test/results_tf/sub-*; do cp ${i}/DTI_Metrics/*__fa.nii.gz tractometry_flow_test/raw/$(basename $i)/metrics/; done
-        for i in tractoflow_test/results_tf/sub-*; do cp ${i}/DTI_Metrics/*__ad.nii.gz tractometry_flow_test/raw/$(basename $i)/metrics/; done
-        for i in tractoflow_test/results_tf/sub-*; do cp ${i}/DTI_Metrics/*__rd.nii.gz tractometry_flow_test/raw/$(basename $i)/metrics/; done
-        for i in tractoflow_test/results_tf/sub-*; do cp ${i}/DTI_Metrics/*__md.nii.gz tractometry_flow_test/raw/$(basename $i)/metrics/; done
+Dmriqc_flow
+~~~~~~~~~~~
 
-        for i in RBx_flow_test/results_rbx/sub-*; do cp ${i}/Transform_Centroids/*.trk tractometry_flow_test/raw/$(basename $i)/centroids/; done
-        for i in tractometry_flow_test/raw/sub-*; do rm ${i}/centroids/*_Brainstem.trk; done
+Dmriqc_flow is our pipeline for diffusion MRI quality control. Using different profiles, you can QC the output from most SCIL flows. Let's start by QC-ing the raw input data.
 
-        for i in RBx_flow_test/results_rbx/*; do cp ${i}/Clean_Bundles/*.trk tractometry_flow_test/raw/$(basename $i)/bundles/; done
-        for i in tractometry_flow_test/raw/sub-*; do rm ${i}/bundles/*_Brainstem_cleaned.trk; done
+1. **Pull the container**
 
-.. note::
-    Tractometry_flow segments the bundles into different sections (20 by default) and estimates the different values of the diffusion and lesion metrics in each section. At the end, we obtain the bundles profile for each metric.
+2. **Run the command**
 
-#. Run tractometry_flow.
+.. code-block:: bash
 
-    .. code-block:: bash
+   # If using Singularity
+   nextflow run scilus/dmriqc_flow --input tutorial_data_scil/input_raw/ --output qc_results/ -with-singularity scil_1.5.0.sif
 
-        nextflow ${FLOW_DIR}/tractometry_flow/main.nf --input tractometry_flow_test/raw --use_provided_centroids True \
-         --output_dir tractometry_flow_test/results_tm -with-singularity ./containers_scilus_1.6.0.sif \
-         -w tractometry_flow_test/work -resume
+   # If using Docker
+   nextflow run scilus/dmriqc_flow --input flows_tuto/sub-01/ --output qc_results/ -with-docker
 
-Parameters:
-  - :bash:`--input`: directory of our data
-  - :bash:`--use_provided_centroids`: Use the provided pre-computed centroids from rbx_flow rather than using automatic computation
-  - :bash:`--output_dir`: directory where results will be generated
-  - :bash:`-with-singularity`: directory of singularity we want to use
-  - :bash:`-w`: directory where work will be generated
-  - :bash:`-resume`: use the results already created in the work if the command has already been executed
+Tractoflow
+~~~~~~~~~~
 
-For more details about tractometry_flow use the command:
+Tractoflow is the main flow to preprocess diffusion data and generate tractograms and metrics.
 
-    .. code-block:: bash
+1. **Prepare the input data**  
+   BIDS and non-BIDS ??
 
-        nextflow ${FLOW_DIR}/tractometry_flow/main.nf --help
+2. **Pull the container**
 
-Or you can check the documentation for tractometry_flow `here <https://github.com/scilus/tractometry_flow>`_.
+3. **Run the flow**
 
-References :
-    * Beaudoin et al. (2021). Modern Technology in Multi-Shell Diffusion MRI Reveals Diffuse White Matter Changes in Young Adults With Relapsing-Remitting Multiple Sclerosis. `<https://doi.org/10.3389/FNINS.2021.665017>`_
-    * Cousineau et al. (2017). A test-retest study on Parkinson's PPMI dataset yields statistically significant white matter fascicles. `<https://doi.org/10.1016/j.nicl.2017.07.020>`_
+.. code-block:: bash
 
-Visualization
-*************
+   # If using Singularity
+   nextflow run scilus/dmriqc_flow -r 1.0.0 --input tutorial_data_scil/input_raw/ --output qc_results/ -with-singularity scil_1.5.0.sif
 
-Once you've run your scripts, you'll get various files in your results directories. The first thing to do is to check your DTI metric in `MI-Brain <https://scil-documentation.readthedocs.io/en/latest/intro_to/explore_software.html#mi-brain>`_.
+   # If using Docker
+   nextflow run scilus/dmriqc_flow -r 1.0.0 --input flows_tuto/sub-01/ --output qc_results/ -with-docker
 
-The second thing you can do is view the mosaic of your different bundles: 
+4. **QC the output**  
+   You can reuse Dmriqc_flow here to inspect the outputs..
 
-    .. code-block:: bash
+Rbx_flow
+~~~~~~~~
 
-        scil_visualize_bundles_mosaic.py RBx_flow_test/results_rbx/sub-PT001_ses-1_acq-1/Register_Anat/sub-PT001_ses-1_acq-1__native_anat.nii.gz \
-        RBx_flow_test/results_rbx/sub-PT001_ses-1_acq-1/Clean_Bundles/*cleaned.trk mosaic.png
+Rbx_flow (RecobundlesX) extracts anatomical bundles from a whole-brain tractogram.
 
-        feh mosaic.png
+1. **Prepare the input data**  
+   You can use `combine_flow` to format inputs appropriately.
 
-Finally, tractometry_flow directly generates plots of the various profilometries of your bundles with DTI metrics.
-These are very basic, but give you an initial overview of the profile of your bundles. In addition, it also generates json files with all the tractometry_flow data.
-You can check these files either with Excel, or in python with pandas or polars.
+2. **Pull the container**  
 
-For further information about quality assurance and check, please see the `Checks and Stats section <https://scil-documentation.readthedocs.io/en/latest/our_tools/other_pipelines.html>`_.
+3. **Run the flow**
 
-Complete processing
-*******************
+.. code-block:: bash
 
-If you want to launch all the different steps in one you call download this script :  `all_in_flow <https://nextcloud.computecanada.ca/index.php/s/WeRndPaSwx8MBk6>`_.
-To use this script you just have to modify the pathway for your library flow in the script.
-Then run the script with this command :
+   # If using Singularity
+   nextflow run scilus/dmriqc_flow --input tutorial_data_scil/input_raw/ --output qc_results/ -with-singularity scil_1.5.0.sif
 
-    .. code-block:: bash
+   # If using Docker
+   nextflow run scilus/dmriqc_flow --input flows_tuto/sub-01/ --output qc_results/ -with-docker
 
-        bash all_in_flow.sh
+4. **QC the output**  
+   You can use Dmriqc_flow...
