@@ -180,7 +180,7 @@ Tractoflow
 Tractoflow is the main flow to preprocess diffusion data and generate tractograms and metrics.
 
 1. **Prepare the input data**  
-   Supports both BIDS and non-BIDS formats (leave as is for now).
+   BIDS and non-BIDS ??
 
 2. **Pull the container**
 
@@ -206,7 +206,6 @@ Rbx_flow (RecobundlesX) extracts anatomical bundles from a whole-brain tractogra
    You can use `combine_flow` to format inputs appropriately.
 
 2. **Pull the container**  
-   (Use `nextflow pull scilus/rbx_flow` and ensure the container is available.)
 
 3. **Run the flow**
 
