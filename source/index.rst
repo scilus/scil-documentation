@@ -47,6 +47,7 @@ Here, you will find a summary of the tools we develop, and some clues on how we 
     guides/nextflow
     guides/code_with_nextflow
     guides/anatomy
+    guides/glassbrain
 
 .. toctree::
     :maxdepth: 1
