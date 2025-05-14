@@ -244,7 +244,7 @@ Now you can install Nextflow by opening a terminal and executing the following l
     source ~/.bashrc
 
     # Test Nextflow
-    nextflow run hello
+    nextflow run hello -dsl2
 
 .. _ref_highperfcomputer:
 
