@@ -65,7 +65,8 @@ Using Compute Canada for the first time
 
         # User specific aliases and functions
 
-        module load java/1.8.0_192 singularity/3.5
+        module load java/11.0.2
+        module load singularity
 
         #export PATH=$PATH:/home/USER/scripts  # if you have scripts
         export PATH=$PATH:$HOME/nextflow
