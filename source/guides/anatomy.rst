@@ -22,33 +22,32 @@ The anatomical description of bundles (or tract, fasciculus, tractus, etc.) is a
 
     - *Simulated bundles*: Finally, you can also explore the bundles associated with the phantom from the `ISMRM 2015 Tractography Challenge <https://tractometer.org/ismrm2015/home/>`_. The differences between these simulated bundles and real anatomical ones were discussed in `Renauld et al, 2023 <https://www.nature.com/articles/s41598-023-28560-w>`_. In this case, the bundles are not entirely simulated; they were created by tracking from real subjects with deterministic, bundle-wise parameters. However, the dwi accompanying the data is entirely simulated.
 
-**Comissural fibers**: They connect the two hemispheres of the brain. They are mostly in a left-right orientation.
+**Commissural fibers**: They connect the two hemispheres of the brain. They are mostly in a left-right orientation.
 
-    - AC: Anterior comissure
+    - AC: Anterior commissure
     - CC: Corpus callosum
-    - PC: Posterior comissure
-    - FX: Fornix
+    - PC: Posterior commissure
 
-**Projection fibers**: They connect the cortex with lower parts of the brain or with the spinal cord. They are mostly in a z orientation (top-bottom).
+**Projection fibers**: They connect the cortex with lower parts of the brain, such as the brainstem or cerebellum, or with the spinal cord. They are mostly in a z orientation (top-bottom).
 
     - FPT: Frontopontine Tract
-    - IFOF: Inferior fronto-occipital fasciculus
-    - ILF: Inferior fronto-occipital fasciculus
-    - MCP: Middle cerebellar peduncle
-    - MdLF: Middle longitudinal fascicle
     - OR, or OR_ML: Optic radiation (with Meyer's loop)
     - POPT: Parieto-occipital pontine tract
     - PYT: Pyramidal tract
+    - FX: Fornix (it also contains commissural fibers)
     - SCP: Superior cerebellar peduncle
-    - SLF: Superior longitudinal fasciculus
-    - UF: Uncinate fasciculus
-
+    - MCP: Middle cerebellar peduncle
+    - ICP: Inferior cerebellar peduncle
 
 **Association fibers**: They connect two cortex regions in a same hemisphere.
     - AF: Arcuate fasciculus.
     - CG: Cingulum.
     - FAT: Frontal aslant tract
-    - ICP: Inferior cerebellar peduncle
+    - IFOF: Inferior fronto-occipital fasciculus
+    - ILF: Inferior longitudinal fasciculus
+    - MdLF: Middle longitudinal fascicle
+    - SLF: Superior longitudinal fasciculus
+    - UF: Uncinate fasciculus
 
 
 The corpus callosum is probably the easiest bundle to recognize from a raw diffusion / tensor / fODF image because of its strong anisotropy. It is a good choice of bundle to assess that the data was read correctly during processing.
