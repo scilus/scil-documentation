@@ -124,7 +124,7 @@ Since the installation is not that easy and it takes a few GB of space, you migh
 
         .. code-block:: bash
 
-            export ANTSPATH=~/YOUR_SOFTWARES/ANTs/bin
+            export ANTSPATH=~/YOUR_SOFTWARES/ANTs/install/bin
             export PATH=${ANTSPATH}:$PATH
 
 Once installed, you should be able to type :bash:`antsRegistration` to see the help display.
