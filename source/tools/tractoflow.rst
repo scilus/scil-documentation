@@ -79,8 +79,8 @@ Using Tractoflow on Compute Canada
             #   - Interface seeding
             #   - nbr_seeds 15.
             my_singularity_img='../tractoflow_*.img' # or .sif
-            nextflow -c ../beluga.conf run ../tractoflow-*/main.nf --root ../input_data_tractoflow \
-                -with-singularity $my_singularity_img -resume -with-report report.html \
+            nextflow -c ../beluga.conf run ../tractoflow-*/main.nf --input ../input_data_tractoflow \
+                -with-singularity ../tractoflow_*.img -resume -with-report report.html \
                 --dti_shells "0 1500" --fodf_shells "0 1500" --step 0.5 --nbr_seeds 15 \
                 --wm_seeding false --mean_frf false --set_frf true
 
