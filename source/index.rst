@@ -34,6 +34,7 @@ Here, you will find a summary of the tools we develop, and some clues on how we 
     tools/recobundles
     tools/other_pipelines
     tools/machine_learning
+    tools/SET
     tools/others
 
 .. toctree::
