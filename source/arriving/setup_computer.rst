@@ -36,22 +36,8 @@ Before proceeding to the next steps, here are some useful additions you can make
     bind '"\e[5~": history-search-backward' # Press page-up button to go backward in history
     bind '"\e[6~": history-search-forward' # Press page-down button to go forward in history
 
-Python
-""""""
-
-Although your Linux distribution most likely already includes a python distribution, it may be necessary to install additionnal python packages for software development. There are many alternatives for installing python. On Ubuntu, we can use the `deadsnakes <https://launchpad.net/~deadsnakes/+archive/ubuntu/ppa>`_ repository to download and install a specific version:
-
-.. code-block:: bash
-
-        sudo apt-get update
-        sudo add-apt-repository ppa:deadsnakes/ppa
-        sudo apt-get install python3.10-dev python3.10-venv python3.10-tk python3-pip
-        python3.10 -m pip install pip  # update pip (python package manager) to latest version
-
-Other python packages can be installed by replacing python3.X by a version of your choice.
-
-Virtual environments
-""""""""""""""""""""
+Python and virtual environments
+"""""""""""""""""""""""""""""""
 
 Virtual environments are a good way to separate the system's python installation from the python version you need for your work. It also allows you to have a precise set of python packages with specific versions. While there are many options for environments, we highly recommend using `uv <https://docs.astral.sh/uv/getting-started/installation/>`_. Start by installing it and creating a directory where all your environments will be saved:
 
@@ -63,12 +49,11 @@ You can restart the terminal and create an environment:
 
 .. code-block:: bash
 
-    NAME=somename # Ex: $NAME could be my_env_py3
-                    # depending on the use you will give to this environment.
-                    # Try to be explicit
+    NAME=scilpy
+
     # One of:
     uv venv ~/.venvs/$NAME
-    uv venv ~/.venvs/$NAME --python 3.13 # To use one precise python version
+    uv venv ~/.venvs/$NAME --python 3.11 # To use one precise python version
                                          # You can also use the complete path to the python installation
                                          # The python version must be already
                                          # installed on your computer
@@ -111,7 +96,7 @@ See the :ref:`ref_git` page for more details of its usage.
 Scilpy
 """"""
 
-`Scilpy <https://github.com/scilus/scilpy>`_ is the main library supporting research and development at the lab. It currently supports python versions 3.8 to 3.10, so make sure you have followed all the previous steps. Once your python distribution is correctly installed and your virtual environment is active, scilpy can be installed by following the procedure outlined below:
+`Scilpy <https://github.com/scilus/scilpy>`_ is the main library supporting research and development at the lab. It currently supports python versions 3.11 to 3.12.14, so make sure you have followed all the previous steps. Once your python distribution is correctly installed and your virtual environment is active, scilpy can be installed by following the procedure outlined below:
 
     .. code-block:: bash
 
@@ -128,17 +113,15 @@ Scilpy
         # Go where you want the scilpy folder to be, then:
         git clone git@github.com:YOUR_USERNAME/scilpy.git # Don't forget to replace YOUR_USERNAME
         cd scilpy
-        export SETUPTOOLS_USE_DISTUTILS=stdlib # This might change in time.
         # Please refer to the README from https://github.com/scilus/scilpy if the next step fails.
-        pip install -e .
+        uv pip install -e .
 
         # Setup your Git remotes
         git remote add upstream git@github.com:scilus/scilpy.git # Link to the main version of scilpy
         git remote add origin git@github.com:YOUR_USERNAME/scilpy.git # Should be set automatically
         git remote -v # To verify everything is in order
 
-| *Note: Scilpy can now be installed in a virtual environment through pip:* :bash:`pip install scilpy`.
-| *Note: For Mac users, you might have to use this command instead* :bash:`pip install scilpy==2.0.0 --use-pep517`.
+| *Note: Scilpy can now be installed in a virtual environment through pip:* :bash:`uv pip install scilpy`.
 
 
 In any case, please refer to the `Github page <https://github.com/scilus/scilpy>`__ if you encounter problems.
